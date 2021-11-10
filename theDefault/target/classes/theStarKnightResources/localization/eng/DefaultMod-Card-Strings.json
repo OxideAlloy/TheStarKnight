@@ -1,0 +1,76 @@
+{
+  "theStarKnight:DefaultCommonAttack": {
+    "NAME": "Strike(Default)",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "theStarKnight:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL thestarknight:Multiword_Keyword."
+  },
+  "theStarKnight:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! thestarknight:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! thestarknight:Keywords."
+  },
+  "theStarKnight:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theStarKnight:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "theStarKnight:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X thestarknight:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 thestarknight:Keywords."
+  },
+  "theStarKnight:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theStarKnight:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "theStarKnight:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "theStarKnight:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !theStarKnight:ENERGY_DAMAGE! damage total.)"
+  },
+  "theStarKnight:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !theStarKnight:SecondMagic! poison to an enemy."
+  },
+  "theStarKnight:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+
+
+
+  "theStarKnight:Strike_SK": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theStarKnight:Defend_SK": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Deal !B! damage."
+  },
+  "theStarKnight:DeathGrip_SK": {
+    "NAME": "Death Grip",
+    "DESCRIPTION": "Apply !M! Constricted. NL Enemy loses !theStarKnight:SecondMagic! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "Elite Cards",
+      "Powerful 0-cost cards that reflect some of the Spire's strongest foes."
+    ],
+    "theStarKnight:Stomp_SK": {
+      "NAME": "Stomp",
+      "DESCRIPTION": "Deal !B! damage."
+    }
+  }
+}
