@@ -16,5 +16,21 @@
       "multikeyword"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  },
+  {
+    "PROPER_NAME": "Ichor",
+    "NAMES": [
+      "ichor"
+    ],
+    "DESCRIPTION": "Increases damage received by 10% per stack"
+  },
+  {
+    "PROPER_NAME": "Constricted",
+    "NAMES": [
+      "constricted",
+      "Constrict",
+      "constrict"
+    ],
+    "DESCRIPTION": "Constricted enemies take damage at the end of their turn."
   }
 ]

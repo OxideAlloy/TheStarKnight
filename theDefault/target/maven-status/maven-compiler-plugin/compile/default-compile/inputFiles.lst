@@ -1,4 +1,5 @@
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultRareAttack.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\Corrupt_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultUncommonSkill.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\actions\UncommonPowerAction.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\relics\PlaceholderRelic2.java
@@ -7,7 +8,9 @@ D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\mai
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\orbs\DefaultOrb.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DeathGrip_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\CommonPower.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\IchorPower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultCommonSkill.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\FrenziedStrike_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\AbstractDynamicCard.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\util\IDCheckDontTouchPls.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultAttackWithVariable.java
@@ -18,6 +21,7 @@ D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\mai
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultCommonPower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultUncommonPower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\RarePower.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\StackingDrawReductionPower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\DefaultMod.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\patches\relics\BottledPlaceholderField.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultCommonAttack.java

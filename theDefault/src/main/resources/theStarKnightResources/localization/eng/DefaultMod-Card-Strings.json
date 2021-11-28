@@ -63,14 +63,18 @@
   },
   "theStarKnight:DeathGrip_SK": {
     "NAME": "Death Grip",
-    "DESCRIPTION": "Apply !M! Constricted. NL Enemy loses !theStarKnight:SecondMagic! Strength.",
-    "EXTENDED_DESCRIPTION": [
-      "test",
-      "lorem ipsum dolor."
-    ],
-    "theStarKnight:Stomp_SK": {
-      "NAME": "Stomp",
-      "DESCRIPTION": "Deal !B! damage."
-    }
+    "DESCRIPTION": "Apply !M! thestarknight:Constricted. NL Enemy loses !theStarKnight:SecondMagic! Strength."
+  },
+  "theStarKnight:Stomp_SK": {
+    "NAME": "Stomp",
+    "DESCRIPTION": "Deal !D! damage. (IN PROGRESS)"
+  },
+  "theStarKnight:Corrupt_SK": {
+    "NAME": "Corrupt",
+    "DESCRIPTION": "Apply !M! thestarknight:Ichor."
+   },
+  "theStarKnight:FrenziedStrike_SK": {
+    "NAME": "Frenzied Strike",
+    "DESCRIPTION": "Deal !D! damage and draw !M! less card next turn. Shuffle a Frenzied Strike into your draw pile."
   }
 }

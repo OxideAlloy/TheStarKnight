@@ -1,10 +1,19 @@
 {
-"theStarKnight:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"theStarKnight:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-}
+        "theStarKnight:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+        },
+        "theStarKnight:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+        },
+
+        "theStarKnight:IchorPower": {
+                "NAME": "Ichor",
+                "DESCRIPTIONS": ["Increases damage received by 10% per stack"]
+        },
+        "theStarKnight:StackingDrawReductionPower": {
+                "NAME": "Draw Down",
+                "DESCRIPTIONS": ["Reduces the amount of cards drawn next turn by "]
+        }
 }

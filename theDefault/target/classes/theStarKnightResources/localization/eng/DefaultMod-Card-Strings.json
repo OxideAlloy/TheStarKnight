@@ -63,14 +63,18 @@
   },
   "theStarKnight:DeathGrip_SK": {
     "NAME": "Death Grip",
-    "DESCRIPTION": "Apply !M! Constricted. NL Enemy loses !theStarKnight:SecondMagic! Strength.",
-    "EXTENDED_DESCRIPTION": [
-      "Elite Cards",
-      "Powerful 0-cost cards that reflect some of the Spire's strongest foes."
-    ],
-    "theStarKnight:Stomp_SK": {
-      "NAME": "Stomp",
-      "DESCRIPTION": "Deal !B! damage."
-    }
+    "DESCRIPTION": "Apply !M! thestarknight:Constricted. NL Enemy loses !theStarKnight:SecondMagic! Strength."
+  },
+  "theStarKnight:Stomp_SK": {
+    "NAME": "Stomp",
+    "DESCRIPTION": "Deal !D! damage. (IN PROGRESS)"
+  },
+  "theStarKnight:Corrupt_SK": {
+    "NAME": "Corrupt",
+    "DESCRIPTION": "Apply !M! thestarknight:Ichor."
+   },
+  "theStarKnight:FrenziedStrike_SK": {
+    "NAME": "Frenzied Strike",
+    "DESCRIPTION": "Deal !D! damage. Draw !M! less card next turn. Shuffle a \nFrenzied Strike into your draw pile."
   }
 }

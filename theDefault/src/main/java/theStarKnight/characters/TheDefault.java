@@ -61,11 +61,11 @@ public class TheDefault extends CustomPlayer {
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 75;
+    public static final int STARTING_HP = 75; //TODO Set base stats!
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int CARD_DRAW = 5;
+    public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
 
@@ -156,12 +156,20 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 1; i++) {
             retVal.add(Strike_SK.ID);
             retVal.add(Defend_SK.ID);
         }
+        retVal.add(Corrupt_SK.ID);
         retVal.add(Stomp_SK.ID);
-        retVal.add(DeathGrip_SK.ID);
+
+        retVal.add(FrenziedStrike_SK.ID);
+        retVal.add(FrenziedStrike_SK.ID);
+        retVal.add(FrenziedStrike_SK.ID);
+
+        //retVal.add(DeathGrip_SK.ID);
+        //retVal.add(Corrupt_SK.ID);
+
  /*
         retVal.add(DefaultCommonAttack.ID);
         retVal.add(DefaultUncommonAttack.ID);

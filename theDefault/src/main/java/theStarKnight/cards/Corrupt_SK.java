@@ -29,7 +29,7 @@ public class Corrupt_SK extends AbstractDynamicCard {
     private static final int UPGRADED_COST = 0;
 
     private static final int AMOUNT = 3;
-    private static final int UPGRADED_AMOUNT = 4;
+    private static final int UPGRADED_AMOUNT = 1;
     //private static final int DEBUFF = 1;
     //private static final int UPGRADED_DEBUFF = 1;
 

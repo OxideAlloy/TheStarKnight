@@ -9,9 +9,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
-
 import static theStarKnight.DefaultMod.makeCardPath;
-
 
 public class DeathGrip_SK extends AbstractDynamicCard {
 

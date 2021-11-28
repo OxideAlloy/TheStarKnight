@@ -5,6 +5,7 @@ theStarKnight\variables\DefaultCustomVariable.class
 theStarKnight\patches\DefaultInsertPatch$Locator.class
 theStarKnight\variables\DefaultSecondMagicNumber.class
 theStarKnight\cards\AbstractDefaultCard.class
+theStarKnight\powers\StackingDrawReductionPower.class
 theStarKnight\characters\TheDefault$Enums.class
 theStarKnight\patches\DefaultInsertPatch.class
 theStarKnight\cards\DefaultAttackWithVariable.class
@@ -16,6 +17,7 @@ theStarKnight\relics\PlaceholderRelic2.class
 theStarKnight\patches\relics\BottledPlaceholderField.class
 theStarKnight\DefaultMod.class
 theStarKnight\cards\DefaultSecondMagicNumberSkill.class
+theStarKnight\cards\Corrupt_SK.class
 theStarKnight\cards\DefaultCommonAttack.class
 theStarKnight\powers\RarePower.class
 theStarKnight\cards\Defend_SK.class
@@ -30,6 +32,8 @@ theStarKnight\cards\DefaultRareSkill.class
 theStarKnight\cards\DefaultUncommonSkill.class
 theStarKnight\cards\CardTemplate.class
 theStarKnight\orbs\DefaultOrb.class
+theStarKnight\powers\IchorPower.class
+theStarKnight\cards\FrenziedStrike_SK.class
 theStarKnight\cards\DefaultRareAttack.class
 theStarKnight\cards\OrbSkill.class
 theStarKnight\cards\Stomp_SK.class

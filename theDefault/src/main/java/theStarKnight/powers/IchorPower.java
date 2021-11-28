@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,14 +23,15 @@ import theStarKnight.util.TextureLoader;
 public class IchorPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("Ichor");
+
+    public static final String POWER_ID = DefaultMod.makeID("IchorPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/placeholder_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/placeholder_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/IchorIcon_84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/IchorIcon_32.png");
 
     public IchorPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -77,28 +79,19 @@ public class IchorPower extends AbstractPower implements CloneablePowerInterface
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
         return type == DamageInfo.DamageType.NORMAL ? damage * (1.0F + (float)this.amount * 0.1F) : damage;
-
-//        AbstractPower p = this.target.getPower("Poison");
-//        if (p != null) {
-//            --p.amount;
-//            if (p.amount == 0) {
-//                this.target.powers.remove(p);
-//            } else {
-//                p.updateDescription();
-//            }
-//        }
     }
 
-
-
+    @Override
+    public void wasHPLost(DamageInfo info, int damageAmount) {
+        if (info.owner != null && info.owner != this.owner && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
+            this.flash();
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+        }
+    }
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
-        }
+            description = DESCRIPTIONS[0];
     }
 
     @Override

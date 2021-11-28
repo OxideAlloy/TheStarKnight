@@ -1,6 +1,5 @@
 package theStarKnight.cards;
 
-import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,11 +13,8 @@ import static theStarKnight.DefaultMod.makeCardPath;
 
 public class Stomp_SK extends AbstractDynamicCard {
 
-    //See "CardTemplate" for original template
-
     public static final String ID = DefaultMod.makeID(Stomp_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Stomp.png");
-
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
