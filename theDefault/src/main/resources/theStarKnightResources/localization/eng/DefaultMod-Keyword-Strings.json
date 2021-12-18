@@ -32,5 +32,23 @@
       "constrict"
     ],
     "DESCRIPTION": "Constricted enemies take damage at the end of their turn."
+  },
+  {
+    "PROPER_NAME": "Murder",
+    "NAMES": [
+      "murder",
+      "murdering",
+      "murders",
+      "Murdering",
+      "Murders"
+    ],
+    "DESCRIPTION": "Effect is triggered when the enemy is killed."
+  },
+  {
+    "PROPER_NAME": "Madness",
+    "NAMES": [
+      "madness"
+    ],
+    "DESCRIPTION": "Madness is equal to the difference between the number of cards in you hand and your max hand size."
   }
 ]

@@ -67,7 +67,7 @@
   },
   "theStarKnight:Stomp_SK": {
     "NAME": "Stomp",
-    "DESCRIPTION": "Deal !D! damage. (IN PROGRESS)"
+    "DESCRIPTION": "Deal !D! damage. thestarknight:Murder: Draw !M! card, and gain !M! energy"
   },
   "theStarKnight:Corrupt_SK": {
     "NAME": "Corrupt",
@@ -75,6 +75,27 @@
    },
   "theStarKnight:FrenziedStrike_SK": {
     "NAME": "Frenzied Strike",
-    "DESCRIPTION": "Deal !D! damage. Draw !M! less card next turn. Shuffle a \nFrenzied Strike into your draw pile."
+    "DESCRIPTION": "Deal !D! damage and draw !M! less card next turn. Shuffle a NL Frenzied Strike into your draw pile."
+  },
+  "theStarKnight:DiffractionSpikes_SK": {
+    "NAME": "Diffraction Spikes",
+    "DESCRIPTION": "Gain !B! Block and Counter."
+  },
+  "theStarKnight:Roar_SK": {
+    "NAME": "Roar",
+    "DESCRIPTION": "Apply !M! Vulnerable. Gain !theStarKnight:SecondMagic! Vigor."
+  },
+  "theStarKnight:SolarFlare_SK": {
+    "NAME": "Solar Flare",
+    "DESCRIPTION": "Deal !D! damage X+1 times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X+1 times. Refund half X rounded down."
+  },
+  "theStarKnight:KnifeGame_SK": {
+    "NAME": "Knife Game",
+    "DESCRIPTION": "Deal damage equal to NL your thestarknight:Madness NL !theStarKnight:SecondMagic! times."
+  },
+  "theStarKnight:Samsara_SK": {
+    "NAME": "Saṃsāra",
+    "DESCRIPTION": "Lose 1 Max HP. Gain !M! Temporary_HP."
   }
 }

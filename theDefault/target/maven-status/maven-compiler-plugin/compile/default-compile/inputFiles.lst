@@ -5,9 +5,12 @@ D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\mai
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\relics\PlaceholderRelic2.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\AbstractDefaultCard.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultRareSkill.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\SolarFlare_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\orbs\DefaultOrb.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\Samsara_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DeathGrip_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\CommonPower.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DiffractionSpikes_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\IchorPower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultCommonSkill.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\FrenziedStrike_SK.java
@@ -16,6 +19,7 @@ D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\mai
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultAttackWithVariable.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultRarePower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultSecondMagicNumberSkill.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\KnifeGame_SK.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\characters\TheDefault.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\variables\DefaultSecondMagicNumber.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultCommonPower.java
@@ -26,6 +30,8 @@ D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\mai
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\patches\relics\BottledPlaceholderField.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultCommonAttack.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\relics\PlaceholderRelic.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\Roar_SK.java
+D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\powers\CounterPower.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\cards\DefaultUncommonAttack.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\variables\DefaultCustomVariable.java
 D:\Olin\My Projects\StS Mod Project\StS-DefaultModBase-master\theDefault\src\main\java\theStarKnight\events\IdentityCrisisEvent.java

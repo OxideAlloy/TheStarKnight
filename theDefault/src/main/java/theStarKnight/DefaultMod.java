@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theStarKnight.cards.*;
+import theStarKnight.cards.defaultExamples.AbstractDefaultCard;
 import theStarKnight.characters.TheDefault;
 import theStarKnight.events.IdentityCrisisEvent;
 import theStarKnight.potions.PlaceholderPotion;

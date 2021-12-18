@@ -8,7 +8,10 @@ theStarKnight\cards\AbstractDefaultCard.class
 theStarKnight\powers\StackingDrawReductionPower.class
 theStarKnight\characters\TheDefault$Enums.class
 theStarKnight\patches\DefaultInsertPatch.class
+theStarKnight\powers\CounterPower.class
+theStarKnight\cards\SolarFlare_SK.class
 theStarKnight\cards\DefaultAttackWithVariable.class
+theStarKnight\cards\Samsara_SK.class
 theStarKnight\cards\DefaultRarePower.class
 theStarKnight\util\IDCheckDontTouchPls.class
 theStarKnight\util\TextureLoader.class
@@ -17,6 +20,7 @@ theStarKnight\relics\PlaceholderRelic2.class
 theStarKnight\patches\relics\BottledPlaceholderField.class
 theStarKnight\DefaultMod.class
 theStarKnight\cards\DefaultSecondMagicNumberSkill.class
+theStarKnight\cards\DiffractionSpikes_SK.class
 theStarKnight\cards\Corrupt_SK.class
 theStarKnight\cards\DefaultCommonAttack.class
 theStarKnight\powers\RarePower.class
@@ -25,6 +29,7 @@ theStarKnight\cards\DeathGrip_SK.class
 theStarKnight\relics\BottledPlaceholderRelic.class
 theStarKnight\cards\DefaultUncommonPower.class
 theStarKnight\potions\PlaceholderPotion.class
+theStarKnight\cards\Roar_SK.class
 theStarKnight\relics\PlaceholderRelic.class
 theStarKnight\actions\UncommonPowerAction.class
 theStarKnight\cards\DefaultCommonPower.class
@@ -35,6 +40,7 @@ theStarKnight\orbs\DefaultOrb.class
 theStarKnight\powers\IchorPower.class
 theStarKnight\cards\FrenziedStrike_SK.class
 theStarKnight\cards\DefaultRareAttack.class
+theStarKnight\cards\KnifeGame_SK.class
 theStarKnight\cards\OrbSkill.class
 theStarKnight\cards\Stomp_SK.class
 theStarKnight\characters\TheDefault.class

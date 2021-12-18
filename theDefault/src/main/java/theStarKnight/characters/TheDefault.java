@@ -22,7 +22,12 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theStarKnight.DefaultMod;
-import theStarKnight.cards.*;
+import theStarKnight.cards.attacks.KnifeGame_SK;
+import theStarKnight.cards.attacks.SolarFlare_SK;
+import theStarKnight.cards.attacks.Strike_SK;
+import theStarKnight.cards.defaultExamples.DefaultCommonAttack;
+import theStarKnight.cards.skills.Defend_SK;
+import theStarKnight.cards.skills.Samsara_SK;
 import theStarKnight.relics.DefaultClickableRelic;
 import theStarKnight.relics.PlaceholderRelic;
 import theStarKnight.relics.PlaceholderRelic2;
@@ -160,15 +165,16 @@ public class TheDefault extends CustomPlayer {
             retVal.add(Strike_SK.ID);
             retVal.add(Defend_SK.ID);
         }
-        retVal.add(Corrupt_SK.ID);
-        retVal.add(Stomp_SK.ID);
 
-        retVal.add(FrenziedStrike_SK.ID);
-        retVal.add(FrenziedStrike_SK.ID);
-        retVal.add(FrenziedStrike_SK.ID);
-
+        //retVal.add(Stomp_SK.ID);
+        //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
         //retVal.add(Corrupt_SK.ID);
+        //retVal.add(DiffractionSpikes_SK.ID);
+        //retVal.add(Roar_SK.ID);
+        retVal.add(SolarFlare_SK.ID);
+        retVal.add(KnifeGame_SK.ID);
+        retVal.add(Samsara_SK.ID);
 
  /*
         retVal.add(DefaultCommonAttack.ID);
