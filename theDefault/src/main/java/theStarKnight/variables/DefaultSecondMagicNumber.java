@@ -2,7 +2,7 @@ package theStarKnight.variables;
 
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import theStarKnight.cards.defaultExamples.AbstractDefaultCard;
+import theStarKnight.cards.AbstractDefaultCard;
 
 import static theStarKnight.DefaultMod.makeID;
 

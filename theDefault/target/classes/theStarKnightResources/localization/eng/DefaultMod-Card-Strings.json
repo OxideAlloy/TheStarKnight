@@ -97,5 +97,18 @@
   "theStarKnight:Samsara_SK": {
     "NAME": "Saṃsāra",
     "DESCRIPTION": "Lose 1 Max HP. Gain !M! Temporary_HP."
+  },
+  "theStarKnight:DarkHeart_SK": {
+    "NAME": "Dark Heart",
+    "DESCRIPTION": "Deal damage and gain block equal to your thestarknight:Madness.",
+    "UPGRADE_DESCRIPTION": "Deal damage and gain block equal to twice your thestarknight:Madness."
+  },
+  "theStarKnight:Finish_SK": {
+    "NAME": "Finish",
+    "DESCRIPTION": "Deal damage equal to half the targets missing HP."
+  },
+  "theStarKnight:CleavingBlow_SK": {
+    "NAME": "Cleaving Blow",
+    "DESCRIPTION": "Deal !D! damage, doubled against minions. If this kills the target, gain !M! energy."
   }
 }
