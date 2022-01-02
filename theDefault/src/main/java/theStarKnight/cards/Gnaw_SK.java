@@ -1,24 +1,28 @@
 package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class Strike_SK extends AbstractDynamicCard {
+public class Gnaw_SK extends AbstractDynamicCard {
 
     //See "CardTemplate" for original template
 
-    public static final String ID = DefaultMod.makeID(Strike_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("AxeStrike.png");
+    public static final String ID = DefaultMod.makeID(Gnaw_SK.class.getSimpleName());
+    public static final String IMG = makeCardPath("Bite.png");
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
@@ -26,20 +30,18 @@ public class Strike_SK extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 3;
 
-    public Strike_SK() {
+    public Gnaw_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new VampireDamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
     // Upgraded stats.

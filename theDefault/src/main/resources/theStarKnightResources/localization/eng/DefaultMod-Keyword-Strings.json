@@ -50,5 +50,12 @@
       "madness"
     ],
     "DESCRIPTION": "Madness is equal to the difference between the number of cards in you hand and your max hand size."
+  },
+  {
+    "PROPER_NAME": "Echo",
+    "NAMES": [
+      "Echos"
+    ],
+    "DESCRIPTION": "Madness is equal to the difference between the number of cards in you hand and your max hand size."
   }
 ]

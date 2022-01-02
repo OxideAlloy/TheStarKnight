@@ -8,11 +8,13 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -23,6 +25,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theStarKnight.DefaultMod;
 import theStarKnight.cards.*;
+import theStarKnight.powers.ShardEcho;
 import theStarKnight.relics.DefaultClickableRelic;
 import theStarKnight.relics.PlaceholderRelic;
 import theStarKnight.relics.PlaceholderRelic2;
@@ -161,6 +164,7 @@ public class TheDefault extends CustomPlayer {
             retVal.add(Defend_SK.ID);
         }
 
+        retVal.add(Playtester_SK.ID);
         //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
@@ -170,9 +174,23 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(DarkHeart_SK.ID);
         //retVal.add(SolarFlare_SK.ID);
         //retVal.add(KnifeGame_SK.ID);
-        retVal.add(Samsara_SK.ID);
-        retVal.add(Finish_SK.ID);
-        retVal.add(CleavingBlow_SK.ID);
+        //retVal.add(Samsara_SK.ID);
+        //retVal.add(Finish_SK.ID);
+        //retVal.add(CleavingBlow_SK.ID);
+        retVal.add(VoidStrike_SK.ID);
+        //retVal.add(OrbitalStrike_SK.ID);
+        //retVal.add(MeteorBlast_SK.ID);
+        //retVal.add(HeavyMetal_SK.ID);
+        //retVal.add(HammerTime_SK.ID);
+        //retVal.add(Helios_SK.ID);
+        //retVal.add(Hemorrhage_SK.ID);
+        //retVal.add(WoodenSword_SK.ID);
+        //retVal.add(OblivionShard_SK.ID);
+        //retVal.add(Gnaw_SK.ID);
+        //retVal.add(GhostArmor_SK.ID);
+        retVal.add(NeutronBurst_SK.ID);
+        //retVal.add(StrangeMatter_SK.ID);
+        retVal.add(IchorShield_SK.ID);
 
  /*
         retVal.add(DefaultCommonAttack.ID);
@@ -199,9 +217,10 @@ public class TheDefault extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
+        //TODO Add some Relics
         retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
+        //retVal.add(PlaceholderRelic2.ID);
+        //retVal.add(DefaultClickableRelic.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
@@ -315,5 +334,19 @@ public class TheDefault extends CustomPlayer {
     public String getVampireText() {
         return TEXT[2];
     }
+
+
+    //////////////////////////
+    //BEGIN NON-DEFAULT CODE//
+    //////////////////////////
+
+    //Apply ShardEcho power
+    public void applyPreCombatLogic() {
+        super.applyPreCombatLogic();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ShardEcho(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+        //Iterator var1 = AbstractDungeon.player.drawPile.group.iterator();
+    }
+
+
 
 }

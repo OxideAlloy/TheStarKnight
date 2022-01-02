@@ -2,6 +2,7 @@ package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,28 +12,29 @@ import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class Strike_SK extends AbstractDynamicCard {
+public class MeteorBlast_SK extends AbstractDynamicCard {
 
     //See "CardTemplate" for original template
 
-    public static final String ID = DefaultMod.makeID(Strike_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("AxeStrike.png");
+    public static final String ID = DefaultMod.makeID(MeteorBlast_SK.class.getSimpleName());
+    public static final String IMG = makeCardPath("MeteorStrike.png");
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 5;
+    private static final int UPGRADED_COST = 4;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 35;
+    private static final int BLAST = 5;
+    //private static final int UPGRADE_PLUS_DMG = 1;
 
-    public Strike_SK() {
+    public MeteorBlast_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-
+        baseMagicNumber = magicNumber = BLAST;
     }
 
     // Actions the card should do.
@@ -40,6 +42,10 @@ public class Strike_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        if (this.upgraded) {
+            this.addToBot(new DamageAllEnemiesAction(p, this.magicNumber, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        }
+
     }
 
     // Upgraded stats.
@@ -47,7 +53,7 @@ public class Strike_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            //upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }

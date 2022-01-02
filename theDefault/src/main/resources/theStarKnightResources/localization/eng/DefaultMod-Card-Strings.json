@@ -52,6 +52,10 @@
   },
 
 
+  "theStarKnight:Playtester_SK": {
+    "NAME": "Playtest Card",
+    "DESCRIPTION": "Innate. N: Upgrade your cards. NL Gain [G] [G] [G] [G] [G]"
+  },
 
   "theStarKnight:Strike_SK": {
     "NAME": "Strike",
@@ -110,5 +114,61 @@
   "theStarKnight:CleavingBlow_SK": {
     "NAME": "Cleaving Blow",
     "DESCRIPTION": "Deal !D! damage, doubled against minions. If this kills the target, gain !M! energy."
+  },
+  "theStarKnight:VoidStrike_SK": {
+    "NAME": "Void Strike",
+    "DESCRIPTION": "Deal !D! damage. Exhaust a random(not random) card from your hand. Ethereal."
+  },
+  "theStarKnight:OrbitalStrike_SK": {
+    "NAME": "Orbital Strike",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! block. Shuffle this card into your library."
+  },
+  "theStarKnight:MeteorBlast_SK": {
+    "NAME": "Meteor Blast",
+    "DESCRIPTION": "Deal !D! damage. (Upgraded: deal !M! damage to ALL enemies)"
+  },
+  "theStarKnight:HammerTime_SK": {
+    "NAME": "Hammer Time",
+    "DESCRIPTION": "Deal !D! damage !M! times. Shuffle a *Heavy *Metal into your deck."
+  },
+  "theStarKnight:HeavyMetal_SK": {
+    "NAME": "Heavy Metal",
+    "DESCRIPTION": "When drawn, NL gain !M! strength and lose !M! dexterity. NL Unplayable. Retain."
+  },
+  "theStarKnight:Helios_SK": {
+    "NAME": "Helios",
+    "DESCRIPTION": "Deal !D! damage. NL Retain. NL When retained, gain Vulnerable."
+  },
+  "theStarKnight:Hemorrhage_SK": {
+    "NAME": "Hemorrhage",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! thestarknight:Ichor NL Lose 2 HP."
+  },
+  "theStarKnight:WoodenSword_SK": {
+    "NAME": "Wooden Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength."
+  },
+  "theStarKnight:OblivionShard_SK": {
+    "NAME": "Oblivion Shard",
+    "DESCRIPTION": "Echo NL Deal !D! damage to a random enemy at the end of your turn."
+  },
+  "theStarKnight:Gnaw_SK": {
+    "NAME": "Gnaw",
+    "DESCRIPTION": "Deal !D!. NL Gain HP equal to the unblocked damage."
+  },
+  "theStarKnight:GhostArmor_SK": {
+    "NAME": "Ghost Armor",
+    "DESCRIPTION": "Gain 1 Intangible. NL Lose !M! max HP."
+  },
+  "theStarKnight:StrangeMatter_SK": {
+    "NAME": "Strange Matter",
+    "DESCRIPTION": "When drawn, exhaust a card in your hand and add a *Strange *Matter to your hand. When exhausted, deal !M! damage to all enemies."
+  },
+  "theStarKnight:NeutronBurst_SK": {
+    "NAME": "Neutron Burst",
+    "DESCRIPTION": "Draw !M! cards. Shuffle a *Strange *Matter into your library."
+  },
+  "theStarKnight:IchorShield_SK": {
+    "NAME": "Ichor Shield",
+    "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, apply 2 thestarknight:Ichor to the attacker."
   }
 }

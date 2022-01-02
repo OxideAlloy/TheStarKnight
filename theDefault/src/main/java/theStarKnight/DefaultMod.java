@@ -83,14 +83,15 @@ public class DefaultMod implements
     public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
-    private static final String MODNAME = "Default Mod";
-    private static final String AUTHOR = "Gremious"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String MODNAME = "The Star Knight";
+    private static final String AUTHOR = "OxideAlloy"; // And pretty soon - You!
+    private static final String DESCRIPTION = "A warrior from far away. It has answered the call to Slay the Spire.";
     
     // =============== INPUT TEXTURE LOCATION =================
     
     // Colors (RGB)
     // Character Color
+    public static final Color COLOUR_OUT_OF_SPACE = CardHelper.getColor(90.0f, 00.0f, 80.0f);
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
     
     // Potion Colors in RGB
@@ -119,8 +120,8 @@ public class DefaultMod implements
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theStarKnightResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "theStarKnightResources/images/charSelect/DefaultCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theStarKnightResources/images/charSelect/DefaultCharacterPortraitBG.png";
+    private static final String THE_DEFAULT_BUTTON = "theStarKnightResources/images/charSelect/Button_SK.png";
+    private static final String THE_DEFAULT_PORTRAIT = "theStarKnightResources/images/charSelect/PortraitBG_SK.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theStarKnightResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theStarKnightResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theStarKnightResources/images/char/defaultCharacter/corpse.png";

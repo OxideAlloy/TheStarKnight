@@ -1,8 +1,12 @@
 package theStarKnight.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.tempCards.Insight;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,35 +15,40 @@ import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class Strike_SK extends AbstractDynamicCard {
+public class HammerTime_SK extends AbstractDynamicCard {
 
     //See "CardTemplate" for original template
 
-    public static final String ID = DefaultMod.makeID(Strike_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("AxeStrike.png");
+    public static final String ID = DefaultMod.makeID(HammerTime_SK.class.getSimpleName());
+    public static final String IMG = makeCardPath("HammerStrike.png");
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 2;
 
     private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
 
-    public Strike_SK() {
+    private static final int TIMES = 2;
+    private static final int UPGRADED_TIMES_ADD = 1;
+
+    public HammerTime_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-
+        baseMagicNumber = magicNumber = TIMES;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        for (int i = 0; i < this.magicNumber; i++) {
+            this.addToBot(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        }
+        AbstractCard card = new HeavyMetal_SK();
+        this.addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true, false));
     }
 
     // Upgraded stats.
@@ -47,8 +56,7 @@ public class Strike_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADED_TIMES_ADD);
             initializeDescription();
         }
     }
