@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theStarKnight:BlackHelm_SKRelic": {
+    "NAME": "Black Helm",
+    "FLAVOR": "It pulses with dark energy.",
+    "DESCRIPTIONS": [
+      "Gain 1 max HP at the end of each combat."
+    ]
   }
 }

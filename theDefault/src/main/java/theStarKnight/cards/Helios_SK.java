@@ -23,7 +23,7 @@ public class Helios_SK extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 3;
     private static final int UPGRADED_COST = 2;

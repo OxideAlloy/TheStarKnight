@@ -46,29 +46,24 @@ public class IchorShieldPower extends AbstractPower implements CloneablePowerInt
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-
-        System.out.println("onAttack called within IchorShieldPower");
-
-
+        //System.out.println("onAttack called within IchorShieldPower");
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {
             this.flash();
             this.addToTop(new ApplyPowerAction(info.owner, this.owner, new IchorPower(info.owner, this.owner, this.amount), this.amount));
         }
-
         return damageAmount;
-
     }
 
     @Override
     public void atStartOfTurn() {
-        System.out.println("atStartOfTurn called within IchorShieldPower");
+        //System.out.println("atStartOfTurn called within IchorShieldPower");
         this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
 
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

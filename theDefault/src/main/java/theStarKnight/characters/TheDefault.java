@@ -26,14 +26,12 @@ import org.apache.logging.log4j.Logger;
 import theStarKnight.DefaultMod;
 import theStarKnight.cards.*;
 import theStarKnight.powers.ShardEcho;
-import theStarKnight.relics.DefaultClickableRelic;
-import theStarKnight.relics.PlaceholderRelic;
-import theStarKnight.relics.PlaceholderRelic2;
+import theStarKnight.relics.*;
 
 import java.util.ArrayList;
 
 import static theStarKnight.DefaultMod.*;
-import static theStarKnight.characters.TheDefault.Enums.COLOR_GRAY;
+import static theStarKnight.characters.TheDefault.Enums.COLOUR_SK;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -52,9 +50,9 @@ public class TheDefault extends CustomPlayer {
     public static class Enums {
         @SpireEnum
         public static AbstractPlayer.PlayerClass THE_DEFAULT;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_GRAY;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "COLOUR_OUT_OF_SPACE_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOUR_SK;
+        @SpireEnum(name = "COLOUR_OUT_OF_SPACE_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
@@ -218,12 +216,14 @@ public class TheDefault extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         //TODO Add some Relics
+        retVal.add(BlackHelm_SKRelic.ID);
         retVal.add(PlaceholderRelic.ID);
         //retVal.add(PlaceholderRelic2.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
+        UnlockTracker.markRelicAsSeen(BlackHelm_SKRelic.ID);
         UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
@@ -255,13 +255,13 @@ public class TheDefault extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_GRAY;
+        return COLOUR_SK;
     }
 
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return theStarKnight.DefaultMod.DEFAULT_GRAY;
+        return theStarKnight.DefaultMod.COLOUR_OUT_OF_SPACE;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -298,14 +298,14 @@ public class TheDefault extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return theStarKnight.DefaultMod.DEFAULT_GRAY;
+        return theStarKnight.DefaultMod.COLOUR_OUT_OF_SPACE;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return theStarKnight.DefaultMod.DEFAULT_GRAY;
+        return theStarKnight.DefaultMod.COLOUR_OUT_OF_SPACE;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects

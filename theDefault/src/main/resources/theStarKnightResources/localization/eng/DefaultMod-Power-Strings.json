@@ -26,6 +26,9 @@
         },
         "theStarKnight:IchorShieldPower": {
                 "NAME": "Ichor Shield",
-                "DESCRIPTIONS": ["Applys !M! *Ichor to attackers."]
+                "DESCRIPTIONS": [
+                        "When attacked, apply #b",
+                        " #Ichor."
+                ]
         }
 }

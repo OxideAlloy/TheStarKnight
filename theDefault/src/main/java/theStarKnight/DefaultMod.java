@@ -24,10 +24,7 @@ import theStarKnight.cards.AbstractDefaultCard;
 import theStarKnight.characters.TheDefault;
 import theStarKnight.events.IdentityCrisisEvent;
 import theStarKnight.potions.PlaceholderPotion;
-import theStarKnight.relics.BottledPlaceholderRelic;
-import theStarKnight.relics.DefaultClickableRelic;
-import theStarKnight.relics.PlaceholderRelic;
-import theStarKnight.relics.PlaceholderRelic2;
+import theStarKnight.relics.*;
 import theStarKnight.util.IDCheckDontTouchPls;
 import theStarKnight.util.TextureLoader;
 import theStarKnight.variables.DefaultCustomVariable;
@@ -85,14 +82,14 @@ public class DefaultMod implements
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Star Knight";
     private static final String AUTHOR = "OxideAlloy"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A warrior from far away. It has answered the call to Slay the Spire.";
+    private static final String DESCRIPTION = "Adds The Star Knight to Slay the Spire.";
     
     // =============== INPUT TEXTURE LOCATION =================
     
     // Colors (RGB)
     // Character Color
     public static final Color COLOUR_OUT_OF_SPACE = CardHelper.getColor(90.0f, 00.0f, 80.0f);
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+    //public static final Color COLOUR_OUT_OF_SPACE = CardHelper.getColor(64.0f, 70.0f, 70.0f);
     
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -107,17 +104,17 @@ public class DefaultMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
   
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "theStarKnightResources/images/512/Attack_SK_512.png";
-    private static final String SKILL_DEFAULT_GRAY = "theStarKnightResources/images/512/Skill_SK_512.png";
-    private static final String POWER_DEFAULT_GRAY = "theStarKnightResources/images/512/Power_SK_512.png";
+    private static final String ATTACK_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/Attack_SK_512.png";
+    private static final String SKILL_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/Skill_SK_512.png";
+    private static final String POWER_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/Power_SK_512.png";
     
-    private static final String ENERGY_ORB_DEFAULT_GRAY = "theStarKnightResources/images/512/card_default_gray_orb.png";
+    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/card_default_gray_orb.png";
     private static final String CARD_ENERGY_ORB = "theStarKnightResources/images/512/card_small_orb.png";
     
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "theStarKnightResources/images/1024/Attack_SK_1024.png";
-    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theStarKnightResources/images/1024/Skill_SK_1024.png";
-    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "theStarKnightResources/images/1024/Power_SK_1024.png";
-    private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theStarKnightResources/images/1024/card_default_gray_orb.png";
+    private static final String ATTACK_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Attack_SK_1024.png";
+    private static final String SKILL_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Skill_SK_1024.png";
+    private static final String POWER_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Power_SK_1024.png";
+    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theStarKnightResources/images/charSelect/Button_SK.png";
@@ -164,7 +161,7 @@ public class DefaultMod implements
     // =============== /INPUT TEXTURE LOCATION/ =================
     
     
-    // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
+    // =============== SUBSCRIBE, CREATE THE COLOUR_SK, INITIALIZE =================
     
     public DefaultMod() {
         logger.info("Subscribe to BaseMod hooks");
@@ -200,13 +197,13 @@ public class DefaultMod implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+        logger.info("Creating the color " + TheDefault.Enums.COLOUR_SK.toString());
         
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
-                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+        BaseMod.addColor(TheDefault.Enums.COLOUR_SK, COLOUR_OUT_OF_SPACE, COLOUR_OUT_OF_SPACE, COLOUR_OUT_OF_SPACE,
+                COLOUR_OUT_OF_SPACE, COLOUR_OUT_OF_SPACE, COLOUR_OUT_OF_SPACE, COLOUR_OUT_OF_SPACE,
+                ATTACK_COLOUR_OUT_OF_SPACE, SKILL_COLOUR_OUT_OF_SPACE, POWER_COLOUR_OUT_OF_SPACE, ENERGY_ORB_COLOUR_OUT_OF_SPACE,
+                ATTACK_COLOUR_OUT_OF_SPACE_PORTRAIT, SKILL_COLOUR_OUT_OF_SPACE_PORTRAIT, POWER_COLOUR_OUT_OF_SPACE_PORTRAIT,
+                ENERGY_ORB_COLOUR_OUT_OF_SPACE_PORTRAIT, CARD_ENERGY_ORB);
         
         logger.info("Done creating the color");
         
@@ -277,7 +274,7 @@ public class DefaultMod implements
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
     
-    // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
+    // ============== /SUBSCRIBE, CREATE THE COLOUR_SK, INITIALIZE/ =================
     
     
     // =============== LOAD THE CHARACTER =================
@@ -390,9 +387,10 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
+        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
+        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOUR_SK);
+        BaseMod.addRelicToCustomPool(new BlackHelm_SKRelic(), TheDefault.Enums.COLOUR_SK);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
