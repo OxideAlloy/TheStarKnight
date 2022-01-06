@@ -30,5 +30,9 @@
                         "When attacked, apply #b",
                         " #Ichor."
                 ]
+        },
+        "theStarKnight:TempStrNextTurn": {
+                "NAME": "Temporary Strength Next Turn",
+                "DESCRIPTIONS": ["Gain #b temporary strength at the start of your turn."]
         }
 }

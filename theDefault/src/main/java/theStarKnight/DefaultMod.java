@@ -481,6 +481,10 @@ public class DefaultMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
+
+        // UI Strings
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/eng/DefaultMod-UI-Strings.json");
         
         logger.info("Done edittting strings");
     }

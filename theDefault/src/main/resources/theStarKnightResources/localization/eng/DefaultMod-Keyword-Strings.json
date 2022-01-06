@@ -52,10 +52,10 @@
     "DESCRIPTION": "Madness is equal to the difference between the number of cards in you hand and your max hand size."
   },
   {
-    "PROPER_NAME": "Echo",
+    "PROPER_NAME": "Memory",
     "NAMES": [
-      "Echos"
+      "memory"
     ],
-    "DESCRIPTION": "Madness is equal to the difference between the number of cards in you hand and your max hand size."
+    "DESCRIPTION": "Unplayable card with an effect that triggers when this is in your discard pile at the start of your turn."
   }
 ]

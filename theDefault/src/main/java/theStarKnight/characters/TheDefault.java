@@ -157,9 +157,10 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
             retVal.add(Strike_SK.ID);
             retVal.add(Defend_SK.ID);
+            retVal.add(Impurity_SK.ID);
         }
 
         retVal.add(Playtester_SK.ID);
@@ -175,20 +176,29 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Samsara_SK.ID);
         //retVal.add(Finish_SK.ID);
         //retVal.add(CleavingBlow_SK.ID);
-        retVal.add(VoidStrike_SK.ID);
+        //retVal.add(VoidStrike_SK.ID);
         //retVal.add(OrbitalStrike_SK.ID);
         //retVal.add(MeteorBlast_SK.ID);
         //retVal.add(HeavyMetal_SK.ID);
         //retVal.add(HammerTime_SK.ID);
         //retVal.add(Helios_SK.ID);
         //retVal.add(Hemorrhage_SK.ID);
-        //retVal.add(WoodenSword_SK.ID);
-        //retVal.add(OblivionShard_SK.ID);
+        retVal.add(WoodenSword_SK.ID);
+        retVal.add(OblivionShard_SK.ID);
         //retVal.add(Gnaw_SK.ID);
         //retVal.add(GhostArmor_SK.ID);
-        retVal.add(NeutronBurst_SK.ID);
+        //retVal.add(NeutronBurst_SK.ID);
         //retVal.add(StrangeMatter_SK.ID);
-        retVal.add(IchorShield_SK.ID);
+        //retVal.add(IchorShield_SK.ID);
+        //retVal.add(BurningSky_SK.ID);
+        //retVal.add(GatherMass_SK.ID);
+        //retVal.add(Bile_SK.ID);
+        //retVal.add(DarkTract_SK.ID);
+        retVal.add(LeadShield_SK.ID);
+        retVal.add(PulsatingShard_SK.ID);
+        retVal.add(CacconShard_SK.ID);
+        retVal.add(ColdShard_SK.ID);
+        retVal.add(Impurity_SK.ID);
 
  /*
         retVal.add(DefaultCommonAttack.ID);

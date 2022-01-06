@@ -17,7 +17,7 @@ import static theStarKnight.DefaultMod.makeCardPath;
 public class Corrupt_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Corrupt_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("Bile.png");
+    public static final String IMG = makeCardPath("Corrupt.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;

@@ -149,7 +149,7 @@
   },
   "theStarKnight:OblivionShard_SK": {
     "NAME": "Oblivion Shard",
-    "DESCRIPTION": "Echo NL Deal !D! damage to a random enemy at the end of your turn."
+    "DESCRIPTION": "thestarknight:Memory NL Deal !D! damage to a random enemy at the start of your turn."
   },
   "theStarKnight:Gnaw_SK": {
     "NAME": "Gnaw",
@@ -170,5 +170,48 @@
   "theStarKnight:IchorShield_SK": {
     "NAME": "Ichor Shield",
     "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, apply 2 thestarknight:Ichor to the attacker."
+  },
+  "theStarKnight:FallingStar_SK": {
+    "NAME": "Falling Star",
+    "DESCRIPTION": "Deal !D!. NL Retain. NL Exhaust."
+  },
+  "theStarKnight:BurningSky_SK": {
+    "NAME": "Burning Sky",
+    "DESCRIPTION": "Shuffle 2 *Falling *Stars into your library.",
+    "UPGRADE_DESCRIPTION": "Shuffle 2 upgraded *Falling *Stars into your library."
+  },
+  "theStarKnight:GatherMass_SK": {
+    "NAME": "Gather Mass",
+    "DESCRIPTION": "Gain !B! Block. Next turn gain !M! temporary strength and !theStarKnight:SecondMagic! energy."
+  },
+  "theStarKnight:Bile_SK": {
+    "NAME": "Bile",
+    "DESCRIPTION": "Apply !M! poison. NL Apply !M! Ichor."
+  },
+  "theStarKnight:DarkTract_SK": {
+    "NAME": "Dark Tract",
+    "DESCRIPTION": "Draw !M! card, discard !M! card. NL When gained, gain 2 max HP.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards, discard !M! cards. NL When gained, gain 2 max HP."
+  },
+  "theStarKnight:LeadShield_SK": {
+    "NAME": "Lead Shield",
+    "DESCRIPTION": "Deal !B! Block. NL Gain !M! Strength."
+  },
+  "theStarKnight:PulsatingShard_SK": {
+    "NAME": "Pulsating Shard",
+    "DESCRIPTION": "thestarknight:Memory NL Gain [E] and lose one HP at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn."
+  },
+  "theStarKnight:CacconShard_SK": {
+    "NAME": "Caccon Shard",
+    "DESCRIPTION": "thestarknight:Memory NL Gain !M! HP at the start of your turn."
+  },
+  "theStarKnight:ColdShard_SK": {
+    "NAME": "Cold Shard",
+    "DESCRIPTION": "thestarknight:Memory NL Gain !B! block at the start of your turn."
+  },
+  "theStarKnight:Impurity_SK": {
+    "NAME": "Impurity",
+    "DESCRIPTION": "Choose and discard !M! cards in your library."
   }
 }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
@@ -47,7 +48,7 @@ public class WoodenSword_SK extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
     }
 
     // Upgraded stats.

@@ -1,5 +1,6 @@
 package theStarKnight.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.SetDontTriggerAction;
@@ -15,6 +16,9 @@ import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
+
+//THIS CARD IS NOT ADDED TO THE CARD POOL
+@AutoAdd.Ignore
 
 public class HeavyMetal_SK extends AbstractDynamicCard {
 

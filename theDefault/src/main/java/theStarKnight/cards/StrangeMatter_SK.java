@@ -1,5 +1,6 @@
 package theStarKnight.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,6 +17,9 @@ import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
+
+//THIS CARD IS NOT ADDED TO THE CARD POOL
+@AutoAdd.Ignore
 
 public class StrangeMatter_SK extends AbstractDynamicCard {
 

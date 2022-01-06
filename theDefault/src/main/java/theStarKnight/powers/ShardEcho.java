@@ -5,8 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -15,8 +14,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import theStarKnight.DefaultMod;
+import theStarKnight.cards.CacconShard_SK;
+import theStarKnight.cards.ColdShard_SK;
 import theStarKnight.cards.OblivionShard_SK;
+import theStarKnight.cards.PulsatingShard_SK;
 import theStarKnight.util.TextureLoader;
 
 import java.util.ArrayList;
@@ -58,11 +61,32 @@ public class ShardEcho extends AbstractPower implements CloneablePowerInterface,
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
 
+            //OblivionShard deals damage to a random monster
             if (c.cardID.equals(OblivionShard_SK.ID)) {
                 AbstractMonster mon = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
                 c.calculateCardDamage(mon);
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(mon, new DamageInfo(AbstractDungeon.player, c.damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
+
+            //PulsatingShard gains player 1 energy. Player loses 1 HP if not upgraded. (Energy gain amount is hardcoded here)
+            if (c.cardID.equals(PulsatingShard_SK.ID)) {
+                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                if (!c.upgraded) {
+                    this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
+                }
+            }
+
+            //CacconShard heals 2 HP (or 3 HP if upgraded).
+            if (c.cardID.equals(CacconShard_SK.ID)) {
+                AbstractDungeon.actionManager.addToBottom(new  HealAction(AbstractDungeon.player, AbstractDungeon.player, c.magicNumber));
+            }
+
+            //ColdShard grants 5 block (or 8 block if upgraded).
+            if (c.cardID.equals(ColdShard_SK.ID)) {
+                AbstractDungeon.actionManager.addToBottom(new  HealAction(AbstractDungeon.player, AbstractDungeon.player, c.magicNumber));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, c.block));
+            }
+
         }
     }
 

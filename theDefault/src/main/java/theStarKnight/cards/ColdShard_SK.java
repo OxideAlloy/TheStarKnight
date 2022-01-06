@@ -1,9 +1,6 @@
 package theStarKnight.cards;
 
-import basemod.AutoAdd;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,35 +9,36 @@ import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class OblivionShard_SK extends AbstractDynamicCard {
+public class ColdShard_SK extends AbstractDynamicCard {
 
-    //See "CardTemplate" for original template
-
-    public static final String ID = DefaultMod.makeID(OblivionShard_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("OblivionShard.png");
+    public static final String ID = DefaultMod.makeID(ColdShard_SK.class.getSimpleName());
+    public static final String IMG = makeCardPath("ColdShard.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = -2;
 
-    private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int BLOCK = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    public OblivionShard_SK() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-    }
-
-    // Actions the card should do.
+    // /STAT DECLARATION/
 
     //////////////////////////////////////////////////////////////
     //The power "ShardEcho" causes this cards effect to trigger.//
     //////////////////////////////////////////////////////////////
+
+    public ColdShard_SK() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseBlock = BLOCK;
+    }
+
+    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
     @Override
@@ -48,11 +46,12 @@ public class OblivionShard_SK extends AbstractDynamicCard {
         return false;
     }
 
+    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }
