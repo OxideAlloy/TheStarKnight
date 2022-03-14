@@ -213,5 +213,22 @@
   "theStarKnight:Impurity_SK": {
     "NAME": "Impurity",
     "DESCRIPTION": "Choose and discard !M! cards in your library."
+  },
+  "theStarKnight:Glare_SK": {
+    "NAME": "Glare",
+    "DESCRIPTION": "Apply !M! Weak to all enemies, gain !B! block."
+  },
+  "theStarKnight:EventHorizon_SK": {
+    "NAME": "Event Horizon",
+    "DESCRIPTION": "Gain !B! block, NL exhaust your hand"
+  },
+  "theStarKnight:HeatDeath_SK": {
+    "NAME": "Heat Deat",
+    "DESCRIPTION": "Deal damage equal to your thestarknight:Madness !M!."
+  },
+
+  "theStarKnight:Ignition_SK": {
+    "NAME": "Ignition",
+    "DESCRIPTION": "Target enemy loses HP equal to twice their thestarknight:Ichor. Draw a card."
   }
 }

@@ -40,6 +40,7 @@ public class Corrupt_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //System.out.println("Magic Number = "+magicNumber );
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new IchorPower(m, p, magicNumber), magicNumber));
     }

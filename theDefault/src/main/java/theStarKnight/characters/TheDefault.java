@@ -39,6 +39,7 @@ import static theStarKnight.characters.TheDefault.Enums.COLOUR_SK;
 
 public class TheDefault extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final float[] layerSpeeds;
 
     // =============== CHARACTER ENUMERATORS =================
     // These are enums for your Characters color (both general color and for the card library) as well as
@@ -102,7 +103,7 @@ public class TheDefault extends CustomPlayer {
 
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theStarKnightResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "theStarKnightResources/images/char/defaultCharacter/orb/vfx.png", layerSpeeds,
                 new SpriterAnimation(
                         "theStarKnightResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
 
@@ -157,17 +158,16 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 1; i++) {
             retVal.add(Strike_SK.ID);
             retVal.add(Defend_SK.ID);
-            retVal.add(Impurity_SK.ID);
         }
 
         retVal.add(Playtester_SK.ID);
         //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
-        //retVal.add(Corrupt_SK.ID);
+        retVal.add(Corrupt_SK.ID);
         //retVal.add(DiffractionSpikes_SK.ID);
         //retVal.add(Roar_SK.ID);
         //retVal.add(DarkHeart_SK.ID);
@@ -183,8 +183,8 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(HammerTime_SK.ID);
         //retVal.add(Helios_SK.ID);
         //retVal.add(Hemorrhage_SK.ID);
-        retVal.add(WoodenSword_SK.ID);
-        retVal.add(OblivionShard_SK.ID);
+        //retVal.add(WoodenSword_SK.ID);
+        //retVal.add(OblivionShard_SK.ID);
         //retVal.add(Gnaw_SK.ID);
         //retVal.add(GhostArmor_SK.ID);
         //retVal.add(NeutronBurst_SK.ID);
@@ -194,11 +194,17 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(GatherMass_SK.ID);
         //retVal.add(Bile_SK.ID);
         //retVal.add(DarkTract_SK.ID);
-        retVal.add(LeadShield_SK.ID);
-        retVal.add(PulsatingShard_SK.ID);
-        retVal.add(CacconShard_SK.ID);
-        retVal.add(ColdShard_SK.ID);
-        retVal.add(Impurity_SK.ID);
+        //retVal.add(LeadShield_SK.ID);
+        //retVal.add(PulsatingShard_SK.ID);
+        //retVal.add(CacconShard_SK.ID);
+        //retVal.add(ColdShard_SK.ID);
+        //retVal.add(Impurity_SK.ID);
+        //retVal.add(Glare_SK.ID);
+        //retVal.add(EventHorizon_SK.ID);
+        //retVal.add(HeatDeath_SK.ID);
+        retVal.add(Ignition_SK.ID);
+
+
 
  /*
         retVal.add(DefaultCommonAttack.ID);
@@ -357,6 +363,10 @@ public class TheDefault extends CustomPlayer {
         //Iterator var1 = AbstractDungeon.player.drawPile.group.iterator();
     }
 
+
+    static {
+        layerSpeeds = new float[]{-20.0F, 20.0F, -40.0F, 40.0F, 0.0F};
+    }
 
 
 }
