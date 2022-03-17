@@ -22,7 +22,7 @@
     "NAMES": [
       "ichor"
     ],
-    "DESCRIPTION": "Increases damage received by 10% per stack"
+    "DESCRIPTION": "Increases damage received by 10% per stack. NL Receiving attack damage reduces #Ichor by #b2. "
   },
   {
     "PROPER_NAME": "Constricted",
@@ -57,5 +57,13 @@
       "memory"
     ],
     "DESCRIPTION": "Unplayable card with an effect that triggers when this is in your discard pile at the start of your turn."
+  },
+  {
+    "PROPER_NAME": "Plated Armor",
+    "NAMES": [
+      "Plated Armor",
+      "plated_armor"
+    ],
+    "DESCRIPTION": "At the end of your turn, gain this amount of block. Receiving unblocked attack damage reduces #yPlated #yArmor by #b1."
   }
 ]

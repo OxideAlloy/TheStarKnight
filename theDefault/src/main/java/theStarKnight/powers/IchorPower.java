@@ -58,10 +58,10 @@ public class IchorPower extends AbstractPower implements CloneablePowerInterface
 //        AbstractDungeon.actionManager.addToBottom(new NewQueueCardAction(playCard, targetMonster)); // Play the card on the target.
 //    }
 
-//    @Override
-//    public void playApplyPowerSfx() {
-//        CardCrawlGame.sound.play("POWER_POISON", 0.05F);
-//    }
+    @Override
+    public void playApplyPowerSfx() {
+        CardCrawlGame.sound.play("POWER_POISON", 0.05F);
+    }
 
 //    @Override
 //    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
@@ -77,7 +77,7 @@ public class IchorPower extends AbstractPower implements CloneablePowerInterface
     public void wasHPLost(DamageInfo info, int damageAmount) {
         if (info.owner != null && info.owner != this.owner && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
             this.flash();
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 2));
         }
     }
 

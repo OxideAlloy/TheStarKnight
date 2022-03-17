@@ -226,9 +226,72 @@
     "NAME": "Heat Deat",
     "DESCRIPTION": "Deal damage equal to your thestarknight:Madness !M!."
   },
-
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
     "DESCRIPTION": "Target enemy loses HP equal to twice their thestarknight:Ichor. Draw a card."
+  },
+  "theStarKnight:DarkImpulse_SK": {
+    "NAME": "Dark Impulse",
+    "DESCRIPTION": "Deal damage equal to your madness. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your madness."
+  },
+  "theStarKnight:MadSlash_SK": {
+    "NAME": "Mad Slash",
+    "DESCRIPTION": "Deal damage equal to your madness to all enemies.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to twice your madness to all enemies."
+  },
+  "theStarKnight:RecklessStrike_SK": {
+    "NAME": "Reckless Strike",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! vulnerable."
+  },
+  "theStarKnight:Vengance_SK": {
+    "NAME": "Vengance",
+    "DESCRIPTION": "Deal !D! damage. NL If this would be exhausted, play it."
+  },
+  "theStarKnight:TowerShield_SK": {
+    "NAME": "Tower Shield",
+    "DESCRIPTION": "Gain !B! block. Retain. When retained, gain 2 Weak."
+  },
+  "theStarKnight:TidalLock_SK": {
+    "NAME": "Tidal Lock",
+    "DESCRIPTION": "Shuffle 2 *Comets into your library.",
+    "UPGRADE_DESCRIPTION": "Shuffle 2 upgraded *Comets into your library."
+  },
+  "theStarKnight:Comet_SK": {
+    "NAME": "Comet",
+    "DESCRIPTION": "Gain !B! block. NL Retain. Exhaust."
+  },
+  "theStarKnight:Supernova_SK": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "Currently non-functional."
+  },
+  "theStarKnight:IchorSpray_SK": {
+    "NAME": "Ichor Spray",
+    "DESCRIPTION": "Apply Weak and !M! Ichor to each enemy."
+  },
+  "theStarKnight:MagneticField_SK": {
+    "NAME": "Magnetic Field",
+    "DESCRIPTION": "Gain !M! thestarknight:Plated_Armor. NL Exhaust."
+  },
+  "theStarKnight:Terror_SK": {
+    "NAME": "Terror",
+    "DESCRIPTION": "Exhaust a random card. NL Gain [G] [G] NL Ethereal."
+  },
+  "theStarKnight:Radiate_SK": {
+    "NAME": "Radiate",
+    "DESCRIPTION": "Lose 1 max hp. NL Gain [G] [G]",
+    "UPGRADE_DESCRIPTION": "Lose 1 max hp. NL Gain [G] [G] [G]"
+  },
+  "theStarKnight:Riposte_SK": {
+    "NAME": "Riposte",
+    "DESCRIPTION": "Gain !B! block and !M! counter."
+  },
+  "theStarKnight:Supermassive_SK": {
+    "NAME": "Supermassive",
+    "DESCRIPTION": "Gain !B! block. NL Lose 1 dexterity."
+  },
+  "theStarKnight:UnstableBlock_SK": {
+    "NAME": "Unstable Block",
+    "DESCRIPTION": "Gain !B! block. NL When exhausted deal !D! damage to a random enemy."
   }
 }

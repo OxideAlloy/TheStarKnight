@@ -167,7 +167,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
-        retVal.add(Corrupt_SK.ID);
+        //retVal.add(Corrupt_SK.ID);
         //retVal.add(DiffractionSpikes_SK.ID);
         //retVal.add(Roar_SK.ID);
         //retVal.add(DarkHeart_SK.ID);
@@ -202,7 +202,22 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Glare_SK.ID);
         //retVal.add(EventHorizon_SK.ID);
         //retVal.add(HeatDeath_SK.ID);
-        retVal.add(Ignition_SK.ID);
+        //retVal.add(Ignition_SK.ID);
+        //retVal.add(DarkImpulse_SK.ID);
+        //retVal.add(MadSlash_SK.ID);
+        //retVal.add(RecklessStrike_SK.ID);
+        //retVal.add(Vengance_SK.ID);
+        //retVal.add(TowerShield_SK.ID);
+        //retVal.add(TidalLock_SK.ID);
+        //retVal.add(Comet_SK.ID);
+        //retVal.add(Supernova_SK.ID);
+        //retVal.add(IchorSpray_SK.ID);
+        //retVal.add(MagneticField_SK.ID);
+        //retVal.add(Radiate_SK.ID);
+        retVal.add(Terror_SK.ID);
+        //retVal.add(Riposte_SK.ID);
+        //retVal.add(Supermassive_SK.ID);
+        retVal.add(UnstableBlock_SK.ID);
 
 
 
