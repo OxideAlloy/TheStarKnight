@@ -22,8 +22,8 @@ public class IchorPower extends AbstractPower implements CloneablePowerInterface
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/IchorIcon_84.png");
-    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/IchorIcon_32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/Ichor_84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/Ichor_32.png");
 
     public IchorPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -83,7 +83,7 @@ public class IchorPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public void updateDescription() {
-            description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

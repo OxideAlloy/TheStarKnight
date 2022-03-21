@@ -10,7 +10,10 @@
 
         "theStarKnight:IchorPower": {
                 "NAME": "Ichor",
-                "DESCRIPTIONS": ["Increases damage received by 10% per stack"]
+                "DESCRIPTIONS": [
+                        "Increases damage received by #b",
+                        "0% per stack. Reduce by 2 when dealt HP damage."
+                ]
         },
         "theStarKnight:StackingDrawReductionPower": {
                 "NAME": "Draw Down",
@@ -33,6 +36,37 @@
         },
         "theStarKnight:TempStrNextTurn": {
                 "NAME": "Temporary Strength Next Turn",
-                "DESCRIPTIONS": ["Gain #b temporary strength at the start of your turn."]
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " temporary strength at the start of your turn."
+                ]
+        },
+        "theStarKnight:BleedingEdgePower": {
+                "NAME": "Bleeding Edge",
+                "DESCRIPTIONS": [
+                        "Whenever you attack an enemy, apply #b",
+                        " #Ichor to them. "
+                ]
+        },
+        "theStarKnight:AccretionDiskPower": {
+                "NAME": "Accretion Disk",
+                "DESCRIPTIONS": [
+                        "At the start of your turn add a Pulsar to your hand."
+                ]
+        },
+        "theStarKnight:IchorFloodPower": {
+                "NAME": "Ichor Flood Power",
+                "DESCRIPTIONS": [
+                        "At the start of your turn apply #b",
+                        " Ichor to each enemy."
+                ]
+        },
+        "theStarKnight:SingularityPower": {
+                "NAME": "Singularity Power",
+                "DESCRIPTIONS": [
+                        "At the start of your turn gain #b",
+                        " Constricted and apply #b",
+                        " Constricted to each enemy."
+                ]
         }
 }

@@ -293,5 +293,37 @@
   "theStarKnight:UnstableBlock_SK": {
     "NAME": "Unstable Block",
     "DESCRIPTION": "Gain !B! block. NL When exhausted deal !D! damage to a random enemy."
+  },
+  "theStarKnight:Radiant_SK": {
+    "NAME": "Radiant",
+    "DESCRIPTION": "Remove all debuffs.",
+    "UPGRADE_DESCRIPTION": "Remove all debuffs. NL Gain 3 Artifact."
+  },
+  "theStarKnight:BleedingEdge_SK": {
+    "NAME": "Bleeding Edge",
+    "DESCRIPTION": "Gain !M! vulnerable. Whenever you attack an enemy, apply 1 Ichor to them."
+  },
+  "theStarKnight:Atlas_SK": {
+    "NAME": "Atlas",
+    "DESCRIPTION": "Gain !M! thestarknight:Plated_Armor. Shuffle a *Heavy *Metal into your deck."
+  },
+  "theStarKnight:AccretionDisk_SK": {
+    "NAME": "Accretion Disk",
+    "DESCRIPTION": "At the start of your turn add a *Pulsar to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn add an upgraded *Pulsar to your hand."
+  },
+  "theStarKnight:Pulsar_SK": {
+    "NAME": "Pulsar",
+    "DESCRIPTION": "Exhaust a random card. NL Deal damage equal to the number of cards in your exhaust pile. NL Exhaust. Ethereal."
+  },
+  "theStarKnight:IchorFlood_SK": {
+    "NAME": "Ichor Flood",
+    "DESCRIPTION": "At the start of your turn apply 1 thestarknight:Ichor to each enemy.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn apply 1 thestarknight:Ichor to each enemy."
+  },
+  "theStarKnight:Singularity_SK": {
+    "NAME": "Singularity",
+    "DESCRIPTION": "At the start of your turn gain !M! Constricted and apply 2 Constricted to each enemy.",
+    "UPGRADE_DESCRIPTION": "Innate. At the start of your turn gain !M! Constricted and apply 2 Constricted to each enemy."
   }
 }

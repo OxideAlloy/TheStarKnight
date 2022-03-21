@@ -2,7 +2,9 @@ package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.actions.ImpurityAction;
@@ -14,6 +16,9 @@ public class Impurity_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Impurity_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Impurity.png");
+
+//    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+//    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -44,6 +49,7 @@ public class Impurity_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
+//            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

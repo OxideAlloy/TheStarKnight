@@ -38,6 +38,7 @@ public class HammerTime_SK extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = TIMES;
+        this.cardsToPreview = new HeavyMetal_SK();
     }
 
     // Actions the card should do.
@@ -47,8 +48,8 @@ public class HammerTime_SK extends AbstractDynamicCard {
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
-        AbstractCard card = new HeavyMetal_SK();
-        this.addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true, false));
+        //AbstractCard card = new HeavyMetal_SK();
+        this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true, false));
     }
 
     // Upgraded stats.
