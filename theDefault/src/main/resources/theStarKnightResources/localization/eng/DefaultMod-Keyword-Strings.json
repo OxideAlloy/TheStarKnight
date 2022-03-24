@@ -22,7 +22,7 @@
     "NAMES": [
       "ichor"
     ],
-    "DESCRIPTION": "Increases damage received by 10% per stack. NL Receiving attack damage reduces #Ichor by #b2. "
+    "DESCRIPTION": "Increases damage received by #b10% per stack. NL Receiving attack damage reduces #Ichor by #b2. "
   },
   {
     "PROPER_NAME": "Constricted",
@@ -65,5 +65,13 @@
       "plated_armor"
     ],
     "DESCRIPTION": "At the end of your turn, gain this amount of block. Receiving unblocked attack damage reduces #yPlated #yArmor by #b1."
+  },
+  {
+    "PROPER_NAME": "Malignant",
+    "NAMES": [
+      "malignant"
+    ],
+    "DESCRIPTION": "At the end of your turn, gain temporary HP and reduce Malignant by 1."
   }
+
 ]

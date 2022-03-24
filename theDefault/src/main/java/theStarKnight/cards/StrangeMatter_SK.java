@@ -11,11 +11,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 import static theStarKnight.DefaultMod.makeCardPath;
 
 //THIS CARD IS NOT ADDED TO THE CARD POOL
@@ -53,6 +55,7 @@ public class StrangeMatter_SK extends AbstractDynamicCard {
 
     public void triggerOnExhaust() {
         this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(this.magicNumber, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+
     }
 
     @Override

@@ -180,17 +180,17 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(OrbitalStrike_SK.ID);
         //retVal.add(MeteorBlast_SK.ID);
         //retVal.add(HeavyMetal_SK.ID);
-        retVal.add(HammerTime_SK.ID);
+        //retVal.add(HammerTime_SK.ID);
         //retVal.add(Helios_SK.ID);
         //retVal.add(Hemorrhage_SK.ID);
         //retVal.add(WoodenSword_SK.ID);
         //retVal.add(OblivionShard_SK.ID);
         //retVal.add(Gnaw_SK.ID);
         //retVal.add(GhostArmor_SK.ID);
-        //retVal.add(NeutronBurst_SK.ID);
+        retVal.add(NeutronBurst_SK.ID);
         //retVal.add(StrangeMatter_SK.ID);
         //retVal.add(IchorShield_SK.ID);
-        retVal.add(BurningSky_SK.ID);
+        //retVal.add(BurningSky_SK.ID);
         //retVal.add(GatherMass_SK.ID);
         //retVal.add(Bile_SK.ID);
         //retVal.add(DarkTract_SK.ID);
@@ -220,11 +220,21 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(UnstableBlock_SK.ID);
         //retVal.add(Radiant_SK.ID);
         //retVal.add(BleedingEdge_SK.ID);
-        retVal.add(Atlas_SK.ID);
-        retVal.add(AccretionDisk_SK.ID);
+        //retVal.add(Atlas_SK.ID);
+        //retVal.add(AccretionDisk_SK.ID);
         //retVal.add(Pulsar_SK.ID);
         //retVal.add(IchorFlood_SK.ID);
         //retVal.add(Singularity_SK.ID);
+        //retVal.add(Instinct_SK.ID);
+        //retVal.add(OpenMind_SK.ID);
+        //retVal.add(Adaptive_SK.ID);
+        //retVal.add(Alignment_SK.ID);
+        retVal.add(MalignantGrowth_SK.ID);
+        //retVal.add(VoidBorn_SK.ID);
+        //retVal.add(VoidBorn_SK.ID);
+        retVal.add(StarForge_SK.ID);
+        retVal.add(WeepingWound_SK.ID);
+        retVal.add(WeepingWound_SK.ID);
 
 
  /*

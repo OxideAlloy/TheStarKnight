@@ -12,7 +12,7 @@
                 "NAME": "Ichor",
                 "DESCRIPTIONS": [
                         "Increases damage received by #b",
-                        "0% per stack. Reduce by 2 when dealt HP damage."
+                        "0%. Reduced by 2 when dealt HP damage."
                 ]
         },
         "theStarKnight:StackingDrawReductionPower": {
@@ -55,18 +55,71 @@
                 ]
         },
         "theStarKnight:IchorFloodPower": {
-                "NAME": "Ichor Flood Power",
+                "NAME": "Ichor Flood",
                 "DESCRIPTIONS": [
                         "At the start of your turn apply #b",
                         " Ichor to each enemy."
                 ]
         },
         "theStarKnight:SingularityPower": {
-                "NAME": "Singularity Power",
+                "NAME": "Singularity",
                 "DESCRIPTIONS": [
                         "At the start of your turn gain #b",
                         " Constricted and apply #b",
                         " Constricted to each enemy."
+                ]
+        },
+        "theStarKnight:InstinctPower": {
+                "NAME": "Instinct",
+                "DESCRIPTIONS": [
+                        "At the end of your turn gain block equal to your #Madness."
+                ]
+        },
+        "theStarKnight:AdaptivePower": {
+                "NAME": "Adaptive",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a card, draw a card."
+                ]
+        },
+        "theStarKnight:AlignmentPower": {
+                "NAME": "Conjunction",
+                "DESCRIPTIONS": [
+                        "Cards cost #b",
+                        " less energy to play."
+                ]
+        },
+        "theStarKnight:MalignantGrowthPower": {
+                "NAME": "Malignant",
+                "DESCRIPTIONS": [
+                        "At the end of your turn, gain #b",
+                        " temporary HP and reduce Malignant by 1."
+                ]
+        },
+        "theStarKnight:VoidBornPower": {
+                "NAME": "Void Born",
+                "DESCRIPTIONS": [
+                        "Whenever you draw a Void deal 10 damage to each enemy. At the start of your turn shuffle a Void into your library."
+                ]
+        },
+        "theStarKnight:SporePower": {
+                "NAME": "Spore",
+                "DESCRIPTIONS": [
+                        "At the end of turn if there is 10 or more Spore, remove all stacks and take that much damage, otherwise Spore is doubled."
+                ]
+        },
+        "theStarKnight:StarForgePower": {
+                "NAME": "Star Forge",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a card, deal #b",
+                        " damage to ALL enemies."
+                ]
+        },
+        "theStarKnight:WeepingWoundPower": {
+                "NAME": "Weeping",
+                "DESCRIPTIONS": [
+                        "Whenever you draw a Wound, apply #b",
+                        " #yIchor to All enemies.",
+                        " #yIchor to All enemies and draw a card."
                 ]
         }
 }

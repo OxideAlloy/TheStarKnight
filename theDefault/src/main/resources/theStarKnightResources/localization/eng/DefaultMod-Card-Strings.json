@@ -117,7 +117,8 @@
   },
   "theStarKnight:VoidStrike_SK": {
     "NAME": "Void Strike",
-    "DESCRIPTION": "Deal !D! damage. Exhaust a random(not random) card from your hand. Ethereal."
+    "DESCRIPTION": "Deal !D! damage. Exhaust a random card from your hand. Ethereal.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Exhaust a card from your hand. Ethereal."
   },
   "theStarKnight:OrbitalStrike_SK": {
     "NAME": "Orbital Strike",
@@ -186,7 +187,7 @@
   },
   "theStarKnight:Bile_SK": {
     "NAME": "Bile",
-    "DESCRIPTION": "Apply !M! poison. NL Apply !M! Ichor."
+    "DESCRIPTION": "Apply !M! thestarknight:Ichor. NL Apply !theStarKnight:SecondMagic! Vulnerable."
   },
   "theStarKnight:DarkTract_SK": {
     "NAME": "Dark Tract",
@@ -232,13 +233,13 @@
   },
   "theStarKnight:DarkImpulse_SK": {
     "NAME": "Dark Impulse",
-    "DESCRIPTION": "Deal damage equal to your madness. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to your madness."
+    "DESCRIPTION": "Deal damage equal to your thestarknight:Madness. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your thestarknight:Madness."
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "Deal damage equal to your madness to all enemies.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to twice your madness to all enemies."
+    "DESCRIPTION": "Deal damage equal to your thestarknight:Madness to all enemies.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to twice your thestarknight:Madness to all enemies."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -267,7 +268,7 @@
   },
   "theStarKnight:IchorSpray_SK": {
     "NAME": "Ichor Spray",
-    "DESCRIPTION": "Apply Weak and !M! Ichor to each enemy."
+    "DESCRIPTION": "Apply Weak and !M! thestarknight:Ichor to each enemy."
   },
   "theStarKnight:MagneticField_SK": {
     "NAME": "Magnetic Field",
@@ -301,7 +302,7 @@
   },
   "theStarKnight:BleedingEdge_SK": {
     "NAME": "Bleeding Edge",
-    "DESCRIPTION": "Gain !M! vulnerable. Whenever you attack an enemy, apply 1 Ichor to them."
+    "DESCRIPTION": "Gain !M! vulnerable. Whenever you attack an enemy, apply 1 thestarknight:Ichor to them."
   },
   "theStarKnight:Atlas_SK": {
     "NAME": "Atlas",
@@ -325,5 +326,38 @@
     "NAME": "Singularity",
     "DESCRIPTION": "At the start of your turn gain !M! Constricted and apply 2 Constricted to each enemy.",
     "UPGRADE_DESCRIPTION": "Innate. At the start of your turn gain !M! Constricted and apply 2 Constricted to each enemy."
+  },
+  "theStarKnight:Instinct_SK": {
+    "NAME": "Instinct",
+    "DESCRIPTION": "At the end of your turn gain block equal to your thestarknight:Madness. NL You gain 1 less energy each turn."
+  },
+  "theStarKnight:OpenMind_SK": {
+    "NAME": "Open Mind",
+    "DESCRIPTION": "Increase your hand size by !M!."
+  },
+  "theStarKnight:Adaptive_SK": {
+    "NAME": "Adaptive",
+    "DESCRIPTION": "Whenever you exhaust a card, NL draw a card."
+  },
+  "theStarKnight:Alignment_SK": {
+    "NAME": "Alignment",
+    "DESCRIPTION": "Cards cost one less [G]. Discard your hand. Ethereal.",
+    "UPGRADE_DESCRIPTION": "Cards cost one less [G]. Discard your hand."
+  },
+  "theStarKnight:MalignantGrowth_SK": {
+    "NAME": "Malignant Growth",
+    "DESCRIPTION": "Gain !M! thestarknight:Malignant."
+  },
+  "theStarKnight:VoidBorn_SK": {
+    "NAME": "Void Born",
+    "DESCRIPTION": "Whenever you draw a *Void deal 10 damage to each enemy. At the start of your turn shuffle a *Void into your library."
+  },
+  "theStarKnight:StarForge_SK": {
+    "NAME": "Star Forge",
+    "DESCRIPTION": "Whenever you exhaust a card, deal !M! damage to ALL enemies."
+  },
+  "theStarKnight:WeepingWound_SK": {
+    "NAME": "Weeping Wound",
+    "DESCRIPTION": "Shuffle 2 *Wounds into your deck. Whenever you draw a *Wound, apply !M! thestarknight:Ichor to all enemies."
   }
 }

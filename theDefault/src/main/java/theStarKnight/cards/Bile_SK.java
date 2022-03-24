@@ -1,11 +1,9 @@
 package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 import theStarKnight.powers.IchorPower;
@@ -22,23 +20,28 @@ public class Bile_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     private static final int AMOUNT = 4;
     private static final int UPGRADED_AMOUNT = 2;
+
+    private static final int DEBUFF = 2;
+    private static final int UPGRADED_DEBUFF = 1;
+
 
     // /STAT DECLARATION/
 
     public Bile_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, p, new IchorPower(m, p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.defaultSecondMagicNumber, false), this.defaultSecondMagicNumber));
     }
 
     //Upgraded stats.
@@ -47,6 +50,7 @@ public class Bile_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            this.upgradeDefaultSecondMagicNumber(UPGRADED_DEBUFF);
             initializeDescription();
         }
     }
