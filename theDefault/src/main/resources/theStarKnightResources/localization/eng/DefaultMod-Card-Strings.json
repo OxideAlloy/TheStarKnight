@@ -87,7 +87,7 @@
   },
   "theStarKnight:Roar_SK": {
     "NAME": "Roar",
-    "DESCRIPTION": "Apply !M! Vulnerable. Gain !theStarKnight:SecondMagic! Vigor."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
   "theStarKnight:SolarFlare_SK": {
     "NAME": "Solar Flare",
@@ -96,7 +96,7 @@
   },
   "theStarKnight:KnifeGame_SK": {
     "NAME": "Knife Game",
-    "DESCRIPTION": "Deal damage equal to NL your thestarknight:Madness NL !theStarKnight:SecondMagic! times."
+    "DESCRIPTION": "Deal damage !D! equal to NL your thestarknight:Madness NL !M! times."
   },
   "theStarKnight:Samsara_SK": {
     "NAME": "Saṃsāra",
@@ -104,8 +104,8 @@
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
-    "DESCRIPTION": "Deal damage and gain block equal to your thestarknight:Madness.",
-    "UPGRADE_DESCRIPTION": "Deal damage and gain block equal to twice your thestarknight:Madness."
+    "DESCRIPTION": "Deal damage !D! NL and gain block !B! NL equal to your thestarknight:Madness.",
+    "UPGRADE_DESCRIPTION": "Deal damage !D! NL and gain block !B! NL equal to twice your thestarknight:Madness."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
@@ -125,8 +125,8 @@
     "DESCRIPTION": "Deal !D! damage. Gain !B! block. Shuffle this card into your library."
   },
   "theStarKnight:MeteorBlast_SK": {
-    "NAME": "Meteor Blast",
-    "DESCRIPTION": "Deal !D! damage. (Upgraded: deal !M! damage to ALL enemies)"
+    "NAME": "Meteor Strike",
+    "DESCRIPTION": "Deal !theStarKnight:SecondMagic! damage NL and !D! damage to ALL enemies."
   },
   "theStarKnight:HammerTime_SK": {
     "NAME": "Hammer Time",
@@ -225,7 +225,7 @@
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Deat",
-    "DESCRIPTION": "Deal damage equal to your thestarknight:Madness !M!."
+    "DESCRIPTION": "Deal damage !D! equal to your thestarknight:Madness."
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
@@ -238,8 +238,8 @@
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "Deal damage equal to your thestarknight:Madness to all enemies.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to twice your thestarknight:Madness to all enemies."
+    "DESCRIPTION": "Deal damage !D! NL equal to your thestarknight:Madness.",
+    "UPGRADE_DESCRIPTION": "Deal damage !D! NL equal to twice your thestarknight:Madness."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -346,7 +346,7 @@
   },
   "theStarKnight:MalignantGrowth_SK": {
     "NAME": "Malignant Growth",
-    "DESCRIPTION": "Gain !M! thestarknight:Malignant."
+    "DESCRIPTION": "Gain 1 Constricted and !M! thestarknight:Malignant."
   },
   "theStarKnight:VoidBorn_SK": {
     "NAME": "Void Born",
@@ -359,5 +359,9 @@
   "theStarKnight:WeepingWound_SK": {
     "NAME": "Weeping Wound",
     "DESCRIPTION": "Shuffle 2 *Wounds into your deck. Whenever you draw a *Wound, apply !M! thestarknight:Ichor to all enemies."
+  },
+  "theStarKnight:Ruin_SK": {
+    "NAME": "Ruin",
+    "DESCRIPTION": "You cannot gain block. Unblocked damage to an enemy causes that much temporary strength loss. Lose Ruin when dealt damage."
   }
 }

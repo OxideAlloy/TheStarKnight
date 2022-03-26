@@ -164,12 +164,12 @@ public class TheDefault extends CustomPlayer {
         }
 
         retVal.add(Playtester_SK.ID);
-        //retVal.add(Stomp_SK.ID);
+        retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
         //retVal.add(Corrupt_SK.ID);
         //retVal.add(DiffractionSpikes_SK.ID);
-        //retVal.add(Roar_SK.ID);
+        retVal.add(Roar_SK.ID);
         //retVal.add(DarkHeart_SK.ID);
         //retVal.add(SolarFlare_SK.ID);
         //retVal.add(KnifeGame_SK.ID);
@@ -178,7 +178,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(CleavingBlow_SK.ID);
         //retVal.add(VoidStrike_SK.ID);
         //retVal.add(OrbitalStrike_SK.ID);
-        //retVal.add(MeteorBlast_SK.ID);
+        retVal.add(MeteorBlast_SK.ID);
         //retVal.add(HeavyMetal_SK.ID);
         //retVal.add(HammerTime_SK.ID);
         //retVal.add(Helios_SK.ID);
@@ -187,7 +187,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(OblivionShard_SK.ID);
         //retVal.add(Gnaw_SK.ID);
         //retVal.add(GhostArmor_SK.ID);
-        retVal.add(NeutronBurst_SK.ID);
+        //retVal.add(NeutronBurst_SK.ID);
         //retVal.add(StrangeMatter_SK.ID);
         //retVal.add(IchorShield_SK.ID);
         //retVal.add(BurningSky_SK.ID);
@@ -229,12 +229,13 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(OpenMind_SK.ID);
         //retVal.add(Adaptive_SK.ID);
         //retVal.add(Alignment_SK.ID);
-        retVal.add(MalignantGrowth_SK.ID);
+        //retVal.add(MalignantGrowth_SK.ID);
         //retVal.add(VoidBorn_SK.ID);
         //retVal.add(VoidBorn_SK.ID);
-        retVal.add(StarForge_SK.ID);
-        retVal.add(WeepingWound_SK.ID);
-        retVal.add(WeepingWound_SK.ID);
+        //retVal.add(StarForge_SK.ID);
+        //retVal.add(WeepingWound_SK.ID);
+        //retVal.add(Ruin_SK.ID);
+
 
 
  /*

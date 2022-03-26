@@ -1,8 +1,12 @@
 package theStarKnight.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -24,35 +28,26 @@ public class Roar_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
+    //private static final int UPGRADED_COST = 2;
 
-    //private static final int DAMAGE = 10;
-    //private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     private static final int AMOUNT = 1;
-    private static final int UPGRADED_AMOUNT = 2;
+    private static final int UPGRADED_AMOUNT = 1;
 
-    private static final int BUFF = 7;
-    private static final int UPGRADED_BUFF = 10;
 
     public Roar_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        //baseDamage = DAMAGE;
+        baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = AMOUNT;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = BUFF;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(
-                new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-        this.addToBot(
-                new ApplyPowerAction(p, p, new VigorPower(p, defaultSecondMagicNumber), defaultSecondMagicNumber));
-//        AbstractDungeon.actionManager.addToBottom(
-//                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        this.addToBot(
-                new TalkAction(true, "@RRrroohrrRGHHhhh!!@", 2.0F, 2.0F));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
     }
 
     // Upgraded stats.
@@ -60,10 +55,9 @@ public class Roar_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
-            this.upgradeDefaultSecondMagicNumber(UPGRADED_BUFF);
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

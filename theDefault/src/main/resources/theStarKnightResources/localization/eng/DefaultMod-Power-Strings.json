@@ -121,5 +121,11 @@
                         " #yIchor to All enemies.",
                         " #yIchor to All enemies and draw a card."
                 ]
+        },
+        "theStarKnight:RuinPower": {
+                "NAME": "Ruin",
+                "DESCRIPTIONS": [
+                        "You cannot gain block. When you deal unblocked damage to an enemy they temporarily loses that much strength. Lose Ruin when dealt damage."
+                ]
         }
 }

@@ -4,6 +4,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,28 +29,31 @@ public class HeatDeath_SK extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 
-    private static final int AMOUNT = 99;
-
     public HeatDeath_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = AMOUNT;
+        this.baseDamage = 5;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.magicNumber = this.baseMagicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, (this.magicNumber), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
    }
 
-   // NEED TO FIGURE OUT HOW TO UPDATE THE MAGIC NUMBER WHEN PLAYER HAND SIZE CHANGES --- look into hooks//
-
-//    @Override
-//    public void update() {
-//        this.magicNumber = this.baseMagicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-//    }
+    //// START MADNESS CODE ////
+    public void atTurnStart() {
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+    }
+    public void triggerOnOtherCardPlayed(AbstractCard c) {
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+    }
+    public void applyPowers() {
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        super.applyPowers();
+        this.initializeDescription();
+    }
+    //// END MADNESS CODE ////
 
 
 
