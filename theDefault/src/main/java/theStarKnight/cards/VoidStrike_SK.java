@@ -41,6 +41,7 @@ public class VoidStrike_SK extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.isEthereal = true;
+        this.tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.

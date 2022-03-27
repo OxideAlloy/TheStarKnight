@@ -32,7 +32,7 @@ public class Strike_SK extends AbstractDynamicCard {
     public Strike_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-
+        this.tags.add(CardTags.STARTER_STRIKE);
     }
 
     // Actions the card should do.

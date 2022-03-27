@@ -39,6 +39,7 @@ public class OrbitalStrike_SK extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         this.shuffleBackIntoDrawPile = true;
+        this.tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.

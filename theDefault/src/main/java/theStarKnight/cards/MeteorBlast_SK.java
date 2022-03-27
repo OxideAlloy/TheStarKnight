@@ -40,6 +40,7 @@ public class MeteorBlast_SK extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         //baseMagicNumber = magicNumber = IMPACT;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = IMPACT;
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -31,7 +31,7 @@
                 "NAME": "Ichor Shield",
                 "DESCRIPTIONS": [
                         "When attacked, apply #b",
-                        " #Ichor."
+                        " #pIchor."
                 ]
         },
         "theStarKnight:TempStrNextTurn": {
@@ -45,7 +45,7 @@
                 "NAME": "Bleeding Edge",
                 "DESCRIPTIONS": [
                         "Whenever you attack an enemy, apply #b",
-                        " #Ichor to them. "
+                        " #pIchor to them. "
                 ]
         },
         "theStarKnight:AccretionDiskPower": {
@@ -58,7 +58,7 @@
                 "NAME": "Ichor Flood",
                 "DESCRIPTIONS": [
                         "At the start of your turn apply #b",
-                        " Ichor to each enemy."
+                        " #pIchor to each enemy."
                 ]
         },
         "theStarKnight:SingularityPower": {
@@ -118,8 +118,8 @@
                 "NAME": "Weeping",
                 "DESCRIPTIONS": [
                         "Whenever you draw a Wound, apply #b",
-                        " #yIchor to All enemies.",
-                        " #yIchor to All enemies and draw a card."
+                        " #pIchor to All enemies.",
+                        " #pIchor to All enemies and draw a card."
                 ]
         },
         "theStarKnight:RuinPower": {

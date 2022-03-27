@@ -229,7 +229,7 @@
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
-    "DESCRIPTION": "Target enemy loses HP equal to twice their thestarknight:Ichor. Draw a card."
+    "DESCRIPTION": "Enemy loses HP equal to their thestarknight:Ichor. Draw a card."
   },
   "theStarKnight:DarkImpulse_SK": {
     "NAME": "Dark Impulse",

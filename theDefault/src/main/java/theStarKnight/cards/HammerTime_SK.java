@@ -39,6 +39,7 @@ public class HammerTime_SK extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = TIMES;
         this.cardsToPreview = new HeavyMetal_SK();
+        //this.tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.

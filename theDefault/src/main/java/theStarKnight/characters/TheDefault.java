@@ -3,6 +3,7 @@ package theStarKnight.characters;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -14,9 +15,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -29,6 +32,7 @@ import theStarKnight.powers.ShardEcho;
 import theStarKnight.relics.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static theStarKnight.DefaultMod.*;
 import static theStarKnight.characters.TheDefault.Enums.COLOUR_SK;
@@ -40,6 +44,22 @@ import static theStarKnight.characters.TheDefault.Enums.COLOUR_SK;
 public class TheDefault extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     public static final float[] layerSpeeds;
+
+
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("images/scenes/greenBg.jpg");
+    }
+
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("theStarKnightResources/images/scenes/endingPanel1.png"));
+        panels.add(new CutscenePanel("theStarKnightResources/images/scenes/endingPanel2.png"));
+        panels.add(new CutscenePanel("theStarKnightResources/images/scenes/endingPanel3.png"));
+        return panels;
+    }
+
+
+
 
     // =============== CHARACTER ENUMERATORS =================
     // These are enums for your Characters color (both general color and for the card library) as well as
@@ -164,12 +184,12 @@ public class TheDefault extends CustomPlayer {
         }
 
         retVal.add(Playtester_SK.ID);
-        retVal.add(Stomp_SK.ID);
+        //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
         //retVal.add(Corrupt_SK.ID);
         //retVal.add(DiffractionSpikes_SK.ID);
-        retVal.add(Roar_SK.ID);
+        //retVal.add(Roar_SK.ID);
         //retVal.add(DarkHeart_SK.ID);
         //retVal.add(SolarFlare_SK.ID);
         //retVal.add(KnifeGame_SK.ID);
@@ -178,7 +198,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(CleavingBlow_SK.ID);
         //retVal.add(VoidStrike_SK.ID);
         //retVal.add(OrbitalStrike_SK.ID);
-        retVal.add(MeteorBlast_SK.ID);
+        //retVal.add(MeteorBlast_SK.ID);
         //retVal.add(HeavyMetal_SK.ID);
         //retVal.add(HammerTime_SK.ID);
         //retVal.add(Helios_SK.ID);
@@ -208,7 +228,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(RecklessStrike_SK.ID);
         //retVal.add(Vengance_SK.ID);
         //retVal.add(TowerShield_SK.ID);
-        //retVal.add(TidalLock_SK.ID);
+        retVal.add(TidalLock_SK.ID);
         //retVal.add(Comet_SK.ID);
         //retVal.add(Supernova_SK.ID);
         //retVal.add(IchorSpray_SK.ID);
@@ -219,7 +239,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Supermassive_SK.ID);
         //retVal.add(UnstableBlock_SK.ID);
         //retVal.add(Radiant_SK.ID);
-        //retVal.add(BleedingEdge_SK.ID);
+        retVal.add(BleedingEdge_SK.ID);
         //retVal.add(Atlas_SK.ID);
         //retVal.add(AccretionDisk_SK.ID);
         //retVal.add(Pulsar_SK.ID);

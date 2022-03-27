@@ -29,6 +29,7 @@ public class Defend_SK extends AbstractDynamicCard {
     public Defend_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     // Actions the card should do.
