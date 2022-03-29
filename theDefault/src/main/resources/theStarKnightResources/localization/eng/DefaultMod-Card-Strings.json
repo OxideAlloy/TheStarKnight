@@ -146,7 +146,7 @@
   },
   "theStarKnight:WoodenSword_SK": {
     "NAME": "Wooden Sword",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity."
   },
   "theStarKnight:OblivionShard_SK": {
     "NAME": "Oblivion Shard",
@@ -315,7 +315,7 @@
   },
   "theStarKnight:Pulsar_SK": {
     "NAME": "Pulsar",
-    "DESCRIPTION": "Exhaust a random card. Deal damage equal to the number of cards in your exhaust pile. NL Exhaust. Ethereal."
+    "DESCRIPTION": "Deal damage equal to the number of cards in your exhaust pile. Exhaust a random card. NL Exhaust. Ethereal."
   },
   "theStarKnight:IchorFlood_SK": {
     "NAME": "Ichor Flood",
@@ -350,7 +350,7 @@
   },
   "theStarKnight:VoidBorn_SK": {
     "NAME": "Void Born",
-    "DESCRIPTION": "Whenever you draw a *Void deal 10 damage to each enemy. At the start of your turn shuffle a *Void into your library."
+    "DESCRIPTION": "Whenever you draw a *Void deal 10 damage to each enemy. At the end of your turn shuffle a *Void into your library."
   },
   "theStarKnight:StarForge_SK": {
     "NAME": "Star Forge",

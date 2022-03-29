@@ -25,7 +25,7 @@ public class Glare_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
+    //private static final int UPGRADED_COST = 1;
 
     private static final int AMOUNT = 1;
     private static final int UPGRADED_AMOUNT = 1;
@@ -66,7 +66,7 @@ public class Glare_SK extends AbstractDynamicCard {
             upgradeName();
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

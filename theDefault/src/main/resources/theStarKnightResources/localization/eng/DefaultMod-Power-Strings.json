@@ -11,8 +11,8 @@
         "theStarKnight:IchorPower": {
                 "NAME": "Ichor",
                 "DESCRIPTIONS": [
-                        "Increases damage received by #b",
-                        "0%. Reduced by 2 when dealt HP damage."
+                        "Increases attack damage received by #b",
+                        "0%. Reduced by 2 when dealt attack damage."
                 ]
         },
         "theStarKnight:StackingDrawReductionPower": {
@@ -98,7 +98,7 @@
         "theStarKnight:VoidBornPower": {
                 "NAME": "Void Born",
                 "DESCRIPTIONS": [
-                        "Whenever you draw a Void deal 10 damage to each enemy. At the start of your turn shuffle a Void into your library."
+                        "Whenever you draw a Void deal 10 damage to each enemy. At the end of your turn shuffle a Void into your library."
                 ]
         },
         "theStarKnight:SporePower": {

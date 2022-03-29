@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theStarKnight.DefaultMod;
+import theStarKnight.cards.Pulsar_SK;
 import theStarKnight.util.TextureLoader;
 
 public class AccretionDiskPower extends AbstractPower implements CloneablePowerInterface {
@@ -43,10 +44,10 @@ public class AccretionDiskPower extends AbstractPower implements CloneablePowerI
     }
 
     public void atStartOfTurn() {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+        //if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
-            this.addToBot(new MakeTempCardInHandAction(new Smite(), this.amount, false));
-        }
+            this.addToBot(new MakeTempCardInHandAction(new Pulsar_SK(), this.amount, false));
+       //}
 
     }
 

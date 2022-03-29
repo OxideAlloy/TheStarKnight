@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -23,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import theStarKnight.cards.AbstractDefaultCard;
 import theStarKnight.characters.TheDefault;
 import theStarKnight.events.IdentityCrisisEvent;
+import theStarKnight.events.SicklyFountainEvent;
 import theStarKnight.potions.IchorPotion;
 import theStarKnight.potions.PlaceholderPotion;
 import theStarKnight.relics.*;
@@ -343,10 +345,15 @@ public class DefaultMod implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
-        AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
-            .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
-            .create();
+//        AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
+//            .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
+//            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+//            .create();
+
+        AddEventParams eventParams = new AddEventParams.Builder(SicklyFountainEvent.ID, SicklyFountainEvent.class)
+                .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
+                .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+                .create();
 
         // Add the event
         BaseMod.addEvent(eventParams);
@@ -388,18 +395,18 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOUR_SK);
+        //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
+        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
+        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOUR_SK);
         BaseMod.addRelicToCustomPool(new BlackHelm_SKRelic(), TheDefault.Enums.COLOUR_SK);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+        //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        UnlockTracker.markRelicAsSeen(BlackHelm_SKRelic.ID);
         logger.info("Done adding relics!");
     }
     

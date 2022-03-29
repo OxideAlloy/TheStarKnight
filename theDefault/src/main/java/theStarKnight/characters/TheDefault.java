@@ -200,8 +200,6 @@ public class TheDefault extends CustomPlayer {
         retVal.add(DarkHeart_SK.ID);
         retVal.add(Corrupt_SK.ID);
 
-        retVal.add(DefaultCommonAttack.ID);
-
         //retVal.add(Playtester_SK.ID);
         //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
@@ -258,7 +256,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Radiant_SK.ID);
         //retVal.add(BleedingEdge_SK.ID);
         //retVal.add(Atlas_SK.ID);
-        //retVal.add(AccretionDisk_SK.ID);
+        retVal.add(AccretionDisk_SK.ID);
         //retVal.add(Pulsar_SK.ID);
         //retVal.add(IchorFlood_SK.ID);
         //retVal.add(Singularity_SK.ID);
@@ -275,23 +273,7 @@ public class TheDefault extends CustomPlayer {
 
 
 
- /*
-        retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultUncommonAttack.ID);
-        retVal.add(DefaultRareAttack.ID);
 
-        retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultUncommonSkill.ID);
-        retVal.add(DefaultRareSkill.ID);
-
-        retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        retVal.add(DefaultRarePower.ID);
-
-        retVal.add(DefaultAttackWithVariable.ID);
-        retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(OrbSkill.ID);
-         */
 
         return retVal;
     }
@@ -365,7 +347,7 @@ public class TheDefault extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new DefaultCommonAttack();
+        return new TowerShield_SK();
     }
 
     // The class name as it appears next to your player name in-game

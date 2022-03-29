@@ -17,5 +17,18 @@
       "[Leave]",
       "Select card to remove."
     ]
+  },
+  "theStarKnight:SicklyFountainEvent": {
+    "NAME": "A Sickly Fountain",
+    "DESCRIPTIONS": [
+      "You pass by a room and glimpse a #gSickly #glooking #gFountain. NL You feel thirsty.",
+      "You drink from the fountain, maybe that wasn't a great idea.",
+      "You decide it's not worth it."
+    ],
+    "OPTIONS": [
+      "[Drink] #gRestore #g20 #gHP, #ggain #ga #gSlimed.",
+      "[Don't Drink]",
+      "[Leave]"
+    ]
   }
 }
