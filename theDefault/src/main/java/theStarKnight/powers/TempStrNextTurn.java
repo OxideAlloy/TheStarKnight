@@ -25,8 +25,8 @@ public class TempStrNextTurn extends AbstractPower {
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     //TODO Update the texture icons to a black Draw Reduction Symbol
-    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/DrawLoss_84.png");
-    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/DrawLoss_32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/TempStrNextTurn_84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/TempStrNextTurn_32.png");
 
     public TempStrNextTurn (final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;

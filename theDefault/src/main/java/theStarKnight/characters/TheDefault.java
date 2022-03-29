@@ -1,10 +1,12 @@
 package theStarKnight.characters;
 
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -42,9 +44,12 @@ import static theStarKnight.characters.TheDefault.Enums.COLOUR_SK;
 //All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
 
 public class TheDefault extends CustomPlayer {
+
+//    public static final String DISCIPLE_SKELETON_ATLAS = "chrono_images/char/Disciple.atlas";
+//    public static final String DISCIPLE_SKELETON_JSON = "chrono_images/char/Disciple.json";
+
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     public static final float[] layerSpeeds;
-
 
     public Texture getCutsceneBg() {
         return ImageMaster.loadImage("images/scenes/greenBg.jpg");
@@ -124,8 +129,8 @@ public class TheDefault extends CustomPlayer {
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "theStarKnightResources/images/char/defaultCharacter/orb/vfx.png", layerSpeeds,
-                new SpriterAnimation(
-                        "theStarKnightResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                new SpineAnimation(
+                        "theStarKnightResources/images/char/defaultCharacter/skeleton.atlas","theStarKnightResources/images/char/defaultCharacter/skeleton.json",1f));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -146,7 +151,8 @@ public class TheDefault extends CustomPlayer {
                 THE_DEFAULT_SKELETON_ATLAS,
                 THE_DEFAULT_SKELETON_JSON,
                 1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+        //TODO Update "newAnimation" if the animation is redone
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
         // =============== /ANIMATIONS/ =================
@@ -160,6 +166,15 @@ public class TheDefault extends CustomPlayer {
         // =============== /TEXT BUBBLE LOCATION/ =================
 
     }
+
+    @Override
+    public void renderPlayerImage(SpriteBatch sb)
+    {
+        sr.setPremultipliedAlpha(false);
+        super.renderPlayerImage(sb);
+        sr.setPremultipliedAlpha(true);
+    }
+
 
     // =============== /CHARACTER CLASS END/ =================
 
@@ -178,19 +193,21 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
             retVal.add(Strike_SK.ID);
             retVal.add(Defend_SK.ID);
         }
+        retVal.add(DarkHeart_SK.ID);
+        retVal.add(Corrupt_SK.ID);
 
-        retVal.add(Playtester_SK.ID);
+        retVal.add(DefaultCommonAttack.ID);
+
+        //retVal.add(Playtester_SK.ID);
         //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
         //retVal.add(DeathGrip_SK.ID);
-        //retVal.add(Corrupt_SK.ID);
         //retVal.add(DiffractionSpikes_SK.ID);
         //retVal.add(Roar_SK.ID);
-        //retVal.add(DarkHeart_SK.ID);
         //retVal.add(SolarFlare_SK.ID);
         //retVal.add(KnifeGame_SK.ID);
         //retVal.add(Samsara_SK.ID);
@@ -228,7 +245,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(RecklessStrike_SK.ID);
         //retVal.add(Vengance_SK.ID);
         //retVal.add(TowerShield_SK.ID);
-        retVal.add(TidalLock_SK.ID);
+        //retVal.add(TidalLock_SK.ID);
         //retVal.add(Comet_SK.ID);
         //retVal.add(Supernova_SK.ID);
         //retVal.add(IchorSpray_SK.ID);
@@ -239,7 +256,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Supermassive_SK.ID);
         //retVal.add(UnstableBlock_SK.ID);
         //retVal.add(Radiant_SK.ID);
-        retVal.add(BleedingEdge_SK.ID);
+        //retVal.add(BleedingEdge_SK.ID);
         //retVal.add(Atlas_SK.ID);
         //retVal.add(AccretionDisk_SK.ID);
         //retVal.add(Pulsar_SK.ID);
@@ -285,16 +302,16 @@ public class TheDefault extends CustomPlayer {
 
         //TODO Add some Relics
         retVal.add(BlackHelm_SKRelic.ID);
-        retVal.add(PlaceholderRelic.ID);
+        //retVal.add(PlaceholderRelic.ID);
         //retVal.add(PlaceholderRelic2.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         UnlockTracker.markRelicAsSeen(BlackHelm_SKRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
+        //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
+        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;
     }

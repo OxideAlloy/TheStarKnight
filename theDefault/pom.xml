@@ -5,9 +5,9 @@
     <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
     <groupId>defaultmod</groupId>
     <artifactId>TheStarKnight</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
-    <name>The Star Knight</name>
+    <name>The Fallen</name>
     <version>0.0.1</version>
-    <description>Adds a new character to Slay the Spire, the Star Knight!</description>
+    <description>Adds a new character to Slay the Spire, the Fallen!</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

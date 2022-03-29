@@ -81,9 +81,9 @@ public class DefaultMod implements
     public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
-    private static final String MODNAME = "The Star Knight";
+    private static final String MODNAME = "The Fallen";
     private static final String AUTHOR = "OxideAlloy"; // And pretty soon - You!
-    private static final String DESCRIPTION = "Adds The Star Knight to Slay the Spire.";
+    private static final String DESCRIPTION = "Adds The Fallen to Slay the Spire.";
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -109,13 +109,13 @@ public class DefaultMod implements
     private static final String SKILL_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/Skill_SK_512.png";
     private static final String POWER_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/Power_SK_512.png";
     
-    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/card_default_gray_orb.png";
-    private static final String CARD_ENERGY_ORB = "theStarKnightResources/images/512/card_small_orb.png";
+    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE = "theStarKnightResources/images/512/OrbLarge2.png";
+    private static final String CARD_ENERGY_ORB = "theStarKnightResources/images/512/OrbSmall2.png";
     
     private static final String ATTACK_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Attack_SK_1024.png";
     private static final String SKILL_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Skill_SK_1024.png";
     private static final String POWER_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Power_SK_1024.png";
-    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/card_default_gray_orb.png";
+    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/OrbLarge2.png";
     
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theStarKnightResources/images/charSelect/Button_SK.png";

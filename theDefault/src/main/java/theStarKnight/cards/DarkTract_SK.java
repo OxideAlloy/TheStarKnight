@@ -55,7 +55,7 @@ public class DarkTract_SK extends AbstractDynamicCard {
 //    }
 
     public void onAddedToMasterDeck() {
-        System.out.println("***onAddedToMasterDeck called***");
+        //System.out.println("***onAddedToMasterDeck called***");
         AbstractDungeon.player.increaseMaxHp(2, true);
     }
 

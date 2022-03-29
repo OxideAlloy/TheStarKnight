@@ -4,9 +4,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -36,7 +39,6 @@ public class Roar_SK extends AbstractDynamicCard {
     private static final int AMOUNT = 1;
     private static final int UPGRADED_AMOUNT = 1;
 
-
     public Roar_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
@@ -48,7 +50,11 @@ public class Roar_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+        ////TODO Need to create an action to use tickDuration() in order to have effects happen simultaneously////
+        //AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_GREMLINNOB_1A"));
+        //this.addToBot(new TalkAction(true, "@RRrroohrrRGHHhhh!!@", 2.0F, 2.0F));
     }
+
 
     // Upgraded stats.
     @Override
