@@ -19,16 +19,16 @@ public class AccretionDisk_SK extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(AccretionDisk_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("AccretionDisk.png");
 
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+//    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+//    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     //private static final int AMOUNT = 2;
     //private static final int UPGRADED_AMOUNT = 2;
@@ -53,7 +53,7 @@ public class AccretionDisk_SK extends AbstractDynamicCard {
             upgradeName();
             //this.upgradeMagicNumber(UPGRADED_AMOUNT);
             upgradeBaseCost(UPGRADED_COST);
-            rawDescription = UPGRADE_DESCRIPTION;
+            //rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

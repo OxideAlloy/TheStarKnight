@@ -14,7 +14,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -23,10 +22,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theStarKnight.cards.AbstractDefaultCard;
 import theStarKnight.characters.TheDefault;
-import theStarKnight.events.IdentityCrisisEvent;
 import theStarKnight.events.SicklyFountainEvent;
 import theStarKnight.potions.IchorPotion;
-import theStarKnight.potions.PlaceholderPotion;
 import theStarKnight.relics.*;
 import theStarKnight.util.IDCheckDontTouchPls;
 import theStarKnight.util.TextureLoader;
@@ -398,15 +395,23 @@ public class DefaultMod implements
         //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOUR_SK);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOUR_SK);
-        BaseMod.addRelicToCustomPool(new BlackHelm_SKRelic(), TheDefault.Enums.COLOUR_SK);
+        BaseMod.addRelicToCustomPool(new DarkHelm_SKRelic(), TheDefault.Enums.COLOUR_SK);
+        BaseMod.addRelicToCustomPool(new MawHelm_SKRelic(), TheDefault.Enums.COLOUR_SK);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
-        
+        BaseMod.addRelic(new AsteroidBelt_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new DyingSpark_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new Hypnos_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new TuningFork_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new Telescope_SKRelic(), RelicType.SHARED);
+        //Currently Broken
+        //BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
+
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
-        UnlockTracker.markRelicAsSeen(BlackHelm_SKRelic.ID);
+        UnlockTracker.markRelicAsSeen(DarkHelm_SKRelic.ID);
         logger.info("Done adding relics!");
     }
     

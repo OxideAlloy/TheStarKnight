@@ -24,7 +24,7 @@ public class DarkHeart_SK extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
@@ -49,6 +49,7 @@ public class DarkHeart_SK extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, (this.block)));
         //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
+        //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
         //System.out.println("hand.size = "+AbstractDungeon.player.hand.size());
         //System.out.println("magic number = "+this.magicNumber);
         //System.out.println("second magic number = "+defaultSecondMagicNumber);
@@ -58,20 +59,20 @@ public class DarkHeart_SK extends AbstractDynamicCard {
     public void atTurnStart() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-            this.baseDamage=this.baseDamage*TIMES;
-            this.baseBlock=this.baseBlock*TIMES;
+            this.baseDamage=this.baseDamage*magicNumber;
+            this.baseBlock=this.baseBlock*magicNumber;
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-            this.baseDamage=this.baseDamage*TIMES;
-            this.baseBlock=this.baseBlock*TIMES;
+            this.baseDamage=this.baseDamage*magicNumber;
+            this.baseBlock=this.baseBlock*magicNumber;
     }
     public void applyPowers() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-            this.baseDamage=this.baseDamage*TIMES;
-            this.baseBlock=this.baseBlock*TIMES;
+            this.baseDamage=this.baseDamage*magicNumber;
+            this.baseBlock=this.baseBlock*magicNumber;
         super.applyPowers();
         this.initializeDescription();
     }

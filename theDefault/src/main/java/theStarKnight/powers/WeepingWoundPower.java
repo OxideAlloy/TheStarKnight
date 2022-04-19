@@ -53,7 +53,7 @@ public class WeepingWoundPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        System.out.println("Card name is equal to: "+card.name);
+        //System.out.println("Card name is equal to: "+card.name);
 
         if (card.cardID == "Wound") {
             this.flash();
@@ -70,7 +70,7 @@ public class WeepingWoundPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

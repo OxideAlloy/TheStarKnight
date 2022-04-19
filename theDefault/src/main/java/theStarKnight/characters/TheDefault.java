@@ -2,7 +2,6 @@ package theStarKnight.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -56,6 +55,7 @@ public class TheDefault extends CustomPlayer {
     }
 
     public List<CutscenePanel> getCutscenePanels() {
+        //noinspection rawtypes
         List<CutscenePanel> panels = new ArrayList();
         panels.add(new CutscenePanel("theStarKnightResources/images/scenes/endingPanel1.png"));
         panels.add(new CutscenePanel("theStarKnightResources/images/scenes/endingPanel2.png"));
@@ -193,7 +193,7 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             retVal.add(Strike_SK.ID);
             retVal.add(Defend_SK.ID);
         }
@@ -256,7 +256,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(Radiant_SK.ID);
         //retVal.add(BleedingEdge_SK.ID);
         //retVal.add(Atlas_SK.ID);
-        retVal.add(AccretionDisk_SK.ID);
+        //retVal.add(AccretionDisk_SK.ID);
         //retVal.add(Pulsar_SK.ID);
         //retVal.add(IchorFlood_SK.ID);
         //retVal.add(Singularity_SK.ID);
@@ -283,14 +283,14 @@ public class TheDefault extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         //TODO Add some Relics
-        retVal.add(BlackHelm_SKRelic.ID);
+        retVal.add(DarkHelm_SKRelic.ID);
         //retVal.add(PlaceholderRelic.ID);
         //retVal.add(PlaceholderRelic2.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(BlackHelm_SKRelic.ID);
+        UnlockTracker.markRelicAsSeen(DarkHelm_SKRelic.ID);
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);

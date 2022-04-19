@@ -53,8 +53,10 @@ public class AlignmentPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void onCardDraw(AbstractCard card) {
-                card.setCostForTurn(card.costForTurn - this.amount);
-                //this may cause status/curse cards to become playable?
+        if (card.cost > 1) {
+            card.setCostForTurn(card.costForTurn - this.amount);
+            //this may cause status/curse cards to become playable?
+        }
     }
 
     @Override

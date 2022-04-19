@@ -72,7 +72,7 @@
         "theStarKnight:InstinctPower": {
                 "NAME": "Instinct",
                 "DESCRIPTIONS": [
-                        "At the end of your turn gain block equal to your #Madness."
+                        "At the end of your turn gain block equal to your #yMadness."
                 ]
         },
         "theStarKnight:AdaptivePower": {
@@ -85,7 +85,7 @@
                 "NAME": "Conjunction",
                 "DESCRIPTIONS": [
                         "Cards cost #b",
-                        " less energy to play."
+                        " less energy to play, to a minimum of one."
                 ]
         },
         "theStarKnight:MalignantGrowthPower": {
@@ -118,8 +118,7 @@
                 "NAME": "Weeping",
                 "DESCRIPTIONS": [
                         "Whenever you draw a Wound, apply #b",
-                        " #pIchor to All enemies.",
-                        " #pIchor to All enemies and draw a card."
+                        " #pIchor to All enemies."
                 ]
         },
         "theStarKnight:RuinPower": {

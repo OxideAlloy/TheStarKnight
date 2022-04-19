@@ -31,11 +31,61 @@
       "Select a card to bottle for "
     ]
   },
-  "theStarKnight:BlackHelm_SKRelic": {
-    "NAME": "Black Helm",
+  "theStarKnight:DarkHelm_SKRelic": {
+    "NAME": "Dark Helm",
     "FLAVOR": "It pulses with dark energy.",
     "DESCRIPTIONS": [
-      "Gain 1 max HP at the end of each combat."
+      "Gain #b1 max HP at the end of each combat."
+    ]
+  },
+  "theStarKnight:MawHelm_SKRelic": {
+    "NAME": "Dark Helm",
+    "FLAVOR": "It's mangled form hides something writhing within.",
+    "DESCRIPTIONS": [
+      "Gain #b2 max HP at the end of each combat."
+    ]
+  },
+  "theStarKnight:AsteroidBelt_SKRelic": {
+    "NAME": "Asteroid Belt",
+    "FLAVOR": "For tightening one's equator.",
+    "DESCRIPTIONS": [
+      "When you take damage, add a Comet to your hand."
+    ]
+  },
+  "theStarKnight:DyingSpark_SKRelic": {
+    "NAME": "Dying Spark",
+    "FLAVOR": "A portent of things to come.",
+    "DESCRIPTIONS": [
+      "When you shuffle your library, gain 1 strength."
+    ]
+  },
+  "theStarKnight:Hypnos_SKRelic": {
+    "NAME": "Bust of Hypnos",
+    "FLAVOR": "A stone bust with immense, sunken, and widely luminous eyes..",
+    "DESCRIPTIONS": [
+      "When you enter a rest site, upgrade a random card."
+    ]
+  },
+  "theStarKnight:TuningFork_SKRelic": {
+    "NAME": "Tuning Fork",
+    "FLAVOR": "It's low hum echos ceaselessly.",
+    "DESCRIPTIONS": [
+      "When you exhaust a card gain 3 block."
+    ]
+  },
+  "theStarKnight:Telescope_SKRelic": {
+    "NAME": "Telescope",
+    "FLAVOR": "Looking through it, you see the most wondrous and horrible things.",
+    "DESCRIPTIONS": [
+      "At the start of combat, scry 6."
+    ]
+  },
+  "theStarKnight:TinyLighthouse_SKRelic": {
+    "NAME": "Tiny Lighthouse",
+    "FLAVOR": "It leers down, winking hideously like an insane watching eye.",
+    "DESCRIPTIONS": [
+      "Gain a potion slot. Obtain a common relic. Remove a card. Future card rewards offer 1 more card choice.",
+      "Choose a card."
     ]
   }
 }

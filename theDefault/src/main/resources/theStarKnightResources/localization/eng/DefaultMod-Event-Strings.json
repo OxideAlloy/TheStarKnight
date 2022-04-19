@@ -26,7 +26,7 @@
       "You decide it's not worth it."
     ],
     "OPTIONS": [
-      "[Drink] #gRestore #g20 #gHP, #ggain #ga #gSlimed.",
+      "[Drink] #gRestore #g20 #gHP. #gGain #ga #gSlimed.",
       "[Don't Drink]",
       "[Leave]"
     ]

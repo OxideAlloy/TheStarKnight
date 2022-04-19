@@ -1,7 +1,9 @@
 package theStarKnight.cards;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -43,8 +45,8 @@ public class Finish_SK extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, this.magicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
-        System.out.println("monster currentHealth = "+m.currentHealth);
-        System.out.println("monster maxHealth = "+m.maxHealth);
+        //System.out.println("monster currentHealth = "+m.currentHealth);
+        //System.out.println("monster maxHealth = "+m.maxHealth);
     }
 
     // Upgraded stats.

@@ -18,7 +18,7 @@ public class Corrupt_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Corrupt_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Corrupt.png");
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;

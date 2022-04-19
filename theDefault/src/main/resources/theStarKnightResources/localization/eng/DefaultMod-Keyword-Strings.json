@@ -22,7 +22,7 @@
     "NAMES": [
       "ichor"
     ],
-    "DESCRIPTION": "Increases damage received by #b10% per stack. NL Receiving attack damage reduces #Ichor by #b2. "
+    "DESCRIPTION": "Increases damage received by #b10% per stack. NL Receiving attack damage reduces #yIchor by #b2. "
   },
   {
     "PROPER_NAME": "Constricted",
@@ -42,14 +42,22 @@
       "Murdering",
       "Murders"
     ],
-    "DESCRIPTION": "Effect is triggered when the enemy is killed."
+    "DESCRIPTION": "Added effect only happens when this card kills an enemy."
   },
   {
     "PROPER_NAME": "Madness",
     "NAMES": [
       "madness"
     ],
-    "DESCRIPTION": "Madness is equal to the difference between the number of cards in you hand and your max hand size."
+    "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum."
+  },
+  {
+    "PROPER_NAME": "Double Madness",
+    "NAMES": [
+      "Double Madness",
+      "double_madness"
+    ],
+  "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum times two."
   },
   {
     "PROPER_NAME": "Memory",
@@ -71,7 +79,13 @@
     "NAMES": [
       "malignant"
     ],
-    "DESCRIPTION": "At the end of your turn, gain temporary HP and reduce Malignant by 1."
+    "DESCRIPTION": "At the end of your turn, gain this many temporary HP and reduce Malignant by 1."
+  },
+  {
+    "PROPER_NAME": "Counter",
+    "NAMES": [
+      "counter"
+    ],
+    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
   }
-
 ]

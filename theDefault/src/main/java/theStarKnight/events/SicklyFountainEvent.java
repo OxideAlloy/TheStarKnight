@@ -36,7 +36,7 @@ public class SicklyFountainEvent extends AbstractImageEvent {
         // The first dialogue options available to us.
         imageEventText.setDialogOption(OPTIONS[0], new Slimed()); // Drink
         imageEventText.setDialogOption(OPTIONS[1]); // Don't Drink
-        imageEventText.setDialogOption(OPTIONS[2]); // Leave
+        //imageEventText.setDialogOption(OPTIONS[2]); // Leave
 
     }
 

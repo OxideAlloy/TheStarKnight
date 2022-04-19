@@ -71,7 +71,7 @@
   },
   "theStarKnight:Stomp_SK": {
     "NAME": "Stomp",
-    "DESCRIPTION": "Deal !D! damage. thestarknight:Murder: Draw !M! card, and gain !M! energy"
+    "DESCRIPTION": "Deal !D! damage. thestarknight:Murder: Draw !M! card, and gain [E]"
   },
   "theStarKnight:Corrupt_SK": {
     "NAME": "Corrupt",
@@ -79,11 +79,12 @@
    },
   "theStarKnight:FrenziedStrike_SK": {
     "NAME": "Frenzied Strike",
-    "DESCRIPTION": "Deal !D! damage and draw !M! less card next turn. Shuffle a NL Frenzied Strike into your draw pile."
+    "DESCRIPTION": "Deal !D! damage and draw !M! less card next turn. Shuffle a NL *Frenzied *Strike into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and draw !M! less card next turn. Shuffle a NL *Frenzied *Strike+ into your draw pile."
   },
   "theStarKnight:DiffractionSpikes_SK": {
     "NAME": "Diffraction Spikes",
-    "DESCRIPTION": "Gain !B! Block and Counter."
+    "DESCRIPTION": "Gain !B! Block and thestarknight:Counter."
   },
   "theStarKnight:Roar_SK": {
     "NAME": "Roar",
@@ -96,7 +97,7 @@
   },
   "theStarKnight:KnifeGame_SK": {
     "NAME": "Knife Game",
-    "DESCRIPTION": "Deal !D! damage equal to your thestarknight:Madness !M! times."
+    "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage !M! times."
   },
   "theStarKnight:Samsara_SK": {
     "NAME": "Saṃsāra",
@@ -104,8 +105,8 @@
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
-    "DESCRIPTION": "Deal !D! damage NL and gain !B! Block NL equal to your thestarknight:Madness.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage NL and gain !B! Block NL equal to twice your thestarknight:Madness."
+    "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Double_Madness NL Deal !D! damage NL and gain !B! Block."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
@@ -113,7 +114,7 @@
   },
   "theStarKnight:CleavingBlow_SK": {
     "NAME": "Cleaving Blow",
-    "DESCRIPTION": "Deal !D! damage, doubled against minions. NL thestarknight:Murder: NL Gain !M! [E]."
+    "DESCRIPTION": "Deal !D! damage, doubled against minions. NL thestarknight:Murder: NL Gain [E] [E]."
   },
   "theStarKnight:VoidStrike_SK": {
     "NAME": "Void Strike",
@@ -158,7 +159,8 @@
   },
   "theStarKnight:GhostArmor_SK": {
     "NAME": "Ghost Armor",
-    "DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]!M! [#AA0000]Max [#AA0000]HP."
+    "DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]2 [#AA0000]Max [#AA0000]HP.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP."
   },
   "theStarKnight:StrangeMatter_SK": {
     "NAME": "Strange Matter",
@@ -196,7 +198,7 @@
   },
   "theStarKnight:LeadShield_SK": {
     "NAME": "Lead Shield",
-    "DESCRIPTION": "Deal !B! Block. NL Gain !M! Strength."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
   },
   "theStarKnight:PulsatingShard_SK": {
     "NAME": "Pulsating Shard",
@@ -205,7 +207,7 @@
   },
   "theStarKnight:CacconShard_SK": {
     "NAME": "Caccon Shard",
-    "DESCRIPTION": "thestarknight:Memory NL Gain !M! HP at the start of your turn."
+    "DESCRIPTION": "thestarknight:Memory NL Gain !M! thestarknight:Malignant at the start of your turn."
   },
   "theStarKnight:ColdShard_SK": {
     "NAME": "Cold Shard",
@@ -213,7 +215,7 @@
   },
   "theStarKnight:Impurity_SK": {
     "NAME": "Impurity",
-    "DESCRIPTION": "Choose and discard !M! cards in your library."
+    "DESCRIPTION": "Choose and discard up to !M! cards in your library."
   },
   "theStarKnight:Glare_SK": {
     "NAME": "Glare",
@@ -225,7 +227,7 @@
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Deat",
-    "DESCRIPTION": "Deal damage !D! equal to your thestarknight:Madness."
+    "DESCRIPTION": "thestarknight:Madness NL Deal damage !D!."
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
@@ -238,8 +240,8 @@
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "Deal !D! damage NL equal to your thestarknight:Madness.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage NL equal to twice your thestarknight:Madness."
+    "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Double_Madness NL Deal !D! damage."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -285,7 +287,7 @@
   },
   "theStarKnight:Riposte_SK": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Gain !B! block and !M! counter."
+    "DESCRIPTION": "Gain !B! block and !M! thestarknight:Counter."
   },
   "theStarKnight:Supermassive_SK": {
     "NAME": "Supermassive",
@@ -310,12 +312,12 @@
   },
   "theStarKnight:AccretionDisk_SK": {
     "NAME": "Accretion Disk",
-    "DESCRIPTION": "At the start of your turn add a *Pulsar to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn add an upgraded *Pulsar to your hand."
+    "DESCRIPTION": "At the start of your turn add a *Pulsar to your hand."
   },
   "theStarKnight:Pulsar_SK": {
     "NAME": "Pulsar",
-    "DESCRIPTION": "Deal damage equal to the number of cards in your exhaust pile. Exhaust a random card. NL Exhaust. Ethereal."
+    "DESCRIPTION": "Deal !D! (equal to your exhaust pile). Exhaust a random card. NL Exhaust. Ethereal.",
+    "UPGRADE_DESCRIPTION": "Deal !D! (equal to your exhaust pile). Exhaust a card. NL Exhaust. Ethereal."
   },
   "theStarKnight:IchorFlood_SK": {
     "NAME": "Ichor Flood",
@@ -341,8 +343,8 @@
   },
   "theStarKnight:Alignment_SK": {
     "NAME": "Alignment",
-    "DESCRIPTION": "Cards cost one less [E]. Discard your hand. Ethereal.",
-    "UPGRADE_DESCRIPTION": "Cards cost one less [E]. Discard your hand."
+    "DESCRIPTION": "Cards cost one less [E] NL to a minimum of one. Discard your hand. Ethereal.",
+    "UPGRADE_DESCRIPTION": "Cards cost one less [E] NL to a minimum of one. Discard your hand."
   },
   "theStarKnight:MalignantGrowth_SK": {
     "NAME": "Malignant Growth",

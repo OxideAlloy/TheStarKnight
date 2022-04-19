@@ -17,7 +17,7 @@ import static theStarKnight.DefaultMod.makeCardPath;
 public class BurningSky_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(BurningSky_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("BurningSky.png");
+    public static final String IMG = makeCardPath("BurningSky2.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
