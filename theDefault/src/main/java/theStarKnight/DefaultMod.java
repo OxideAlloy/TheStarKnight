@@ -17,12 +17,18 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theStarKnight.cards.AbstractDefaultCard;
 import theStarKnight.characters.TheDefault;
 import theStarKnight.events.SicklyFountainEvent;
+import theStarKnight.monsters.ShoggothA;
+import theStarKnight.monsters.ShoggothB;
+import theStarKnight.monsters.ShoggothC;
 import theStarKnight.potions.IchorPotion;
 import theStarKnight.relics.*;
 import theStarKnight.util.IDCheckDontTouchPls;
@@ -129,7 +135,7 @@ public class DefaultMod implements
     // Atlas and JSON files for the Animations
     public static final String THE_DEFAULT_SKELETON_ATLAS = "theStarKnightResources/images/char/defaultCharacter/skeleton.atlas";
     public static final String THE_DEFAULT_SKELETON_JSON = "theStarKnightResources/images/char/defaultCharacter/skeleton.json";
-    
+
     // =============== MAKE IMAGE PATHS =================
     
     public static String makeCardPath(String resourcePath) {
@@ -357,6 +363,18 @@ public class DefaultMod implements
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
+
+        // =============== /MONSTERS/ =================
+        //BaseMod.addMonster(ShoggothC.ID, () -> new ShoggothA(0, 0, 1));
+
+        BaseMod.addMonster("Shoggoth", () -> new MonsterGroup(new AbstractMonster[] {
+                new ShoggothC(-350, 60),
+                new ShoggothB(-50, 200),
+                new ShoggothA(-50, 0),
+                new ShoggothC(150, -50)
+        }));
+        BaseMod.addStrongMonsterEncounter(Exordium.ID, new MonsterInfo("Shoggoth", 10));
+
     }
     
     // =============== / POST-INITIALIZE/ =================

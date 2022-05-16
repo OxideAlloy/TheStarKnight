@@ -40,7 +40,7 @@ public class TowerShield_SK extends AbstractDynamicCard {
 
     public void onRetained() {
         this.addToBot(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 1));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
     }
 
     // Actions the card should do.

@@ -49,6 +49,7 @@ public class Finish_SK extends AbstractDynamicCard {
         //System.out.println("monster maxHealth = "+m.maxHealth);
     }
 
+
     // Upgraded stats.
     @Override
     public void upgrade() {

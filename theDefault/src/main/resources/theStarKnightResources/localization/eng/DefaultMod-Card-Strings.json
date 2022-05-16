@@ -207,7 +207,7 @@
   },
   "theStarKnight:CacconShard_SK": {
     "NAME": "Caccon Shard",
-    "DESCRIPTION": "thestarknight:Memory NL Gain !M! thestarknight:Malignant at the start of your turn."
+    "DESCRIPTION": "thestarknight:Memory NL Gain !M! Temporary_HP at the start of your turn."
   },
   "theStarKnight:ColdShard_SK": {
     "NAME": "Cold Shard",

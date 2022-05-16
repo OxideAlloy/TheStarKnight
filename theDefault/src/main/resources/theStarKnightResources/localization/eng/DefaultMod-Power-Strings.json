@@ -126,5 +126,11 @@
                 "DESCRIPTIONS": [
                         "You cannot gain block. When you deal unblocked damage to an enemy they temporarily loses that much strength. Lose Ruin when dealt damage."
                 ]
+        },
+        "theStarKnight:MadnessPower": {
+                "NAME": "Madness",
+                "DESCRIPTIONS": [
+                        "Equal to the difference between your hand size and the number of cards currently in your hand."
+                ]
         }
 }

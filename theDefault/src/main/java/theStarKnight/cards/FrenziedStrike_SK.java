@@ -45,7 +45,7 @@ public class FrenziedStrike_SK extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = AMOUNT;
-        this.tags.add(CardTags.STRIKE);
+        //this.tags.add(CardTags.STRIKE);
 //        this.cardsToPreview = new FrenziedStrike_SK();
 //        //this.cardsToPreview.upgrade();
 //        if (this.upgraded) {

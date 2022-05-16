@@ -2,12 +2,20 @@ package theStarKnight.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ConfusionPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BurningBlood;
 import theStarKnight.DefaultMod;
+import theStarKnight.powers.MadnessPower;
 import theStarKnight.util.TextureLoader;
 
 import static theStarKnight.DefaultMod.makeRelicOutlinePath;
@@ -30,6 +38,10 @@ public class DarkHelm_SKRelic extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         this.addToTop(new RelicAboveCreatureAction(p, this));
         p.increaseMaxHp(1, true);
+    }
+
+    public void atBattleStartPreDraw() {
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MadnessPower(AbstractDungeon.player, 1), 1));
     }
 
     public AbstractRelic makeCopy() {

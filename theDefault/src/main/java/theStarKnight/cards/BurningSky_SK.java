@@ -52,6 +52,7 @@ public class BurningSky_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.cardsToPreview.upgrade();
             rawDescription = UPGRADE_DESCRIPTION;
             upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
