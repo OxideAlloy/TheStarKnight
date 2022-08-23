@@ -1,5 +1,7 @@
 package theStarKnight.cards;
 
+import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.animations.SetAnimationAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

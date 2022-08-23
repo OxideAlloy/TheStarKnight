@@ -28,8 +28,8 @@ public class OpenMind_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int AMOUNT = 1;
-    private static final int UPGRADED_AMOUNT = 1;
+    private static final int AMOUNT = 2;
+    private static final int UPGRADED_AMOUNT = 2;
 
     public OpenMind_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

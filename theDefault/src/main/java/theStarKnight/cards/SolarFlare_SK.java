@@ -15,6 +15,8 @@ public class SolarFlare_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(SolarFlare_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("SolarFlare.png");
+    public static final String IMG2 = makeCardPath("Flare_full.png");
+    //public static final String IMG = makeCardPath("Flare_full.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -31,6 +33,7 @@ public class SolarFlare_SK extends AbstractDynamicCard {
     public SolarFlare_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        //this.imgAW = IMG2;
     }
 
     // Actions the card should do.
@@ -49,6 +52,7 @@ public class SolarFlare_SK extends AbstractDynamicCard {
             upgradeName();
             ISUPGRADED = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

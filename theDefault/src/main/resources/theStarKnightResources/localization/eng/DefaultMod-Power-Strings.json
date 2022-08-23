@@ -98,7 +98,9 @@
         "theStarKnight:VoidBornPower": {
                 "NAME": "Void Born",
                 "DESCRIPTIONS": [
-                        "Whenever you draw a Void deal 10 damage to each enemy. At the end of your turn shuffle a Void into your library."
+                        "Whenever you exhaust a Status, deal #b",
+                        " damage to each enemy. NL At the start of your turn shuffle #b",
+                        " Void(s) into your library."
                 ]
         },
         "theStarKnight:SporePower": {
@@ -117,7 +119,7 @@
         "theStarKnight:WeepingWoundPower": {
                 "NAME": "Weeping",
                 "DESCRIPTIONS": [
-                        "Whenever you draw a Wound, apply #b",
+                        "Whenever you draw a Status, apply #b",
                         " #pIchor to All enemies."
                 ]
         },
@@ -131,6 +133,13 @@
                 "NAME": "Madness",
                 "DESCRIPTIONS": [
                         "Equal to the difference between your hand size and the number of cards currently in your hand."
+                ]
+        },
+        "theStarKnight:WeakNextTurnPower": {
+                "NAME": "Weak Next Turn",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " Weak at the start of your turn."
                 ]
         }
 }

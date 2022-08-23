@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theStarKnight.DefaultMod;
@@ -52,8 +53,25 @@ public class IchorPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * (1.0F + (float)this.amount * 0.1F) : damage;
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return type == DamageInfo.DamageType.NORMAL ? damage * (1.0F + (float) this.amount * 0.1F) : damage;
+        } else {
+            return damage;
+        }
     }
+
+    //VulnerablePower example code
+//    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
+//        if (type == DamageInfo.DamageType.NORMAL) {
+//            if (this.owner.isPlayer && AbstractDungeon.player.hasRelic("Odd Mushroom")) {
+//                return damage * 1.25F;
+//            } else {
+//                return this.owner != null && !this.owner.isPlayer && AbstractDungeon.player.hasRelic("Paper Frog") ? damage * 1.75F : damage * 1.5F;
+//            }
+//        } else {
+//            return damage;
+//        }
+//    }
 
     @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {

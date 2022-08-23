@@ -27,14 +27,13 @@ public class WoodenSword_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
+    private static final int COST = 1;
 
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     private static final int AMOUNT = 1;
-    private static final int UPGRADED_AMOUNT = 1;
+    private static final int UPGRADED_AMOUNT = 0;
 
     public WoodenSword_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -58,7 +57,6 @@ public class WoodenSword_SK extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

@@ -2,7 +2,9 @@ package theStarKnight.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,6 +27,8 @@ public class StackingDrawReductionPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/DrawLoss_84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/DrawLoss_32.png");
 
+    //private boolean justApplied = true;
+
     public StackingDrawReductionPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
@@ -40,15 +44,35 @@ public class StackingDrawReductionPower extends AbstractPower {
         updateDescription();
     }
 
+//    @Override
+//    public void atEndOfRound() {
+////        if (this.justApplied) {
+////            this.justApplied = false;
+////        } else {
+//            AbstractDungeon.player.gameHandSize -= amount;
+////        }
+//    }
+
+//    @Override
+//    public void onInitialApplication() {
+//        --AbstractDungeon.player.gameHandSize;
+//    }
+
     @Override
-    public void atEndOfRound() {
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         AbstractDungeon.player.gameHandSize -= amount;
     }
 
+
     @Override
     public void atStartOfTurnPostDraw() {
-        AbstractDungeon.player.gameHandSize += amount;
+        //AbstractDungeon.player.gameHandSize += amount;
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    }
+
+    @Override
+    public void onRemove() {
+        AbstractDungeon.player.gameHandSize += amount;
     }
 
     @Override

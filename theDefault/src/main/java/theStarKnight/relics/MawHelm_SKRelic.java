@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlackBlood;
+import org.apache.commons.codec.binary.StringUtils;
 import theStarKnight.DefaultMod;
 import theStarKnight.util.TextureLoader;
 
@@ -19,8 +20,8 @@ public class MawHelm_SKRelic extends CustomRelic {
 
     public static final String ID = DefaultMod.makeID("MawHelm_SKRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("MawHelm_SK.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("MawHelm_SK_OL.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("MawHelm2_SK.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DarkHelm_SK_OL.png"));
 
     public MawHelm_SKRelic() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.HEAVY );
@@ -34,8 +35,22 @@ public class MawHelm_SKRelic extends CustomRelic {
         p.increaseMaxHp(2, true);
     }
 
+    @Override
+    public void obtain() {
+        if (AbstractDungeon.player.hasRelic(DarkHelm_SKRelic.ID)) {
+            for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
+                if (StringUtils.equals(AbstractDungeon.player.relics.get(i).relicId, DarkHelm_SKRelic.ID)) {
+                    instantObtain(AbstractDungeon.player, i, true);
+                    break;
+                }
+            }
+        } else {
+            super.obtain();
+        }
+    }
+
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic("DarkHelm_SKRelic");
+        return AbstractDungeon.player.hasRelic(DarkHelm_SKRelic.ID);
     }
 
     public AbstractRelic makeCopy() {

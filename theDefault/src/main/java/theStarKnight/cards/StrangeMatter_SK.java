@@ -35,7 +35,7 @@ public class StrangeMatter_SK extends AbstractDynamicCard {
 
     private static final int COST = -2;
 
-    private static final int AMOUNT = 2;
+    private static final int AMOUNT = 5;
 
     // /STAT DECLARATION/
 
@@ -49,8 +49,8 @@ public class StrangeMatter_SK extends AbstractDynamicCard {
     @Override
     public void triggerWhenDrawn() {
         this.addToBot(new ExhaustAction(1, true, false, false));
-        AbstractCard card = new StrangeMatter_SK();
-        this.addToBot(new MakeTempCardInHandAction(card, 1));
+        //AbstractCard card = new StrangeMatter_SK();
+        //this.addToBot(new MakeTempCardInHandAction(card, 1));
     }
 
     public void triggerOnExhaust() {

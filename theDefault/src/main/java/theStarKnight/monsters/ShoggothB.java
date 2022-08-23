@@ -24,11 +24,11 @@ public class ShoggothB extends AbstractMonster {
     public static final String ID = "Shoggoth_B";
     private static final MonsterStrings monsterStrings;
     public static final String NAME;
-    public static final String[] MOVES;
-    public static final String[] DIALOG;
+    //public static final String[] MOVES;
+    //public static final String[] DIALOG;
 
-    public static final int HP_MIN = 28;
-    public static final int HP_MAX = 32;
+    public static final int HP_MIN = 26;
+    public static final int HP_MAX = 30;
 
     private static final byte CHOMP_DAMAGE = 12;
 
@@ -36,7 +36,9 @@ public class ShoggothB extends AbstractMonster {
 
     //Top Jaw of Shoggoth
     public ShoggothB(float x, float y) {
-        super(NAME, "Shoggoth_B", 32, 0.0F, 100.0F, 130.0F, 100.0F, (String)null, x, y);
+        super(NAME, ID, 32, 0.0F, 260.0F, 130.0F, 100.0F, (String)null, x, y);
+
+        this.type = EnemyType.ELITE;
 
         this.setHp(HP_MIN, HP_MAX);
 
@@ -78,9 +80,15 @@ public class ShoggothB extends AbstractMonster {
     }
 
     static {
-        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("AcidSlime_S");
+        //monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("Shoggoth Head");
+        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("theStarKnight:Shoggoth_B");
         NAME = monsterStrings.NAME;
-        MOVES = monsterStrings.MOVES;
-        DIALOG = monsterStrings.DIALOG;
+        //MOVES = monsterStrings.MOVES;
+        //DIALOG = monsterStrings.DIALOG;
     }
+
+//    static {
+//        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
+//        NAME = monsterStrings.NAME;
+//    }
 }

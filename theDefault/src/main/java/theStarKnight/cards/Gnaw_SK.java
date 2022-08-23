@@ -32,10 +32,10 @@ public class Gnaw_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
+    //private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     public Gnaw_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -58,7 +58,7 @@ public class Gnaw_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

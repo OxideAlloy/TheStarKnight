@@ -34,9 +34,12 @@ public class FallingStar_SK extends AbstractDynamicCard {
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
 
+    private static final int AMOUNT = 2;
+
     public FallingStar_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = AMOUNT;
         this.exhaust = true;
         this.selfRetain = true;
     }
@@ -46,6 +49,10 @@ public class FallingStar_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+    }
+
+    public void onRetained() {
+        this.upgradeDamage(this.magicNumber);
     }
 
     // Upgraded stats.

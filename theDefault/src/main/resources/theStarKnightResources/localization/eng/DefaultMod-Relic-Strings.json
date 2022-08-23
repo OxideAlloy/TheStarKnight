@@ -39,8 +39,8 @@
     ]
   },
   "theStarKnight:MawHelm_SKRelic": {
-    "NAME": "Dark Helm",
-    "FLAVOR": "It's mangled form hides something writhing within.",
+    "NAME": "Maw Helm",
+    "FLAVOR": "Its mangled form hides something writhing within.",
     "DESCRIPTIONS": [
       "Gain #b2 max HP at the end of each combat."
     ]
@@ -61,7 +61,7 @@
   },
   "theStarKnight:Hypnos_SKRelic": {
     "NAME": "Bust of Hypnos",
-    "FLAVOR": "A stone bust with immense, sunken, and widely luminous eyes..",
+    "FLAVOR": "A stone bust with immense, sunken, and widely luminous eyes.",
     "DESCRIPTIONS": [
       "When you enter a rest site, upgrade a random card."
     ]
@@ -84,8 +84,7 @@
     "NAME": "Tiny Lighthouse",
     "FLAVOR": "It leers down, winking hideously like an insane watching eye.",
     "DESCRIPTIONS": [
-      "Gain a potion slot. Obtain a common relic. Remove a card. Future card rewards offer 1 more card choice.",
-      "Choose a card."
+      "First turn, heal 2 HP NL Second turn, gain 1 energy. NL Third turn, gain 5 vigor. NL Fourth turn, gain 10 block."
     ]
   }
 }

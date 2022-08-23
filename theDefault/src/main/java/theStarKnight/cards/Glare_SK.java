@@ -30,7 +30,7 @@ public class Glare_SK extends AbstractDynamicCard {
     private static final int AMOUNT = 1;
     private static final int UPGRADED_AMOUNT = 1;
 
-    private static final int BLOCK = 3;
+    private static final int BLOCK = 4;
     private static final int UPGRADE_PLUS_BLOCK = 1;
 
     // /STAT DECLARATION/

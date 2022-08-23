@@ -26,11 +26,11 @@ public class ShoggothC extends AbstractMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
-    public static final int HP_MIN = 8;
-    public static final int HP_MAX = 12;
+    public static final int HP_MIN = 16;
+    public static final int HP_MAX = 20;
 
-    private static final byte CLAWS_DAMAGE = 3;
-    private static final byte SLAM_DAMAGE = 10;
+    private static final byte CLAWS_DAMAGE = 2;
+    private static final byte SLAM_DAMAGE = 5;
 
     private int STR_AMOUNT = 1;
     private static final int BLOCK_AMT = 5;
@@ -38,6 +38,8 @@ public class ShoggothC extends AbstractMonster {
     //Smaller blob Shoggoth
     public ShoggothC(float x, float y) {
         super(NAME, "Shoggoth_C", HP_MAX, 0.0F, -0.0F, 100.0F, 100.0F, (String)null, x, y);
+
+        this.type = EnemyType.ELITE;
 
         this.setHp(HP_MIN, HP_MAX);
 
@@ -86,7 +88,7 @@ public class ShoggothC extends AbstractMonster {
     }
 
     static {
-        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("AcidSlime_S");
+        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("theStarKnight:Shoggoth_C");
         NAME = monsterStrings.NAME;
         MOVES = monsterStrings.MOVES;
         DIALOG = monsterStrings.DIALOG;

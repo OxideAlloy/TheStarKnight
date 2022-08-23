@@ -60,6 +60,30 @@
   "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum times two."
   },
   {
+    "PROPER_NAME": "Triple Madness",
+    "NAMES": [
+      "Triple Madness",
+      "triple_madness"
+    ],
+    "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum times three."
+  },
+  {
+    "PROPER_NAME": "Quadruple Madness",
+    "NAMES": [
+      "Quadruple Madness",
+      "quadruple_madness"
+    ],
+    "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum times four."
+  },
+  {
+    "PROPER_NAME": "Quintuple Madness",
+    "NAMES": [
+      "Quintuple Madness",
+      "quintuple_madness"
+    ],
+    "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum times five."
+  },
+  {
     "PROPER_NAME": "Memory",
     "NAMES": [
       "memory"
@@ -87,5 +111,19 @@
       "counter"
     ],
     "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+  },
+  {
+    "PROPER_NAME": "Impending",
+    "NAMES": [
+      "impending"
+    ],
+    "DESCRIPTION": "When retained increase the value(s) on this card."
+  },
+  {
+    "PROPER_NAME": "Eternal",
+    "NAMES": [
+      "eternal"
+    ],
+    "DESCRIPTION": "When exhausted, add a copy of this card to your discard pile."
   }
 ]

@@ -21,13 +21,13 @@ public class LeadShield_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     private static final int AMOUNT = 1;
-    private static final int UPGRADED_AMOUNT = 1;
+    private static final int UPGRADED_AMOUNT = 0;
 
     // /STAT DECLARATION/
 

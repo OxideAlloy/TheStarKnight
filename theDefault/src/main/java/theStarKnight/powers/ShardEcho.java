@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -17,12 +18,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BerserkPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theStarKnight.DefaultMod;
-import theStarKnight.cards.CacconShard_SK;
-import theStarKnight.cards.ColdShard_SK;
-import theStarKnight.cards.OblivionShard_SK;
-import theStarKnight.cards.PulsatingShard_SK;
+import theStarKnight.cards.*;
 import theStarKnight.util.TextureLoader;
 
 import java.util.Iterator;
@@ -81,14 +82,26 @@ public class ShardEcho extends AbstractPower implements CloneablePowerInterface,
                 yshift+=shiftAmt;
             }
 
-            //PulsatingShard gains player 1 energy. Player loses 1 HP if not upgraded. (Energy gain amount is hardcoded here)
+            //FetidShard deals damage to all monsters
+            if (card.cardID.equals(FetidShard_SK.ID)) {
+
+                AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(),xpos,ypos-yshift));
+
+                this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(card.damage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+                yshift+=shiftAmt;
+            }
+
+            //PulsatingShard gains player 1 energy. Player gains 1 Ichor if not upgraded. (Energy gain and Ichor amount is hardcoded here)
             if (card.cardID.equals(PulsatingShard_SK.ID)) {
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(),xpos,ypos-yshift));
                 this.addToTop(new WaitAction(Settings.ACTION_DUR_FAST));
 
                 AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
                 if (!card.upgraded) {
-                    this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
+                    //this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
+                    //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new IchorPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                    this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FrailPower(AbstractDungeon.player, card.magicNumber, false), card.magicNumber));
                 }
                 yshift+=shiftAmt;
             }

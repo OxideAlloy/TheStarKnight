@@ -24,11 +24,14 @@ public class Comet_SK extends AbstractDynamicCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 2;
 
+    private static final int AMOUNT = 2;
+
     // /STAT DECLARATION/
 
     public Comet_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = AMOUNT;
         this.exhaust = true;
         this.selfRetain = true;
     }
@@ -37,6 +40,10 @@ public class Comet_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+    }
+
+    public void onRetained() {
+        this.upgradeBlock(this.magicNumber);
     }
 
     //Upgraded stats.

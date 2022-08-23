@@ -26,7 +26,7 @@ public class PulsatingShard_SK extends AbstractDynamicCard {
 
     private static final int COST = -2;
 
-//    private static final int AMOUNT = 6;
+    private static final int AMOUNT = 1;
 //    private static final int UPGRADED_AMOUNT = 2;
 
     // /STAT DECLARATION/
@@ -37,7 +37,7 @@ public class PulsatingShard_SK extends AbstractDynamicCard {
 
     public PulsatingShard_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        //baseMagicNumber = magicNumber = AMOUNT;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
 
     // Actions the card should do.

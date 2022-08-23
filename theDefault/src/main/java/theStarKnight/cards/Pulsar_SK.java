@@ -47,13 +47,13 @@ public class Pulsar_SK extends AbstractDynamicCard {
         //damage = p.exhaustPile.size();
         //this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
 
-        if (!this.upgraded) {
-            // if not upgraded - exhaust a RANDOM card.
-            this.addToBot(new ExhaustAction(1, true, false, false));
-        } else {
-            // if not upgraded - exhaust a CHOSEN card.
-            this.addToBot(new ExhaustAction(1, false, false, false));
-        }
+//        if (!this.upgraded) {
+//            // if not upgraded - exhaust a RANDOM card.
+//            this.addToBot(new ExhaustAction(1, true, false, false));
+//        } else {
+//            // if not upgraded - exhaust a CHOSEN card.
+//            this.addToBot(new ExhaustAction(1, false, false, false));
+//        }
         AbstractDungeon.actionManager.addToBottom(
             new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }

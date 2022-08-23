@@ -27,7 +27,7 @@ public class MalignantGrowth_SK extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int AMOUNT = 4;
+    private static final int AMOUNT = 3;
     private static final int UPGRADED_AMOUNT = 1;
 
     public MalignantGrowth_SK() {
@@ -39,7 +39,7 @@ public class MalignantGrowth_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstrictedPower(p, p, 1), 1));
+        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstrictedPower(p, p, 1), 1));
         this.addToBot(new ApplyPowerAction(p, p, new MalignantGrowthPower(p, p, this.magicNumber), this.magicNumber));
     }
 

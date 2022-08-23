@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
+import theStarKnight.powers.WeakNextTurnPower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
@@ -40,7 +41,8 @@ public class TowerShield_SK extends AbstractDynamicCard {
 
     public void onRetained() {
         this.addToBot(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
+                //new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakNextTurnPower(AbstractDungeon.player,AbstractDungeon.player, 1), 1));
     }
 
     // Actions the card should do.

@@ -14,6 +14,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -25,7 +26,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theStarKnight.cards.AbstractDefaultCard;
 import theStarKnight.characters.TheDefault;
+import theStarKnight.events.BronzeMirrorEvent;
 import theStarKnight.events.SicklyFountainEvent;
+import theStarKnight.events.TwistedGalleryEvent;
 import theStarKnight.monsters.ShoggothA;
 import theStarKnight.monsters.ShoggothB;
 import theStarKnight.monsters.ShoggothC;
@@ -161,6 +164,7 @@ public class DefaultMod implements
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
     }
+
     
     // =============== /MAKE IMAGE PATHS/ =================
     
@@ -352,14 +356,16 @@ public class DefaultMod implements
 //            .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
 //            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
 //            .create();
+        BaseMod.addEvent(BronzeMirrorEvent.ID, BronzeMirrorEvent.class, TheCity.ID);
+        BaseMod.addEvent(TwistedGalleryEvent.ID, TwistedGalleryEvent.class, Exordium.ID);
 
-        AddEventParams eventParams = new AddEventParams.Builder(SicklyFountainEvent.ID, SicklyFountainEvent.class)
-                .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
-                .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
-                .create();
-
-        // Add the event
-        BaseMod.addEvent(eventParams);
+//        AddEventParams eventParams = new AddEventParams.Builder(SicklyFountainEvent.ID, SicklyFountainEvent.class)
+//                .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
+//                .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+//                .create();
+//
+//        // Add the event
+//        BaseMod.addEvent(eventParams);
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -369,7 +375,7 @@ public class DefaultMod implements
 
         BaseMod.addMonster("Shoggoth", () -> new MonsterGroup(new AbstractMonster[] {
                 new ShoggothC(-350, 60),
-                new ShoggothB(-50, 200),
+                new ShoggothB(-30, 60),
                 new ShoggothA(-50, 0),
                 new ShoggothC(150, -50)
         }));
@@ -423,6 +429,7 @@ public class DefaultMod implements
         BaseMod.addRelic(new Hypnos_SKRelic(), RelicType.SHARED);
         BaseMod.addRelic(new TuningFork_SKRelic(), RelicType.SHARED);
         BaseMod.addRelic(new Telescope_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
         //Currently Broken
         //BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
 
@@ -516,6 +523,11 @@ public class DefaultMod implements
         // UI Strings
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-UI-Strings.json");
+
+        // Monster Strings
+        BaseMod.loadCustomStringsFile(MonsterStrings.class,
+                getModID() + "Resources/localization/eng/DefaultMod-Monster-Strings.json");
+        //BaseMod.loadCustomStringsFile(MonsterStrings.class, "conspire/localization/" + lang + "/conspire-monsters.json");
         
         logger.info("Done edittting strings");
     }

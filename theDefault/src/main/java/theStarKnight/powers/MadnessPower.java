@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,8 +29,8 @@ public class MadnessPower extends AbstractPower implements CloneablePowerInterfa
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/OpenMind_84.png");
-    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/OpenMind_32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/Madness_84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/Madness_32.png");
 
     public MadnessPower(AbstractCreature owner, int amount) {
         name = NAME;
@@ -62,6 +63,10 @@ public class MadnessPower extends AbstractPower implements CloneablePowerInterfa
     public void onDrawOrDiscard() {
         this.amount = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
     }
+
+    //Set hand size back to 10 at end of battle
+    @Override
+    public void onVictory() { BaseMod.MAX_HAND_SIZE=10;}
 
     @Override
     public void onRemove() {

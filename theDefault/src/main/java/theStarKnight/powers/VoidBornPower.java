@@ -29,6 +29,8 @@ public class VoidBornPower extends AbstractPower implements CloneablePowerInterf
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static int exhaustDamage;
+
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/VoidBorn_84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/VoidBorn_32.png");
@@ -41,6 +43,9 @@ public class VoidBornPower extends AbstractPower implements CloneablePowerInterf
         this.source = source;
         type = PowerType.BUFF;
         isTurnBased = false;
+
+        exhaustDamage = 8;
+
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -48,15 +53,26 @@ public class VoidBornPower extends AbstractPower implements CloneablePowerInterf
         updateDescription();
     }
 
+//    @Override
+//    public void onCardDraw(AbstractCard card) {
+//        //System.out.println("Card name is equal to: "+card.name);
+//        if (card.cardID == "Void") {
+//            this.flash();
+//            this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(this.amount*10, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+//        }
+//
+//    }
+
     @Override
-    public void onCardDraw(AbstractCard card) {
+    public void onExhaust(AbstractCard card) {
         //System.out.println("Card name is equal to: "+card.name);
-        if (card.cardID == "Void") {
+        if (card.type == AbstractCard.CardType.STATUS) {
             this.flash();
-            this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(this.amount*10, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+            this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(this.amount*exhaustDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
         }
 
     }
+
 
     @Override
     public void atEndOfTurn(boolean playerTurn) {
@@ -65,7 +81,7 @@ public class VoidBornPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount*exhaustDamage + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
     }
 
     @Override

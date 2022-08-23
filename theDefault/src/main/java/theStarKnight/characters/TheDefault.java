@@ -88,7 +88,7 @@ public class TheDefault extends CustomPlayer {
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 75; //TODO Set base stats!
+    public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
@@ -147,10 +147,11 @@ public class TheDefault extends CustomPlayer {
 
         // =============== ANIMATIONS =================  
 
+        //NOTE smaller scale = larger character
         loadAnimation(
                 THE_DEFAULT_SKELETON_ATLAS,
                 THE_DEFAULT_SKELETON_JSON,
-                1.0f);
+                0.9f);
         //TODO Update "newAnimation" if the animation is redone
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -200,6 +201,8 @@ public class TheDefault extends CustomPlayer {
         retVal.add(DarkHeart_SK.ID);
         retVal.add(Corrupt_SK.ID);
 
+
+        //retVal.add(FetidShard_SK.ID);
         //retVal.add(Playtester_SK.ID);
         //retVal.add(Stomp_SK.ID);
         //retVal.add(FrenziedStrike_SK.ID);
