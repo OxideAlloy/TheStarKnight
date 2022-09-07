@@ -26,12 +26,16 @@ public class FetidShard_SK extends AbstractDynamicCard {
 
     private static final int COST = -2;
 
-    private static final int DAMAGE = 3;
-    private static final int UPGRADE_PLUS_DMG = 2;
+//    private static final int DAMAGE = 3;
+//    private static final int UPGRADE_PLUS_DMG = 2;
+
+    private static final int AMOUNT = 3;
+    private static final int UPGRADED_AMOUNT = 2;
 
     public FetidShard_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        //baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
 
     // Actions the card should do.
@@ -52,7 +56,8 @@ public class FetidShard_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            //upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             initializeDescription();
         }
     }

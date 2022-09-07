@@ -22,9 +22,10 @@ public class Comet_SK extends AbstractDynamicCard {
     private static final int COST = 0;
 
     private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 1;
 
     private static final int AMOUNT = 2;
+    private static final int UPGRADED_AMOUNT = 1;
 
     // /STAT DECLARATION/
 
@@ -52,6 +53,7 @@ public class Comet_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             initializeDescription();
         }
     }

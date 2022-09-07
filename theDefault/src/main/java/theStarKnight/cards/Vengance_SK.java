@@ -35,8 +35,8 @@ public class Vengance_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 7;
-    //private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
     public Vengance_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -54,9 +54,10 @@ public class Vengance_SK extends AbstractDynamicCard {
         this.purgeOnUse = true;
         //this.exhaust = true;
         this.addToBot(new NewQueueCardAction(this, true, false, true));
-        if (upgraded) {
-            this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
-        }
+        //Eternal Keyword Ability (removed for now)
+//        if (upgraded) {
+//            this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+//        }
     }
 
     // Upgraded stats.
@@ -65,7 +66,7 @@ public class Vengance_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
-            //upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

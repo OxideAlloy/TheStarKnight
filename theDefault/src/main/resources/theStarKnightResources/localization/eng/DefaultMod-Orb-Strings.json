@@ -8,5 +8,13 @@
       " NL #yEvoke: Deal #b",
       " damage to all enemies."
     ]
+  },
+  "theStarKnight:MalignantOrb": {
+    "NAME": "Malignant Orb",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn, gain #b",
+      " temporary HP.",
+      " NL #yEvoke: Gain #b"
+    ]
   }
 }

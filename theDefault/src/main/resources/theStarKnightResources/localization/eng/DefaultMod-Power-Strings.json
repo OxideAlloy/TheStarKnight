@@ -78,14 +78,15 @@
         "theStarKnight:AdaptivePower": {
                 "NAME": "Adaptive",
                 "DESCRIPTIONS": [
-                        "Whenever you exhaust a card, draw a card."
+                        "Whenever you exhaust a card, gain #b",
+                        " #yVigor"
                 ]
         },
         "theStarKnight:AlignmentPower": {
                 "NAME": "Conjunction",
                 "DESCRIPTIONS": [
                         "Cards cost #b",
-                        " less energy to play, to a minimum of one."
+                        " less energy to play on the turn they are drawn, to a minimum of one."
                 ]
         },
         "theStarKnight:MalignantGrowthPower": {
@@ -132,7 +133,7 @@
         "theStarKnight:MadnessPower": {
                 "NAME": "Madness",
                 "DESCRIPTIONS": [
-                        "Equal to the difference between your hand size and the number of cards currently in your hand."
+                        "Equal to the difference between your maximum hand size and the number of cards currently in your hand."
                 ]
         },
         "theStarKnight:WeakNextTurnPower": {

@@ -35,7 +35,7 @@ public class Terror_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainEnergyAction(2));
-        this.addToBot(new ExhaustAction(1, true, false, false));
+        this.addToBot(new ExhaustAction(1, false, false, false));
 
     }
 

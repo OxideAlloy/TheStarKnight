@@ -196,6 +196,8 @@ public class TheDefault extends CustomPlayer {
 
         for (int i = 0; i < 4; i++) {
             retVal.add(Strike_SK.ID);
+        }
+        for (int i = 0; i < 4; i++) {
             retVal.add(Defend_SK.ID);
         }
         retVal.add(DarkHeart_SK.ID);

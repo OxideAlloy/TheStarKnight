@@ -26,13 +26,13 @@ public class GatherMass_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 3;
+    //private static final int UPGRADED_COST = 3;
 
-    private static final int BLOCK = 6;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int BLOCK = 8;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
 
-    private static final int STR_AMOUNT = 3;
-    private static final int UPGRADED_STR_AMOUNT = 2;
+    private static final int STR_AMOUNT = 4;
+    private static final int UPGRADED_STR_AMOUNT = 1;
 
     private static final int ENERGY_AMOUNT = 1;
     private static final int UPGRADED_ENERGY_AMOUNT = 1;
@@ -67,7 +67,7 @@ public class GatherMass_SK extends AbstractDynamicCard {
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.upgradeMagicNumber(UPGRADED_STR_AMOUNT);
             this.upgradeDefaultSecondMagicNumber(UPGRADED_ENERGY_AMOUNT);
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

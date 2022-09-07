@@ -52,7 +52,7 @@ public class Ignition_SK extends AbstractDynamicCard {
         if (m.hasPower(IchorPower.POWER_ID)) {
             this.magicNumber = (m.getPower(IchorPower.POWER_ID).amount);
             //System.out.println("Magic Number = "+magicNumber);
-            this.addToBot(new LoseHPAction(m, m, this.magicNumber));
+            this.addToBot(new LoseHPAction(m, p, this.magicNumber));
         } else {
             this.addToBot(
                     new TalkAction(true, "There is no @Ichor@ to ignite!", 2.0F, 2.0F));

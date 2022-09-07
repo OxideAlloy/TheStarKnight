@@ -3,19 +3,18 @@ package theStarKnight.powers;
         import basemod.interfaces.CloneablePowerInterface;
         import com.badlogic.gdx.graphics.Texture;
         import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-        import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-        import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-        import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-        import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+        import com.megacrit.cardcrawl.actions.common.*;
         import com.megacrit.cardcrawl.cards.AbstractCard;
         import com.megacrit.cardcrawl.cards.DamageInfo;
         import com.megacrit.cardcrawl.cards.tempCards.Smite;
+        import com.megacrit.cardcrawl.characters.AbstractPlayer;
         import com.megacrit.cardcrawl.core.AbstractCreature;
         import com.megacrit.cardcrawl.core.CardCrawlGame;
         import com.megacrit.cardcrawl.core.Settings;
         import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
         import com.megacrit.cardcrawl.localization.PowerStrings;
         import com.megacrit.cardcrawl.powers.AbstractPower;
+        import com.megacrit.cardcrawl.powers.watcher.VigorPower;
         import theStarKnight.DefaultMod;
         import theStarKnight.util.TextureLoader;
 
@@ -48,7 +47,8 @@ public class AdaptivePower extends AbstractPower implements CloneablePowerInterf
 
     public void onExhaust(AbstractCard card) {
         this.flash();
-        this.addToBot(new DrawCardAction(this.amount));
+        //this.addToBot(new DrawCardAction(this.amount));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, this.amount), this.amount));
     }
 
     public void stackPower(int stackAmount) {
@@ -58,7 +58,7 @@ public class AdaptivePower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

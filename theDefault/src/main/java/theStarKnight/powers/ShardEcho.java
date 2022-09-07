@@ -77,7 +77,7 @@ public class ShardEcho extends AbstractPower implements CloneablePowerInterface,
 
                 AbstractMonster mon = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
                 card.calculateCardDamage(mon);
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(mon, new DamageInfo(AbstractDungeon.player, card.damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(mon, new DamageInfo(null, card.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
                 yshift+=shiftAmt;
             }
@@ -87,7 +87,7 @@ public class ShardEcho extends AbstractPower implements CloneablePowerInterface,
 
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(),xpos,ypos-yshift));
 
-                this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(card.damage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(card.magicNumber, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
                 yshift+=shiftAmt;
             }
@@ -121,7 +121,7 @@ public class ShardEcho extends AbstractPower implements CloneablePowerInterface,
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(),xpos,ypos-yshift));
                 this.addToTop(new WaitAction(Settings.ACTION_DUR_FAST));
 
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, card.block));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, card.magicNumber));
                 yshift+=shiftAmt;
             }
 

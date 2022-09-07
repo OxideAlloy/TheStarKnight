@@ -54,6 +54,16 @@ public class MadnessPower extends AbstractPower implements CloneablePowerInterfa
         this.amount = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
     }
 
+//    @Override
+//    public void onAfterCardPlayed(AbstractCard usedCard) {
+//        this.amount = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+//    }
+
+    @Override
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        this.amount = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+    }
+
     @Override
     public void onExhaust(AbstractCard card) {
         this.amount = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());

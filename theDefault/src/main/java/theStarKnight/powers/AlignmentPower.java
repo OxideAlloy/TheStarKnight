@@ -3,24 +3,11 @@ package theStarKnight.powers;
         import basemod.interfaces.CloneablePowerInterface;
         import com.badlogic.gdx.graphics.Texture;
         import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-        import com.megacrit.cardcrawl.actions.AbstractGameAction;
-        import com.megacrit.cardcrawl.actions.animations.VFXAction;
-        import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-        import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-        import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-        import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-        import com.megacrit.cardcrawl.actions.utility.SFXAction;
-        import com.megacrit.cardcrawl.actions.utility.UseCardAction;
         import com.megacrit.cardcrawl.cards.AbstractCard;
-        import com.megacrit.cardcrawl.cards.DamageInfo;
         import com.megacrit.cardcrawl.core.AbstractCreature;
         import com.megacrit.cardcrawl.core.CardCrawlGame;
-        import com.megacrit.cardcrawl.core.Settings;
-        import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
         import com.megacrit.cardcrawl.localization.PowerStrings;
         import com.megacrit.cardcrawl.powers.AbstractPower;
-        import com.megacrit.cardcrawl.powers.PoisonPower;
-        import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
         import theStarKnight.DefaultMod;
         import theStarKnight.util.TextureLoader;
 
@@ -53,11 +40,16 @@ public class AlignmentPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (card.cost > 1) {
-            card.setCostForTurn(card.costForTurn - this.amount);
-            //this may cause status/curse cards to become playable?
+        for (int i = 0; i < this.amount; i++) {
+            if (card.cost > 1) {
+                card.setCostForTurn(card.costForTurn - 1);
+                //card.setCostForTurn(-9);
+                //this may cause status/curse cards to become playable?
+            }
         }
     }
+
+
 
     @Override
     public void updateDescription() {

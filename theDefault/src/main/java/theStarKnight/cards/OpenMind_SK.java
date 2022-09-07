@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 import theStarKnight.powers.CommonPower;
+import theStarKnight.powers.IchorPower;
+import theStarKnight.powers.MadnessPower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
@@ -40,8 +42,20 @@ public class OpenMind_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        BaseMod.MAX_HAND_SIZE=BaseMod.MAX_HAND_SIZE+AMOUNT;
+        BaseMod.MAX_HAND_SIZE=BaseMod.MAX_HAND_SIZE+magicNumber;
+        AbstractDungeon.actionManager.addToBottom(
+                //this is just to force an update of MadnessPower
+                new ApplyPowerAction(p, p, new MadnessPower(p, 0), 0)
+        );
+
+                //new ApplyPowerAction(p, p, new MadnessPower(p, 2), 2)
+
+        System.out.println("Hand size is currently = "+BaseMod.MAX_HAND_SIZE);
+        System.out.println("MadnessPower should display = "+(BaseMod.MAX_HAND_SIZE-AbstractDungeon.player.hand.size()+1));
     }
+
+
+
 
     //Upgraded stats.
     @Override

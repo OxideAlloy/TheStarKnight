@@ -1,6 +1,7 @@
 package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,33 +19,37 @@ public class Radiant_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Radiant_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Radiant.png");
-    //TODO Need to update to "Radiant.png"
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
-    private static final int AMOUNT = 0;
-    private static final int UPGRADED_AMOUNT = 3;
+    private static final int BLOCK = 16;
+
+    private static final int AMOUNT = 2;
+    //private static final int UPGRADED_AMOUNT = 3;
 
     public Radiant_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
+        baseBlock = BLOCK;
+        this.exhaust = true;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new RemoveDebuffsAction(AbstractDungeon.player));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
         if (this.upgraded) {
-            this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
+            this.addToBot(new RemoveDebuffsAction(AbstractDungeon.player));
         }
     }
 
@@ -53,7 +58,7 @@ public class Radiant_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            //this.upgradeMagicNumber(UPGRADED_AMOUNT);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

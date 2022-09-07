@@ -103,7 +103,7 @@
     "NAMES": [
       "malignant"
     ],
-    "DESCRIPTION": "At the end of your turn, gain this many temporary HP and reduce Malignant by 1."
+    "DESCRIPTION": "Orb: Gains Temporary HP."
   },
   {
     "PROPER_NAME": "Counter",

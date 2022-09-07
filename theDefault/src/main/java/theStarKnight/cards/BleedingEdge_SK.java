@@ -44,7 +44,7 @@ public class BleedingEdge_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new BleedingEdgePower(p, p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new BleedingEdgePower(p, p, this.magicNumber), this.magicNumber));
         //this.addToBot(new ApplyPowerAction(p, p, new BleedingEdgePower(p, 1), 1));
     }
 

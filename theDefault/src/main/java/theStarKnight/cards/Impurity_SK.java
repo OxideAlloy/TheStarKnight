@@ -17,8 +17,8 @@ public class Impurity_SK extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(Impurity_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Impurity.png");
 
-//    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-//    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -28,7 +28,7 @@ public class Impurity_SK extends AbstractDynamicCard {
     private static final int COST = 0;
 
     private static final int AMOUNT = 3;
-    private static final int UPGRADED_AMOUNT = 2;
+    //private static final int UPGRADED_AMOUNT = 2;
 
     // /STAT DECLARATION/
 
@@ -48,8 +48,9 @@ public class Impurity_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(UPGRADED_AMOUNT);
-//            rawDescription = UPGRADE_DESCRIPTION;
+            //this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            this.shuffleBackIntoDrawPile = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

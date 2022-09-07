@@ -58,8 +58,8 @@ public class Alignment_SK extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new AlignmentPower(p, this.magicNumber)));
 
         //OMG why is corruption coded like it is?  (╯°□°)╯︵ ┻━┻
-        int theSize = AbstractDungeon.player.hand.size();
-        this.addToTop(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize, false));
+//        int theSize = AbstractDungeon.player.hand.size();
+//        this.addToTop(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize, false));
 
     }
 

@@ -32,8 +32,8 @@ public class MeteorBlast_SK extends AbstractDynamicCard {
     private static final int COST = 5;
     private static final int UPGRADED_COST = 4;
 
-    private static final int DAMAGE = 5;
-    private static final int IMPACT = 35;
+    private static final int DAMAGE = 35;
+    private static final int IMPACT = 5;
 
     public MeteorBlast_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -44,10 +44,8 @@ public class MeteorBlast_SK extends AbstractDynamicCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.defaultSecondMagicNumber, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        if(upgraded) {
-            this.addToBot(new DamageAllEnemiesAction(p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-        }
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAllEnemiesAction(p, this.defaultBaseSecondMagicNumber, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 
 

@@ -21,11 +21,8 @@ import static theStarKnight.DefaultMod.makeCardPath;
 
 public class MadSlash_SK extends AbstractDynamicCard {
 
-    //See "CardTemplate" for original template
-
     public static final String ID = DefaultMod.makeID(MadSlash_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("MadSlash.png");
-    //TODO Need to update to "MadSlash_SK.png"
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -37,11 +34,12 @@ public class MadSlash_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    //private static final int AMOUNT = 99;
+    private static final int TIMES = 1;
+    private static final int UPGRADED_TIMES = 1;
 
     public MadSlash_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        //baseMagicNumber = magicNumber = AMOUNT;
+        baseMagicNumber = magicNumber = TIMES;
         this.baseDamage = 5;
     }
 
@@ -55,17 +53,17 @@ public class MadSlash_SK extends AbstractDynamicCard {
     //// START MADNESS CODE ////
     public void atTurnStart() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        if(upgraded){this.baseDamage=this.baseDamage*2;}
+        this.baseDamage=this.baseDamage*magicNumber;
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        if(upgraded){this.baseDamage=this.baseDamage*2;}
+        this.baseDamage=this.baseDamage*magicNumber;
     }
     public void applyPowers() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage=this.baseDamage*magicNumber;
         super.applyPowers();
         this.initializeDescription();
-        if(upgraded){this.baseDamage=this.baseDamage*2;}
     }
     //// END MADNESS CODE ////
 
@@ -77,6 +75,7 @@ public class MadSlash_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
+            this.upgradeMagicNumber(UPGRADED_TIMES);
             initializeDescription();
         }
     }

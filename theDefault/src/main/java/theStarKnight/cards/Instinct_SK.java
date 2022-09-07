@@ -44,7 +44,7 @@ public class Instinct_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new InstinctPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1, true), 1));
+        //this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1, true), 1));
     }
 
     //Upgraded stats.

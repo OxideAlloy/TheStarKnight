@@ -30,7 +30,8 @@ public class HeavyMetal_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.STATUS;
     public static final CardColor COLOR = CardColor.COLORLESS;
 
-    private static final int COST = -2;
+//    private static final int COST = -2;
+    private static final int COST = 2;
 
     private static final int AMOUNT = 1;
 
@@ -40,6 +41,7 @@ public class HeavyMetal_SK extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
         this.selfRetain = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
@@ -50,6 +52,7 @@ public class HeavyMetal_SK extends AbstractDynamicCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
     }
 
     //Upgraded stats.

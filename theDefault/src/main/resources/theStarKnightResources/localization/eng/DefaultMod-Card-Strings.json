@@ -88,7 +88,7 @@
   },
   "theStarKnight:Roar_SK": {
     "NAME": "Roar",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Gain !D! block, calculated as attack damage. NL Apply !M! Vulnerable."
   },
   "theStarKnight:SolarFlare_SK": {
     "NAME": "Solar Flare",
@@ -96,25 +96,26 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage X+1 times. Refund half X rounded down."
   },
   "theStarKnight:KnifeGame_SK": {
-    "NAME": "Knife Game",
+    "NAME": "Knives Out",
     "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage !M! times."
   },
   "theStarKnight:Samsara_SK": {
     "NAME": "Saṃsāra",
-    "DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP. Gain !M! Temporary_HP."
+    "DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP. NL Gain !M! Temporary_HP."
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
     "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Double_Madness NL Deal !D! damage NL and gain !B! Block."
+    "UPGRADE_DESCRIPTION": "thestarknight:Madness + !M! NL Deal !D! damage NL and gain !B! Block."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
-    "DESCRIPTION": "Deal damage equal to half the targets missing HP."
+    "DESCRIPTION": "Deal !D! damage NL equal to half the targets missing HP."
   },
   "theStarKnight:CleavingBlow_SK": {
     "NAME": "Cleaving Blow",
-    "DESCRIPTION": "Deal !D! damage, doubled against minions. NL thestarknight:Murder: NL Gain [E] [E]."
+    "DESCRIPTION": "Deal !D! damage, NL doubled against NL minions. NL thestarknight:Murder: NL Gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, NL halved against NL non-minions. NL thestarknight:Murder: NL Gain [E] [E]."
   },
   "theStarKnight:VoidStrike_SK": {
     "NAME": "Void Strike",
@@ -127,7 +128,7 @@
   },
   "theStarKnight:MeteorBlast_SK": {
     "NAME": "Meteorite Strike",
-    "DESCRIPTION": "Deal !theStarKnight:SecondMagic! damage NL and !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage and !theStarKnight:SecondMagic! damage to all enemies."
   },
   "theStarKnight:HammerTime_SK": {
     "NAME": "Hammer Time",
@@ -135,27 +136,27 @@
   },
   "theStarKnight:HeavyMetal_SK": {
     "NAME": "Heavy Metal",
-    "DESCRIPTION": "When drawn, NL gain !M! strength and lose !M! dexterity. NL Unplayable. Retain."
+    "DESCRIPTION": "Exhaust. NL When drawn, NL gain !M! strength and lose !M! dexterity. NL Retain."
   },
   "theStarKnight:Helios_SK": {
     "NAME": "Helios",
-    "DESCRIPTION": "Deal !D! damage. NL Retain. NL When retained, gain Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Retain. NL When retained, NL gain Vulnerable."
   },
   "theStarKnight:Hemorrhage_SK": {
     "NAME": "Hemorrhage",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! thestarknight:Ichor NL [#AA0000]Lose [#AA0000]2 [#AA0000]HP."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! thestarknight:Ichor. NL [#AA0000]Lose [#AA0000]2 [#AA0000]HP."
   },
   "theStarKnight:WoodenSword_SK": {
     "NAME": "Wooden Sword",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity."
   },
   "theStarKnight:OblivionShard_SK": {
-    "NAME": "Oblivion Shard",
-    "DESCRIPTION": "thestarknight:Memory NL Deal !D! damage to a random enemy at the start of your turn."
+    "NAME": "n’ghft s’uhn",
+    "DESCRIPTION": "thestarknight:Memory NL  Deal !M! damage to a random enemy at the start of your turn."
   },
   "theStarKnight:Gnaw_SK": {
     "NAME": "Gnaw",
-    "DESCRIPTION": "Deal !D!. NL Gain HP equal to the unblocked damage."
+    "DESCRIPTION": "Deal !D! damage. NL Gain HP equal to the unblocked damage."
   },
   "theStarKnight:GhostArmor_SK": {
     "NAME": "Ghost Armor",
@@ -201,21 +202,22 @@
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
   },
   "theStarKnight:PulsatingShard_SK": {
-    "NAME": "Pulsating Shard",
+    "NAME": "syha’h gnaiih",
     "DESCRIPTION": "thestarknight:Memory NL Gain [E] and 1 Frail at the start of your turn.",
     "UPGRADE_DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn."
   },
   "theStarKnight:CacconShard_SK": {
-    "NAME": "Caccon Shard",
+    "NAME": "nglui R'lyeh",
     "DESCRIPTION": "thestarknight:Memory NL Gain !M! Temporary_HP at the start of your turn."
   },
   "theStarKnight:ColdShard_SK": {
-    "NAME": "Cold Shard",
-    "DESCRIPTION": "thestarknight:Memory NL Gain !B! Block at the start of your turn."
+    "NAME": "ftaghu ‘fhalma",
+    "DESCRIPTION": "thestarknight:Memory NL Gain !M! Block at the start of your turn."
   },
   "theStarKnight:Impurity_SK": {
     "NAME": "Impurity",
-    "DESCRIPTION": "Choose and discard up to !M! cards in your library."
+    "DESCRIPTION": "Choose and discard up to !M! cards in your library.",
+    "UPGRADE_DESCRIPTION": "Choose and discard up to !M! cards in your library. Shuffle this card into your library."
   },
   "theStarKnight:Glare_SK": {
     "NAME": "Glare",
@@ -226,7 +228,7 @@
     "DESCRIPTION": "Gain !B! block, NL exhaust your hand"
   },
   "theStarKnight:HeatDeath_SK": {
-    "NAME": "Heat Deat",
+    "NAME": "Heat Death",
     "DESCRIPTION": "thestarknight:Madness NL Deal damage !D!."
   },
   "theStarKnight:Ignition_SK": {
@@ -236,7 +238,7 @@
   "theStarKnight:ShieldOfFear_SK": {
     "NAME": "Shield of Fear",
     "DESCRIPTION": "thestarknight:Madness NL Gain !B! block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Gain !B! block.Madness."
+    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Gain !B! block."
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
@@ -275,7 +277,7 @@
   },
   "theStarKnight:Terror_SK": {
     "NAME": "Terror",
-    "DESCRIPTION": "Exhaust a random card. Gain [E] [E] NL Ethereal."
+    "DESCRIPTION": "Exhaust a card. NL Gain [E] [E] NL Ethereal."
   },
   "theStarKnight:Radiate_SK": {
     "NAME": "Radiate",
@@ -296,12 +298,12 @@
   },
   "theStarKnight:Radiant_SK": {
     "NAME": "Radiant",
-    "DESCRIPTION": "Remove all debuffs.",
-    "UPGRADE_DESCRIPTION": "Remove all debuffs. NL Gain 3 Artifact."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Remove all debuffs. NL Exhaust."
   },
   "theStarKnight:BleedingEdge_SK": {
     "NAME": "Bleeding Edge",
-    "DESCRIPTION": "Gain !M! Vulnerable. Whenever you attack an enemy, apply 1 thestarknight:Ichor to them."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL Whenever you attack an enemy, apply !M! thestarknight:Ichor to them."
   },
   "theStarKnight:Atlas_SK": {
     "NAME": "Atlas",
@@ -328,7 +330,7 @@
   },
   "theStarKnight:Instinct_SK": {
     "NAME": "Instinct",
-    "DESCRIPTION": "At the end of your turn gain Block equal to your thestarknight:Madness. NL You gain 1 less [E] each turn."
+    "DESCRIPTION": "At the end of your turn gain Block equal to your thestarknight:Madness."
   },
   "theStarKnight:OpenMind_SK": {
     "NAME": "Open Mind",
@@ -336,16 +338,16 @@
   },
   "theStarKnight:Adaptive_SK": {
     "NAME": "Adaptive",
-    "DESCRIPTION": "Whenever you Exhaust a card, NL draw a card."
+    "DESCRIPTION": "Whenever you NL Exhaust a card, NL gain !M! Vigor."
   },
   "theStarKnight:Alignment_SK": {
     "NAME": "Alignment",
-    "DESCRIPTION": "Cards cost one less [E] NL to a minimum of one. Discard your hand. Ethereal.",
-    "UPGRADE_DESCRIPTION": "Cards cost one less [E] NL to a minimum of one. Discard your hand."
+    "DESCRIPTION": "Cards costs !M! less [E], to a minimum of one, the turn they drawn. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Cards costs !M! less [E], to a minimum of one, the turn they drawn."
   },
   "theStarKnight:MalignantGrowth_SK": {
     "NAME": "Malignant Growth",
-    "DESCRIPTION": "Gain !M! thestarknight:Malignant."
+    "DESCRIPTION": "Gain !M! orb slots and channel !M! thestarknight:Malignant."
   },
   "theStarKnight:VoidBorn_SK": {
     "NAME": "Void Born",
@@ -369,8 +371,8 @@
     "UPGRADE_DESCRIPTION": "thestarknight:Quintuple_Madness NL Deal !D! damage. NL thestarknight:Murder: NL Gain [E] [E]."
   },
   "theStarKnight:FetidShard_SK": {
-    "NAME": "Fetid Shard",
-    "DESCRIPTION": "thestarknight:Memory NL Deal !D! damage to all enemies at the start of your turn."
+    "NAME": "hupadgh n’gha",
+    "DESCRIPTION": "thestarknight:Memory NL Deal !M! damage to all enemies at the start of your turn."
   },
   "theStarKnight:Nihilism_SK": {
     "NAME": "Nihilism",
@@ -382,11 +384,11 @@
   },
   "theStarKnight:ShadeBlade_SK": {
     "NAME": "Shade Blade",
-    "DESCRIPTION": "When exhausted, create a copy in your discard and increase it's damage by !M!. NL Deal !D! damage."
+    "DESCRIPTION": "thestarknight:Eternal NL When exhausted, increase this cards damage by !M!. NL Deal !D! damage."
   },
   "theStarKnight:Supernova_SK": {
     "NAME": "Supernova",
-    "DESCRIPTION": "When exhausted, create a copy in your discard and reduce its cost by [E]. NL Gain !M! Vigor.",
+    "DESCRIPTION": "thestarknight:Eternal NL When exhausted, reduce this cards cost by [E]. NL Gain !M! Vigor.",
     "UPGRADE_DESCRIPTION": "When exhausted, create a copy in your discard and reduce its cost by [E]. NL Gain !M! Vigor. NL Ethereal."
   }
 }

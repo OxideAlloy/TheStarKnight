@@ -17,11 +17,8 @@ import static theStarKnight.DefaultMod.makeCardPath;
 
 public class FallingStar_SK extends AbstractDynamicCard {
 
-    //See "CardTemplate" for original template
-
     public static final String ID = DefaultMod.makeID(FallingStar_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("FallingStar.png");
-    //TODO Need to update to "FallingStar_SK.png"
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -32,9 +29,10 @@ public class FallingStar_SK extends AbstractDynamicCard {
     private static final int UPGRADED_COST = 0;
 
     private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     private static final int AMOUNT = 2;
+    private static final int UPGRADED_AMOUNT = 1;
 
     public FallingStar_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -61,6 +59,7 @@ public class FallingStar_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }

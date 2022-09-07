@@ -31,8 +31,8 @@ public class DarkHeart_SK extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int TIMES = 1;
-    private static final int UPGRADED_TIMES = 1;
+    private static final int TIMES = 0;
+    private static final int UPGRADED_TIMES = 4;
 
     public DarkHeart_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -55,24 +55,25 @@ public class DarkHeart_SK extends AbstractDynamicCard {
         //System.out.println("second magic number = "+defaultSecondMagicNumber);
     }
 
+
     //// START MADNESS CODE ////
     public void atTurnStart() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-            this.baseDamage=this.baseDamage*magicNumber;
-            this.baseBlock=this.baseBlock*magicNumber;
+            this.baseDamage=this.baseDamage+magicNumber;
+            this.baseBlock=this.baseBlock+magicNumber;
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-            this.baseDamage=this.baseDamage*magicNumber;
-            this.baseBlock=this.baseBlock*magicNumber;
+            this.baseDamage=this.baseDamage+magicNumber;
+            this.baseBlock=this.baseBlock+magicNumber;
     }
     public void applyPowers() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-            this.baseDamage=this.baseDamage*magicNumber;
-            this.baseBlock=this.baseBlock*magicNumber;
+            this.baseDamage=this.baseDamage+magicNumber;
+            this.baseBlock=this.baseBlock+magicNumber;
         super.applyPowers();
         this.initializeDescription();
     }
@@ -86,6 +87,7 @@ public class DarkHeart_SK extends AbstractDynamicCard {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             this.upgradeMagicNumber(UPGRADED_TIMES);
+            upgradeDamage(9);
             initializeDescription();
         }
     }

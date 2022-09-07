@@ -21,8 +21,11 @@ public class ColdShard_SK extends AbstractDynamicCard {
 
     private static final int COST = -2;
 
-    private static final int BLOCK = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+//    private static final int BLOCK = 4;
+//    private static final int UPGRADE_PLUS_BLOCK = 3;
+
+    private static final int AMOUNT = 4;
+    private static final int UPGRADED_AMOUNT = 3;
 
     // /STAT DECLARATION/
 
@@ -32,7 +35,8 @@ public class ColdShard_SK extends AbstractDynamicCard {
 
     public ColdShard_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
+        //baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
 
     // Actions the card should do.
@@ -51,7 +55,8 @@ public class ColdShard_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            //upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             initializeDescription();
         }
     }

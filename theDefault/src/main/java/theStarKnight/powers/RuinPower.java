@@ -67,9 +67,9 @@ public class RuinPower extends AbstractPower implements CloneablePowerInterface 
 //    }
 
     @Override
-    public float modifyBlock(float blockAmount) {
-        return 0;
-    }
+    public float modifyBlockLast(float blockAmount) {
+    return 0.0F;
+}
 
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
