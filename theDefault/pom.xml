@@ -6,7 +6,7 @@
     <groupId>defaultmod</groupId>
     <artifactId>TheStarKnight</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
     <name>The Fallen</name>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <description>Adds a new character to Slay the Spire, the Fallen!</description>
 
     <properties>

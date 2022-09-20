@@ -45,8 +45,9 @@
     "DESCRIPTION": "Added effect only happens when this card kills an enemy."
   },
   {
-    "PROPER_NAME": "Madness",
+    "PROPER_NAME": "[#b941e0]Madness",
     "NAMES": [
+      "[#b941e0]madness",
       "madness"
     ],
     "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum."
@@ -82,6 +83,14 @@
       "quintuple_madness"
     ],
     "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum times five."
+  },
+  {
+    "PROPER_NAME": "Multi Madness",
+    "NAMES": [
+      "Multi Madness",
+      "multi_madness"
+    ],
+    "DESCRIPTION": "Any special values on this card are equal to the number of cards in your hand fewer than the maximum."
   },
   {
     "PROPER_NAME": "Memory",

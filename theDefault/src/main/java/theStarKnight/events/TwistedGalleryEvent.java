@@ -29,7 +29,7 @@ public class TwistedGalleryEvent extends AbstractImageEvent {
     private int screenNum = 0;
 
     private int healthgain = 10;
-    private int stealAmt = 100;
+    private int stealAmt = 150;
 
     public TwistedGalleryEvent() {
         super(NAME, DESCRIPTIONS[0], IMG);

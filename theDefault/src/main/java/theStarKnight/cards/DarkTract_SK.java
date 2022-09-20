@@ -45,14 +45,7 @@ public class DarkTract_SK extends AbstractDynamicCard {
         this.addToBot(new DiscardAction(p, p, this.magicNumber, false));
     }
 
-//    @Override
-//    public void onRemovedFromMasterDeck() {
-//        AbstractDungeon.player.increaseMaxHp(5, true);
-//    }
-
-//    public void onAddedToMasterDeck() {
-//        AbstractDungeon.player.increaseMaxHp(5, true);
-//    }
+//// NOTE: Must add the card to AddToDeckPatch for this to work ////
 
     public void onAddedToMasterDeck() {
         //System.out.println("***onAddedToMasterDeck called***");

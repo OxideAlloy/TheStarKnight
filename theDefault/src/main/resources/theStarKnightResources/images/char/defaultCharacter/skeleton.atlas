@@ -4,6 +4,13 @@ size: 256,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+Seam
+  rotate: false
+  xy: 217, 125
+  size: 32, 26
+  orig: 40, 30
+  offset: 4, 1
+  index: -1
 Shadow
   rotate: false
   xy: 1, 122

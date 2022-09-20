@@ -203,7 +203,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(DarkHeart_SK.ID);
         retVal.add(Corrupt_SK.ID);
 
-
+        //retVal.add(RedShift_SK.ID);
         //retVal.add(FetidShard_SK.ID);
         //retVal.add(Playtester_SK.ID);
         //retVal.add(Stomp_SK.ID);

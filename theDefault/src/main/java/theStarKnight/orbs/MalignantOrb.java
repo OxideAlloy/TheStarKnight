@@ -36,7 +36,7 @@ public class MalignantOrb extends CustomOrb {
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
 
     private static final int PASSIVE_AMOUNT = 1;
-    private static final int EVOKE_AMOUNT = 2;
+    private static final int EVOKE_AMOUNT = 3;
 
     // Animation Rendering Numbers - You can leave these at default, or play around with them and see what they change.
     private float vfxTimer = 1.0f;
@@ -74,24 +74,19 @@ public class MalignantOrb extends CustomOrb {
     public void updateDescription() { // Set the on-hover description of the orb
         applyFocus(); // Apply Focus (Look at the next method)
         description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + DESCRIPTIONS[2] + evokeAmount + DESCRIPTIONS[1];
-//        if (passiveAmount == 1) {
-//            description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + evokeAmount + DESCRIPTIONS[1];
-//        } else if (passiveAmount > 1) {
-//            description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + evokeAmount + DESCRIPTIONS[4];
-//        }
     }
 
-    @Override
-    public void applyFocus() {
-        passiveAmount = basePassiveAmount;
-        evokeAmount = baseEvokeAmount;
-    }
+//    @Override
+//    public void applyFocus() {
+//        this.passiveAmount = this.basePassiveAmount;
+//        this.evokeAmount = this.baseEvokeAmount;
+//    }
 
     @Override
     public void onEvoke() { // 1.On Orb Evoke
 
         AbstractDungeon.actionManager.addToBottom(
-                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, evokeAmount));
+                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, this.evokeAmount));
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("SLIME_BLINK_1")); // 3.And play a Jingle Sound.
         // For a list of sound effects you can use, look under com.megacrit.cardcrawl.audio.SoundMaster - you can see the list of keys you can use there. As far as previewing what they sound like, open desktop-1.0.jar with something like 7-Zip and go to audio. Reference the file names provided. (Thanks fiiiiilth)
@@ -99,11 +94,11 @@ public class MalignantOrb extends CustomOrb {
     }
 
     @Override
-    public void onStartOfTurn() {// 1.At the start of your turn.
+    public void onEndOfTurn() {// 1.At the end of your turn.
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), 0.1f));
         AbstractDungeon.actionManager.addToBottom(
-                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, passiveAmount));
+                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, this.passiveAmount));
     }
 
     @Override

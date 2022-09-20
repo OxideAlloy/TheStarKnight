@@ -127,7 +127,9 @@
         "theStarKnight:RuinPower": {
                 "NAME": "Ruin",
                 "DESCRIPTIONS": [
-                        "You cannot gain block. When you deal unblocked damage to an enemy they temporarily loses that much strength. Lose Ruin when dealt damage."
+                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to 1/2 the damage dealt, #b",
+                        " time.",
+                        " times."
                 ]
         },
         "theStarKnight:MadnessPower": {

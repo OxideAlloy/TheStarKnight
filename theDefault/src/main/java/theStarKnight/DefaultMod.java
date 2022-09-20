@@ -123,7 +123,7 @@ public class DefaultMod implements
     private static final String ATTACK_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Attack_SK_1024.png";
     private static final String SKILL_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Skill_SK_1024.png";
     private static final String POWER_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/Power_SK_1024.png";
-    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/OrbLarge2.png";
+    private static final String ENERGY_ORB_COLOUR_OUT_OF_SPACE_PORTRAIT = "theStarKnightResources/images/1024/OrbLarge2_Big.png";
     
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theStarKnightResources/images/charSelect/Button_SK.png";
@@ -374,12 +374,12 @@ public class DefaultMod implements
         //BaseMod.addMonster(ShoggothC.ID, () -> new ShoggothA(0, 0, 1));
 
         BaseMod.addMonster("Shoggoth", () -> new MonsterGroup(new AbstractMonster[] {
-                new ShoggothC(-350, 60),
-                new ShoggothB(-30, 60),
-                new ShoggothA(-50, 0),
-                new ShoggothC(150, -50)
+                new ShoggothC(-350, 40),
+                new ShoggothB(-40, 60),
+                new ShoggothA(-60, 0),
+                new ShoggothC(130, -30)
         }));
-        BaseMod.addStrongMonsterEncounter(Exordium.ID, new MonsterInfo("Shoggoth", 10));
+        BaseMod.addStrongMonsterEncounter(TheCity.ID, new MonsterInfo("Shoggoth", 10));
 
     }
     
@@ -430,6 +430,7 @@ public class DefaultMod implements
         BaseMod.addRelic(new TuningFork_SKRelic(), RelicType.SHARED);
         BaseMod.addRelic(new Telescope_SKRelic(), RelicType.SHARED);
         BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new KleinBottle_SKRelic(), RelicType.SHARED);
         //Currently Broken
         //BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
 

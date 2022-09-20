@@ -105,12 +105,12 @@
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
-    "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Madness + !M! NL Deal !D! damage NL and gain !B! Block."
+    "DESCRIPTION": "thestarknight:[#b941e0]Madness NL Deal !D! damage NL and gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "thestarknight:[#b941e0]Madness + !M! NL Deal !D! damage NL and gain !B! Block."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
-    "DESCRIPTION": "Deal !D! damage NL equal to half the targets missing HP."
+    "DESCRIPTION": "Deal damage equal to half the targets missing HP. NL ( !D! )"
   },
   "theStarKnight:CleavingBlow_SK": {
     "NAME": "Cleaving Blow",
@@ -124,7 +124,7 @@
   },
   "theStarKnight:OrbitalStrike_SK": {
     "NAME": "Orbital Strike",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! block. Shuffle this card into your library."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! block. NL Shuffle this card into your library."
   },
   "theStarKnight:MeteorBlast_SK": {
     "NAME": "Meteorite Strike",
@@ -229,7 +229,7 @@
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Death",
-    "DESCRIPTION": "thestarknight:Madness NL Deal damage !D!."
+    "DESCRIPTION": "thestarknight:Eternal NL thestarknight:Madness NL Deal damage !D!."
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
@@ -242,8 +242,7 @@
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Double_Madness NL Deal !D! damage."
+    "DESCRIPTION": "thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -315,7 +314,7 @@
   },
   "theStarKnight:Pulsar_SK": {
     "NAME": "Pulsar",
-    "DESCRIPTION": "Deal !D! (equal to your exhaust pile). NL Exhaust. Ethereal.",
+    "DESCRIPTION": "Deal !D! damage. (equal to your exhaust pile). NL Exhaust. Ethereal.",
     "UPGRADE_DESCRIPTION": "Deal !D! (equal to your exhaust pile). NL Exhaust. Ethereal."
   },
   "theStarKnight:IchorFlood_SK": {
@@ -325,7 +324,7 @@
   },
   "theStarKnight:Singularity_SK": {
     "NAME": "Singularity",
-    "DESCRIPTION": "At the start of your turn gain !M! thestarknight:Constricted and apply 2 thestarknight:Constricted to each enemy.",
+    "DESCRIPTION": "At the start of your turn, gain !M! thestarknight:Constricted and apply 2 thestarknight:Constricted to each enemy.",
     "UPGRADE_DESCRIPTION": "Innate. At the start of your turn gain !M! thestarknight:Constricted and apply 2 thestarknight:Constricted to each enemy."
   },
   "theStarKnight:Instinct_SK": {
@@ -342,8 +341,8 @@
   },
   "theStarKnight:Alignment_SK": {
     "NAME": "Alignment",
-    "DESCRIPTION": "Cards costs !M! less [E], to a minimum of one, the turn they drawn. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Cards costs !M! less [E], to a minimum of one, the turn they drawn."
+    "DESCRIPTION": "Cards costs !M! less [E] to a minimum of one, the turn they are drawn. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Cards costs !M! less [E] to a minimum of one, the turn they are drawn."
   },
   "theStarKnight:MalignantGrowth_SK": {
     "NAME": "Malignant Growth",
@@ -363,7 +362,7 @@
   },
   "theStarKnight:Ruin_SK": {
     "NAME": "Ruin",
-    "DESCRIPTION": "You cannot gain Block. Unblocked damage to an enemy causes that much Temporary Strength loss. Lose Ruin when dealt damage."
+    "DESCRIPTION": "When you deal unblocked attack damage, the enemy temporarily loses half that much strength. NL Lose !theStarKnight:SecondMagic! Dexterity."
   },
   "theStarKnight:ConsumingDarkness_SK": {
     "NAME": "Consuming Darkness",
@@ -390,5 +389,17 @@
     "NAME": "Supernova",
     "DESCRIPTION": "thestarknight:Eternal NL When exhausted, reduce this cards cost by [E]. NL Gain !M! Vigor.",
     "UPGRADE_DESCRIPTION": "When exhausted, create a copy in your discard and reduce its cost by [E]. NL Gain !M! Vigor. NL Ethereal."
+  },
+  "theStarKnight:Vivisection_SK": {
+    "NAME": "Vivisection",
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 thestarknight:Malignant."
+  },
+  "theStarKnight:RedShift_SK": {
+    "NAME": "Red Shift",
+    "DESCRIPTION": "Choose 1 of !M! Common Red Skills to add to your hand. Exhaust."
+  },
+  "theStarKnight:BlueShift_SK": {
+    "NAME": "Blue Shift",
+    "DESCRIPTION": "Choose 1 of !M! Common Blue Attacks to add to your hand. Exhaust."
   }
 }

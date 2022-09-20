@@ -4,6 +4,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -40,6 +41,12 @@ public class HeatDeath_SK extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
    }
+
+   ///Eternal///
+    public void triggerOnExhaust() {
+        this.upgradeDamage(this.magicNumber);
+        this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+    }
 
     //// START MADNESS CODE ////
     public void atTurnStart() {

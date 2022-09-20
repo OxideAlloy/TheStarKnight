@@ -40,7 +40,7 @@
       "You turn away from the distracting shade and continue your climb."
     ],
     "OPTIONS": [
-      "[Reflect]. Duplicate a card.",
+      "[Reflect] Duplicate a card.",
       "[Remove your helm] Lose 16 HP. Gain 8 Max HP.",
       "[Turn away]",
       "[Leave]"
@@ -55,7 +55,7 @@
     ],
     "OPTIONS": [
       "[Contemplate] Heal 10 HP.",
-      "[Steal] Gain 100 gold and a Nihilism.",
+      "[Steal] Gain 200 gold and a Nihilism.",
       "[Leave]"
     ]
   }

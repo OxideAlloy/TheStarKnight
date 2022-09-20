@@ -18,10 +18,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import theStarKnight.DefaultMod;
 import theStarKnight.util.TextureLoader;
@@ -56,31 +53,18 @@ public class RuinPower extends AbstractPower implements CloneablePowerInterface 
         updateDescription();
     }
 
+
 //    @Override
-//    public void onGainedBlock(float blockAmount) {
-//        if (blockAmount > 0.0F) {
-//            this.flash();
-//            blockAmount = 0;
-//            //return blockAmount;
-//        }
-//
-//    }
-
-    @Override
-    public float modifyBlockLast(float blockAmount) {
-    return 0.0F;
-}
-
+//    public float modifyBlockLast(float blockAmount) {
+//    return 0.0F;
+//}
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        System.out.println("onAttack hook called!");
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
 
-            int unblocked=damageAmount-target.currentBlock;
-            System.out.println("You dealt this much unblocked damage "+unblocked);
+            int unblocked=((damageAmount-target.currentBlock)/2)*this.amount;
 
             if(unblocked > 0) {
-                System.out.println("If statement called!");
                 this.flash();
                 this.addToBot(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -unblocked), -unblocked));
                 if (target != null && !target.hasPower("Artifact")) {
@@ -90,47 +74,21 @@ public class RuinPower extends AbstractPower implements CloneablePowerInterface 
         }
     }
 
-    @Override
-    public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (info.owner != null && info.owner != this.owner && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
-            this.flash();
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
-        }
-    }
-
-//    public float atDamageGive(float damage, DamageInfo.DamageType type) {
-//        if (target.lastDamageTaken > 0) {
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, p, new StrengthPower(m, -defaultSecondMagicNumber), -defaultSecondMagicNumber));
+//    @Override
+//    public void wasHPLost(DamageInfo info, int damageAmount) {
+//        if (info.owner != null && info.owner != this.owner && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
+//            this.flash();
+//            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
 //        }
-//        //return type == DamageInfo.DamageType.NORMAL ? damage + (float)this.amount : damage;
 //    }
-
-//    public void update() {
-//        if (this.duration == 0.5F) {
-//            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
-//        }
-//
-//        this.tickDuration();
-//        if (this.isDone) {
-//            this.target.damage(this.info);
-//            if (this.target.lastDamageTaken > 0) {
-//                this.addToTop(new HealAction(this.source, this.source, this.target.lastDamageTaken));
-//                this.addToTop(new WaitAction(0.1F));
-//            }
-//
-//            if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-//                AbstractDungeon.actionManager.clearPostCombatActions();
-//            }
-//        }
-//
-//    }
-
-
-
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        if(this.amount==1) {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+        }
     }
 
     @Override

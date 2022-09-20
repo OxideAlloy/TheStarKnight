@@ -86,5 +86,15 @@
     "DESCRIPTIONS": [
       "First turn, heal 2 HP NL Second turn, gain 1 energy. NL Third turn, gain 5 vigor. NL Fourth turn, gain 10 block."
     ]
+  },
+  "theStarKnight:KleinBottle_SKRelic": {
+    "NAME": "Klein Bottle",
+    "FLAVOR": "It holds everything.",
+    "DESCRIPTIONS": [
+      "Upon pick up, choose a card. Start each combat with this card in your discard. If the card costs more than 1, it's cost becomes 1.",
+      " starts each battle in your discard pile and cost a maximum of 1 to play.",
+      ".",
+      "Select a card to bottle for "
+    ]
   }
 }

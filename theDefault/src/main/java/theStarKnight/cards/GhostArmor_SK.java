@@ -19,6 +19,7 @@ public class GhostArmor_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(GhostArmor_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("GhostArmor.png");
+    public static final String IMG2 = makeCardPath("Ghost_full.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -58,6 +59,7 @@ public class GhostArmor_SK extends AbstractDynamicCard {
             rawDescription = UPGRADE_DESCRIPTION;
             this.upgradeMagicNumber(UPGRADED_DEBUFF);
             upgradeBaseCost(UPGRADED_COST);
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }
