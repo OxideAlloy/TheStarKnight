@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
-import theStarKnight.powers.CounterPower;
+import theStarKnight.powers.RipostePower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
@@ -15,7 +15,6 @@ public class Riposte_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Riposte_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Riposte.png");
-    //TODO Need to update to "Riposte_SK.png"
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -24,11 +23,11 @@ public class Riposte_SK extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int BLOCK = 6;
-    private static final int UPGRADE_PLUS_BLOCK = 6;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
     private static final int AMOUNT = 10;
-    private static final int UPGRADED_AMOUNT = 5;
+    private static final int UPGRADED_AMOUNT = 4;
 
     // /STAT DECLARATION/
 
@@ -42,7 +41,7 @@ public class Riposte_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RipostePower(magicNumber), magicNumber));
     }
 
     //Upgraded stats.

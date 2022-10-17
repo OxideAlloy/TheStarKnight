@@ -19,9 +19,9 @@
                 "NAME": "Draw Down",
                 "DESCRIPTIONS": ["Reduces the amount of cards drawn next turn by "]
         },
-        "theStarKnight:CounterPower": {
-                "NAME": "Counter",
-                "DESCRIPTIONS": ["Deal this much damage back when attacked."]
+        "theStarKnight:RipostePower": {
+                "NAME": "Riposte",
+                "DESCRIPTIONS": ["Until the start of your turn, deal this much damage back when attacked."]
         },
         "theStarKnight:ShardEcho": {
                 "NAME": "Shard Echo",
@@ -79,7 +79,7 @@
                 "NAME": "Adaptive",
                 "DESCRIPTIONS": [
                         "Whenever you exhaust a card, gain #b",
-                        " #yVigor"
+                        " #yVigor."
                 ]
         },
         "theStarKnight:AlignmentPower": {
@@ -99,9 +99,11 @@
         "theStarKnight:VoidBornPower": {
                 "NAME": "Void Born",
                 "DESCRIPTIONS": [
-                        "Whenever you exhaust a Status, deal #b",
-                        " damage to each enemy. NL At the start of your turn shuffle #b",
-                        " Void(s) into your library."
+                        "Whenever you exhaust a Status, gain #b",
+                        " Strength and #b",
+                        " Energy next turn. NL At the start of your turn shuffle #b",
+                        " Void into your library.",
+                        " Voids into your library."
                 ]
         },
         "theStarKnight:SporePower": {
@@ -120,16 +122,24 @@
         "theStarKnight:WeepingWoundPower": {
                 "NAME": "Weeping",
                 "DESCRIPTIONS": [
-                        "Whenever you draw a Status, apply #b",
+                        "Whenever you draw a Status, exhaust it and apply #b",
                         " #pIchor to All enemies."
+                ]
+        },
+        "theStarKnight:ElderFormPower": {
+                "NAME": "Elder Form",
+                "DESCRIPTIONS": [
+                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to the damage dealt",
+                        ".",
+                        ", #b",
+                        " times."
                 ]
         },
         "theStarKnight:RuinPower": {
                 "NAME": "Ruin",
                 "DESCRIPTIONS": [
-                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to 1/2 the damage dealt, #b",
-                        " time.",
-                        " times."
+                        "Gain #b",
+                        " Constricted at the start of your turn."
                 ]
         },
         "theStarKnight:MadnessPower": {
@@ -143,6 +153,12 @@
                 "DESCRIPTIONS": [
                         "Gain #b",
                         " Weak at the start of your turn."
+                ]
+        },
+        "theStarKnight:Frozen": {
+                "NAME": "Frozen",
+                "DESCRIPTIONS": [
+                        "Deal and receive 25% less damage."
                 ]
         }
 }

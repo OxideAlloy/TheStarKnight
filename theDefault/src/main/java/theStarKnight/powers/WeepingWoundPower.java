@@ -57,8 +57,8 @@ public class WeepingWoundPower extends AbstractPower implements CloneablePowerIn
 
         if (card.type == AbstractCard.CardType.STATUS) {
             this.flash();
+            this.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
             Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
-
             while(var1.hasNext()) {
                 AbstractMonster m = (AbstractMonster)var1.next();
                 if (!m.isDead && !m.isDying) {

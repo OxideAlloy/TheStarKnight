@@ -23,6 +23,7 @@ public class ConsumingDarkness_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ConsumingDarkness_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("ConsumingDarkness.png");
+    public static final String IMG2 = makeCardPath("Consuming_full.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -91,6 +92,7 @@ public class ConsumingDarkness_SK extends AbstractDynamicCard {
 //            //Madness update
 //            this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
 //            this.baseDamage=this.baseDamage*AMOUNT;
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

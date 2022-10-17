@@ -19,6 +19,7 @@ public class Helios_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Helios_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Helios.png");
+    public static final String IMG2 = makeCardPath("Helios_full.png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -58,6 +59,7 @@ public class Helios_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

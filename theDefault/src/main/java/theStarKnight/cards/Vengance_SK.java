@@ -36,7 +36,7 @@ public class Vengance_SK extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    //private static final int UPGRADE_PLUS_DMG = 5;
 
     public Vengance_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -66,7 +66,7 @@ public class Vengance_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            //upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

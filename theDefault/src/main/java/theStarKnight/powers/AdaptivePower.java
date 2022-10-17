@@ -14,6 +14,8 @@ package theStarKnight.powers;
         import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
         import com.megacrit.cardcrawl.localization.PowerStrings;
         import com.megacrit.cardcrawl.powers.AbstractPower;
+        import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+        import com.megacrit.cardcrawl.powers.StrengthPower;
         import com.megacrit.cardcrawl.powers.watcher.VigorPower;
         import theStarKnight.DefaultMod;
         import theStarKnight.util.TextureLoader;
@@ -49,6 +51,8 @@ public class AdaptivePower extends AbstractPower implements CloneablePowerInterf
         this.flash();
         //this.addToBot(new DrawCardAction(this.amount));
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, this.amount), this.amount));
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, this.amount), this.amount));
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.amount), this.amount));
     }
 
     public void stackPower(int stackAmount) {

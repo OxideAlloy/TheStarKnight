@@ -15,6 +15,8 @@ public class DeathGrip_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(DeathGrip_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("DeathGrip.png");
+    public static final String IMG2 = makeCardPath("DeathGrip_full.png");
+
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
@@ -49,6 +51,7 @@ public class DeathGrip_SK extends AbstractDynamicCard {
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
             this.upgradeDefaultSecondMagicNumber(UPGRADED_DEBUFF);
             upgradeBaseCost(UPGRADED_COST);
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

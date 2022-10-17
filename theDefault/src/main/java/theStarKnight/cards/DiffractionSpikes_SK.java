@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
-import theStarKnight.powers.CounterPower;
+import theStarKnight.powers.RipostePower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
@@ -23,24 +23,26 @@ public class DiffractionSpikes_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 1;
+
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    //private static final int AMOUNT = 3;
+    private static final int AMOUNT = 5;
+    private static final int UPGRADED_AMOUNT = 3;
 
     // /STAT DECLARATION/
 
     public DiffractionSpikes_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        //baseMagicNumber = magicNumber = AMOUNT;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CounterPower(block), block));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RipostePower(this.magicNumber), this.magicNumber));
     }
 
     //Upgraded stats.
@@ -50,6 +52,7 @@ public class DiffractionSpikes_SK extends AbstractDynamicCard {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             initializeDescription();
         }
     }

@@ -20,7 +20,8 @@
   {
     "PROPER_NAME": "Ichor",
     "NAMES": [
-      "ichor"
+      "ichor",
+      "Ichor"
     ],
     "DESCRIPTION": "Increases damage received by #b10% per stack. NL Receiving attack damage reduces #yIchor by #b2. "
   },
@@ -45,10 +46,10 @@
     "DESCRIPTION": "Added effect only happens when this card kills an enemy."
   },
   {
-    "PROPER_NAME": "[#b941e0]Madness",
+    "PROPER_NAME": "Madness",
     "NAMES": [
-      "[#b941e0]madness",
-      "madness"
+      "madness",
+      "Madness"
     ],
     "DESCRIPTION": "Any Damage and Block values on this card are equal to the number of cards in your hand fewer than the maximum."
   },
@@ -115,11 +116,11 @@
     "DESCRIPTION": "Orb: Gains Temporary HP."
   },
   {
-    "PROPER_NAME": "Counter",
+    "PROPER_NAME": "Riposte",
     "NAMES": [
-      "counter"
+      "riposte"
     ],
-    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+    "DESCRIPTION": "Until your next turn, when you take #yAttack damage, deal damage back."
   },
   {
     "PROPER_NAME": "Impending",
@@ -134,5 +135,20 @@
       "eternal"
     ],
     "DESCRIPTION": "When exhausted, add a copy of this card to your discard pile."
+  },
+  {
+    "PROPER_NAME": "Elder Form",
+    "NAMES": [
+      "Elder Form",
+      "elder_form"
+    ],
+    "DESCRIPTION": "When you deal unblocked damage, the enemy temporarily loses that much strength."
+  },
+  {
+    "PROPER_NAME": "Frozen",
+    "NAMES": [
+      "frozen"
+    ],
+    "DESCRIPTION": "Deal and receive 25% less damage."
   }
 ]

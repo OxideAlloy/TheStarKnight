@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,6 +19,7 @@ public class UnstableBlock_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(UnstableBlock_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("UnstableBlock.png");
+    public static final String IMG2 = makeCardPath("Unstable_full.png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -29,7 +31,7 @@ public class UnstableBlock_SK extends AbstractDynamicCard {
     private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 2;
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
 
     // /STAT DECLARATION/
@@ -48,7 +50,10 @@ public class UnstableBlock_SK extends AbstractDynamicCard {
 
     public void triggerOnExhaust() {
         this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
+        ///Eternal///
+        this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
     }
+
 
     //Upgraded stats.
     @Override
@@ -57,6 +62,7 @@ public class UnstableBlock_SK extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

@@ -75,7 +75,7 @@
   },
   "theStarKnight:Corrupt_SK": {
     "NAME": "Corrupt",
-    "DESCRIPTION": "Apply !M! thestarknight:Ichor."
+    "DESCRIPTION": "Apply !M! thestarknight:Ichor. NL Exhaust a card."
    },
   "theStarKnight:FrenziedStrike_SK": {
     "NAME": "Frenzied Strike",
@@ -84,7 +84,7 @@
   },
   "theStarKnight:DiffractionSpikes_SK": {
     "NAME": "Diffraction Spikes",
-    "DESCRIPTION": "Gain !B! Block and thestarknight:Counter."
+    "DESCRIPTION": "Gain !B! Block NL and !M! thestarknight:Riposte."
   },
   "theStarKnight:Roar_SK": {
     "NAME": "Roar",
@@ -105,8 +105,8 @@
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
-    "DESCRIPTION": "thestarknight:[#b941e0]Madness NL Deal !D! damage NL and gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "thestarknight:[#b941e0]Madness + !M! NL Deal !D! damage NL and gain !B! Block."
+    "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Madness + !M! NL Deal !D! damage NL and gain !B! Block."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
@@ -165,7 +165,7 @@
   },
   "theStarKnight:StrangeMatter_SK": {
     "NAME": "Strange Matter",
-    "DESCRIPTION": "When drawn, exhaust a card in your hand and add a *Strange *Matter to your hand. When exhausted, deal !M! damage to all enemies."
+    "DESCRIPTION": "When drawn, exhaust a card in your hand. NL When exhausted, deal !M! damage to all enemies."
   },
   "theStarKnight:NeutronBurst_SK": {
     "NAME": "Neutron Burst",
@@ -186,7 +186,7 @@
   },
   "theStarKnight:GatherMass_SK": {
     "NAME": "Gather Mass",
-    "DESCRIPTION": "Gain !B! Block. Next turn gain !M! Temporary Strength and !theStarKnight:SecondMagic! [E]."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn gain !M! Temporary Strength and !theStarKnight:SecondMagic! [E]."
   },
   "theStarKnight:Bile_SK": {
     "NAME": "Bile",
@@ -216,7 +216,7 @@
   },
   "theStarKnight:Impurity_SK": {
     "NAME": "Impurity",
-    "DESCRIPTION": "Choose and discard up to !M! cards in your library.",
+    "DESCRIPTION": "Choose and discard NL up to !M! cards NL in your library.",
     "UPGRADE_DESCRIPTION": "Choose and discard up to !M! cards in your library. Shuffle this card into your library."
   },
   "theStarKnight:Glare_SK": {
@@ -225,7 +225,7 @@
   },
   "theStarKnight:EventHorizon_SK": {
     "NAME": "Event Horizon",
-    "DESCRIPTION": "Gain !B! block, NL exhaust your hand"
+    "DESCRIPTION": "Gain !B! block, NL exhaust your hand."
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Death",
@@ -233,20 +233,20 @@
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
-    "DESCRIPTION": "Enemy loses HP equal to their thestarknight:Ichor. Draw a card."
+    "DESCRIPTION": "Enemy loses HP equal to their thestarknight:Ichor. NL Draw a card."
   },
   "theStarKnight:ShieldOfFear_SK": {
     "NAME": "Shield of Fear",
-    "DESCRIPTION": "thestarknight:Madness NL Gain !B! block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Gain !B! block."
+    "DESCRIPTION": "thestarknight:Madness NL Gain !B! block NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL thestarknight:Madness NL Gain !B! block NL Exhaust."
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times."
+    "DESCRIPTION": "thestarknight:Multi_Madness !theStarKnight:SecondMagic! NL Deal !D! damage to a random enemy, NL !M! times."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! vulnerable."
   },
   "theStarKnight:Vengance_SK": {
     "NAME": "Vengance",
@@ -285,7 +285,7 @@
   },
   "theStarKnight:Riposte_SK": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Gain !B! block and !M! thestarknight:Counter."
+    "DESCRIPTION": "Gain !B! block NL and !M! thestarknight:Riposte."
   },
   "theStarKnight:Supermassive_SK": {
     "NAME": "Supermassive",
@@ -293,7 +293,7 @@
   },
   "theStarKnight:UnstableBlock_SK": {
     "NAME": "Unstable Block",
-    "DESCRIPTION": "Gain !B! Block. NL When exhausted deal !D! damage to a random enemy."
+    "DESCRIPTION": "thestarknight:Eternal NL Gain !B! Block. NL When exhausted deal !D! damage to a random enemy."
   },
   "theStarKnight:Radiant_SK": {
     "NAME": "Radiant",
@@ -319,8 +319,8 @@
   },
   "theStarKnight:IchorFlood_SK": {
     "NAME": "Ichor Flood",
-    "DESCRIPTION": "At the start of your turn apply 1 thestarknight:Ichor to each enemy.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn apply 1 thestarknight:Ichor to each enemy."
+    "DESCRIPTION": "At the start of your turn apply !M! thestarknight:Ichor to each enemy.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn apply !M! thestarknight:Ichor to each enemy."
   },
   "theStarKnight:Singularity_SK": {
     "NAME": "Singularity",
@@ -337,7 +337,7 @@
   },
   "theStarKnight:Adaptive_SK": {
     "NAME": "Adaptive",
-    "DESCRIPTION": "Whenever you NL Exhaust a card, NL gain !M! Vigor."
+    "DESCRIPTION": "Whenever you Exhaust a card, NL gain !M! Vigor."
   },
   "theStarKnight:Alignment_SK": {
     "NAME": "Alignment",
@@ -350,7 +350,7 @@
   },
   "theStarKnight:VoidBorn_SK": {
     "NAME": "Void Born",
-    "DESCRIPTION": "Whenever you exhaust a *Status card deal 8 damage to each enemy. NL At the start of your turn shuffle a *Void into your library."
+    "DESCRIPTION": "Whenever you exhaust a *Status gain !M! Strength and [E] next turn. NL At the start of your turn shuffle a *Void into your library."
   },
   "theStarKnight:StarForge_SK": {
     "NAME": "Star Forge",
@@ -358,11 +358,11 @@
   },
   "theStarKnight:WeepingWound_SK": {
     "NAME": "Weeping Wound",
-    "DESCRIPTION": "Shuffle 2 *Wounds into your deck. Whenever you draw a *Status card, apply !M! thestarknight:Ichor to all enemies."
+    "DESCRIPTION": "Shuffle 3 *Wounds into your deck. Whenever you draw a *Status card, exhaust it and apply !M! thestarknight:Ichor to all enemies."
   },
   "theStarKnight:Ruin_SK": {
-    "NAME": "Ruin",
-    "DESCRIPTION": "When you deal unblocked attack damage, the enemy temporarily loses half that much strength. NL Lose !theStarKnight:SecondMagic! Dexterity."
+    "NAME": "Elder Form",
+    "DESCRIPTION": "Gain thestarknight:Elder_Form NL At the start of NL your turn, gain 1 thestarknight:Constricted."
   },
   "theStarKnight:ConsumingDarkness_SK": {
     "NAME": "Consuming Darkness",
@@ -387,8 +387,7 @@
   },
   "theStarKnight:Supernova_SK": {
     "NAME": "Supernova",
-    "DESCRIPTION": "thestarknight:Eternal NL When exhausted, reduce this cards cost by [E]. NL Gain !M! Vigor.",
-    "UPGRADE_DESCRIPTION": "When exhausted, create a copy in your discard and reduce its cost by [E]. NL Gain !M! Vigor. NL Ethereal."
+    "DESCRIPTION": "When exhausted, reduce this cards cost by [E]. NL Gain !M! Vigor. NL thestarknight:Eternal Ethereal"
   },
   "theStarKnight:Vivisection_SK": {
     "NAME": "Vivisection",
@@ -401,5 +400,13 @@
   "theStarKnight:BlueShift_SK": {
     "NAME": "Blue Shift",
     "DESCRIPTION": "Choose 1 of !M! Common Blue Attacks to add to your hand. Exhaust."
+  },
+  "theStarKnight:IceBlock_SK": {
+    "NAME": "Ice Block",
+    "DESCRIPTION": "Gain !B! block NL and !M! thestarknight:Frozen"
+  },
+  "theStarKnight:HighKick_SK": {
+    "NAME": "High Kick",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has thestarknight:Ichor, NL gain [E] and NL draw 1 card."
   }
 }

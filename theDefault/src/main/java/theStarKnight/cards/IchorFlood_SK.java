@@ -28,9 +28,9 @@ public class IchorFlood_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    //private static final int UPGRADED_COST = 2;
 
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 2;
 
     public IchorFlood_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -50,7 +50,7 @@ public class IchorFlood_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.isInnate = true;
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

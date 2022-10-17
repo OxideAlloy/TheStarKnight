@@ -3,27 +3,16 @@ package theStarKnight.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
-import com.megacrit.cardcrawl.cards.tempCards.Insight;
-import com.megacrit.cardcrawl.cards.tempCards.Smite;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.ConstrictedPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.util.TextureLoader;
-
-import java.util.Iterator;
 
 public class RuinPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
@@ -34,7 +23,6 @@ public class RuinPower extends AbstractPower implements CloneablePowerInterface 
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/Ruin_84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/Ruin_32.png");
 
@@ -53,46 +41,35 @@ public class RuinPower extends AbstractPower implements CloneablePowerInterface 
         updateDescription();
     }
 
-
-//    @Override
-//    public float modifyBlockLast(float blockAmount) {
-//    return 0.0F;
-//}
-
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
-
-            int unblocked=((damageAmount-target.currentBlock)/2)*this.amount;
-
-            if(unblocked > 0) {
-                this.flash();
-                this.addToBot(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -unblocked), -unblocked));
-                if (target != null && !target.hasPower("Artifact")) {
-                    this.addToBot(new ApplyPowerAction(target, this.owner, new GainStrengthPower(target, unblocked), unblocked));
-                }
-            }
-        }
+    @Override
+    public void atStartOfTurn() {
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, this.amount), this.amount));
+        //this.addToBot(new ApplyPowerAction(monster, p, new IchorPower(monster, p, this.magicNumber), this.magicNumber));
+        this.flash();
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new ConstrictedPower(this.owner, this.owner, this.amount), this.amount));
     }
 
+
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
+
 //    @Override
-//    public void wasHPLost(DamageInfo info, int damageAmount) {
-//        if (info.owner != null && info.owner != this.owner && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
-//            this.flash();
-//            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
-//        }
+//    public void updateDescription() {
+//        this.description = DESCRIPTIONS[0] + -this.amount + DESCRIPTIONS[1];
 //    }
 
     @Override
     public void updateDescription() {
-        if(this.amount==1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new VoidBornPower(owner, source, amount);
+        return new IchorPower(owner, source, amount);
     }
 }

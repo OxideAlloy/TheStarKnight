@@ -19,6 +19,7 @@ public class Radiant_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Radiant_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Radiant.png");
+    public static final String IMG2 = makeCardPath("Radiant_full.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -60,6 +61,7 @@ public class Radiant_SK extends AbstractDynamicCard {
             upgradeName();
             //this.upgradeMagicNumber(UPGRADED_AMOUNT);
             rawDescription = UPGRADE_DESCRIPTION;
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

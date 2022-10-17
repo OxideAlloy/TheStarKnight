@@ -15,17 +15,17 @@ package theStarKnight.powers;
         import theStarKnight.DefaultMod;
         import theStarKnight.util.TextureLoader;
 
-public class CounterPower extends AbstractPower implements CloneablePowerInterface {
-    public static final String POWER_ID = DefaultMod.makeID("CounterPower");
+public class RipostePower extends AbstractPower implements CloneablePowerInterface {
+    public static final String POWER_ID = DefaultMod.makeID("RipostePower");
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/Counterstrike84.png");
-    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/Counterstrike32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("theStarKnightResources/images/powers/Riposte_84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("theStarKnightResources/images/powers/Riposte_32.png");
 
 
-    public CounterPower(int amount) {
+    public RipostePower(int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -41,18 +41,21 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
         if (info.type != DamageType.THORNS && info.type != DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
             this.flash();
             this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageType.THORNS), AttackEffect.SLASH_HORIZONTAL, true));
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            //this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         return damageAmount;
     }
 
+    public void atStartOfTurn() {
+        this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    }
 
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }
 
     public AbstractPower makeCopy() {
-        return new CounterPower(this.amount);
+        return new RipostePower(this.amount);
     }
 
     static {

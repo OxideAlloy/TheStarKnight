@@ -2,6 +2,7 @@ package theStarKnight.cards;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,9 +44,15 @@ public class ShieldOfFear_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.magicNumber = this.baseMagicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, (this.block)));
+    }
+
+    ///Eternal///
+    public void triggerOnExhaust() {
+        if(this.upgraded) {
+            this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+        }
     }
 
     //// START MADNESS CODE ////
@@ -68,7 +75,7 @@ public class ShieldOfFear_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
+            //this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

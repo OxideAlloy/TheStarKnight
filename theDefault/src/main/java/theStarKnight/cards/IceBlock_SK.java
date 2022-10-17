@@ -5,40 +5,45 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
+import theStarKnight.powers.IcePower;
+import theStarKnight.powers.IchorPower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class Supermassive_SK extends AbstractDynamicCard {
+public class IceBlock_SK extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Supermassive_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("Supermassive.png");
-    public static final String IMG2 = makeCardPath("Massive_full.png");
+    public static final String ID = DefaultMod.makeID(IceBlock_SK.class.getSimpleName());
+    public static final String IMG = makeCardPath("IceBlock.png");
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    private static final int BLOCK = 25;
-    private static final int UPGRADE_PLUS_BLOCK = 5;
+    private static final int BLOCK = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
+
+    private static final int AMOUNT = 2;
 
     // /STAT DECLARATION/
 
-    public Supermassive_SK() {
+    public IceBlock_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, -1), -1));
+        AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, block));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new IcePower(p, p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.
@@ -47,7 +52,6 @@ public class Supermassive_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

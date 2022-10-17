@@ -1,6 +1,7 @@
 package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,9 +27,9 @@ public class Corrupt_SK extends AbstractDynamicCard {
     private static final int COST = 0;
     //private static final int UPGRADED_COST = 0;
 
-    private static final int AMOUNT = 3;
+    private static final int AMOUNT = 2;
     private static final int UPGRADED_AMOUNT = 2;
-    //private static final int DEBUFF = 1;
+    //private static final int DEBUFF = -1;
     //private static final int UPGRADED_DEBUFF = 1;
 
     public Corrupt_SK() {
@@ -43,6 +44,8 @@ public class Corrupt_SK extends AbstractDynamicCard {
         //System.out.println("Magic Number = "+magicNumber );
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new IchorPower(m, p, magicNumber), magicNumber));
+        this.addToBot(new ExhaustAction(1, false, false, false));
+
     }
 
 //    public void use(AbstractPlayer p, AbstractMonster m) {

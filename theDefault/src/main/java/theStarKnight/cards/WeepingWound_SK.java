@@ -47,7 +47,7 @@ public class WeepingWound_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new WeepingWoundPower(p, p, this.magicNumber), this.magicNumber));
-        this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 2, true, true, false));
+        this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 3, true, true, false));
     }
 
     //Upgraded stats.

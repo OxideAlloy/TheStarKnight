@@ -21,6 +21,7 @@ public class Supernova_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Supernova_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Supernova.png");
+    public static final String IMG2 = makeCardPath("Nova_full.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -30,10 +31,11 @@ public class Supernova_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 4;
+    private static final int COST = 5;
+    private static final int UPGRADED_COST = 3;
 
     private static final int AMOUNT = 12;
-    private static final int UPGRADED_AMOUNT = 6;
+    //private static final int UPGRADED_AMOUNT = 6;
 
 
     // /STAT DECLARATION/
@@ -41,6 +43,7 @@ public class Supernova_SK extends AbstractDynamicCard {
     public Supernova_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
+        this.isEthereal = true;
     }
 
     // Actions the card should do.
@@ -59,9 +62,8 @@ public class Supernova_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            this.upgradeMagicNumber(UPGRADED_AMOUNT);
-            this.isEthereal = true;
+            upgradeBaseCost(UPGRADED_COST);
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }
