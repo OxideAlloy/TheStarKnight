@@ -1,0 +1,10 @@
+{
+  "theStarKnight:MalignantOrb": {
+    "NAME": "Malignant Orb",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, gain #b",
+      " temporary HP.",
+      " NL #yEvoke: Gain #b"
+    ]
+  }
+}

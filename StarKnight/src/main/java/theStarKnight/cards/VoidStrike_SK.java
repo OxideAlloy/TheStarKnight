@@ -1,0 +1,61 @@
+package theStarKnight.cards;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theStarKnight.DefaultMod;
+import theStarKnight.characters.TheDefault;
+
+import static theStarKnight.DefaultMod.makeCardPath;
+
+public class VoidStrike_SK extends AbstractDynamicCard {
+
+    public static final String ID = DefaultMod.makeID(VoidStrike_SK.class.getSimpleName());
+    public static final String IMG = makeCardPath("VoidStrike.png");
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
+    public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
+
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 1;
+    private static final int DAMAGE = 10;
+
+    public VoidStrike_SK() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseDamage = DAMAGE;
+        this.isEthereal = true;
+        this.tags.add(CardTags.STRIKE);
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        if (this.upgraded) {
+            this.addToBot(new ExhaustAction(1, false));
+        } else {
+            this.addToBot(new ExhaustAction(1, true, false, false));
+        }
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(UPGRADED_COST);
+            initializeDescription();
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+        "theStarKnight:IchorPotion": {
+                "NAME": "Ichor Potion",
+                "DESCRIPTIONS": ["Apply ", " #pIchor."]
+        }
+}
