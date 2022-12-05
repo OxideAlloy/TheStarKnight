@@ -1,0 +1,29 @@
+{
+  "theAdventurer:Shoggoth_A": {
+    "MOVES": [
+      "move"
+    ],
+    "NAME": "Shaggoth Body",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "theAdventurer:Shoggoth_B": {
+    "MOVES": [
+      "move"
+    ],
+    "NAME": "Shaggoth Head",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "theAdventurer:Shoggoth_C": {
+    "MOVES": [
+      "Blob and Weave"
+    ],
+    "NAME": "Shoggoth Blob",
+    "DIALOG": [
+      ""
+    ]
+  }
+}

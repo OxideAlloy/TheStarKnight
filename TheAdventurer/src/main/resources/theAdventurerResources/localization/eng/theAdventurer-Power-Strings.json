@@ -1,0 +1,148 @@
+{
+        "theAdventurer:IchorPower": {
+                "NAME": "Ichor",
+                "DESCRIPTIONS": [
+                        "Increases attack damage received by #b",
+                        "0%. Reduced by 2 when dealt attack damage."
+                ]
+        },
+        "theAdventurer:StackingDrawReductionPower": {
+                "NAME": "Draw Down",
+                "DESCRIPTIONS": ["Reduces the amount of cards drawn next turn by "]
+        },
+        "theAdventurer:RipostePower": {
+                "NAME": "Riposte",
+                "DESCRIPTIONS": ["Until the start of your turn, deal this much damage back when attacked."]
+        },
+        "theAdventurer:ShardEcho": {
+                "NAME": "Shard Echo",
+                "DESCRIPTIONS": ["Causes Echo effects to trigger."]
+        },
+        "theAdventurer:IchorShieldPower": {
+                "NAME": "Ichor Shield",
+                "DESCRIPTIONS": [
+                        "When attacked, apply #b",
+                        " #pIchor."
+                ]
+        },
+        "theAdventurer:TempStrNextTurn": {
+                "NAME": "Temporary Strength Next Turn",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " temporary strength at the start of your turn."
+                ]
+        },
+        "theAdventurer:BleedingEdgePower": {
+                "NAME": "Bleeding Edge",
+                "DESCRIPTIONS": [
+                        "Whenever you attack an enemy, apply #b",
+                        " #pIchor to them. "
+                ]
+        },
+        "theAdventurer:AccretionDiskPower": {
+                "NAME": "Accretion Disk",
+                "DESCRIPTIONS": [
+                        "At the start of your turn add a Pulsar to your hand."
+                ]
+        },
+        "theAdventurer:IchorFloodPower": {
+                "NAME": "Ichor Flood",
+                "DESCRIPTIONS": [
+                        "At the start of your turn apply #b",
+                        " #pIchor to each enemy."
+                ]
+        },
+        "theAdventurer:SingularityPower": {
+                "NAME": "Singularity",
+                "DESCRIPTIONS": [
+                        "At the start of your turn, apply #b",
+                        " Constricted to each enemy."
+                ]
+        },
+        "theAdventurer:InstinctPower": {
+                "NAME": "Instinct",
+                "DESCRIPTIONS": [
+                        "At the end of your turn gain block equal to your #yMadness."
+                ]
+        },
+        "theAdventurer:AdaptivePower": {
+                "NAME": "Adaptive",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a card, gain #b",
+                        " #yVigor."
+                ]
+        },
+        "theAdventurer:AlignmentPower": {
+                "NAME": "Conjunction",
+                "DESCRIPTIONS": [
+                        "Cards cost #b",
+                        " less energy to play on the turn they are drawn, to a minimum of one."
+                ]
+        },
+        "theAdventurer:MalignantGrowthPower": {
+                "NAME": "Malignant",
+                "DESCRIPTIONS": [
+                        "At the end of your turn, gain #b",
+                        " temporary HP and reduce Malignant by 1."
+                ]
+        },
+        "theAdventurer:VoidBornPower": {
+                "NAME": "Void Born",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a Status, gain #b",
+                        " Strength and #b",
+                        " Energy next turn. NL At the start of your turn shuffle #b",
+                        " Void into your library.",
+                        " Voids into your library."
+                ]
+        },
+        "theAdventurer:StarForgePower": {
+                "NAME": "Star Forge",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a card, deal #b",
+                        " damage to ALL enemies."
+                ]
+        },
+        "theAdventurer:WeepingWoundPower": {
+                "NAME": "Weeping",
+                "DESCRIPTIONS": [
+                        "Whenever you draw a Status, exhaust it and apply #b",
+                        " #pIchor to All enemies."
+                ]
+        },
+        "theAdventurer:ElderFormPower": {
+                "NAME": "Elder Form",
+                "DESCRIPTIONS": [
+                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to the damage dealt",
+                        ".",
+                        ", #b",
+                        " times."
+                ]
+        },
+        "theAdventurer:RuinPower": {
+                "NAME": "Ruin",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " Constricted at the start of your turn."
+                ]
+        },
+        "theAdventurer:MadnessPower": {
+                "NAME": "Madness",
+                "DESCRIPTIONS": [
+                        "Equal to the difference between your maximum hand size and the number of cards currently in your hand."
+                ]
+        },
+        "theAdventurer:WeakNextTurnPower": {
+                "NAME": "Weak Next Turn",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " Weak at the start of your turn."
+                ]
+        },
+        "theAdventurer:Frozen": {
+                "NAME": "Frozen",
+                "DESCRIPTIONS": [
+                        "Deal and receive 25% less damage."
+                ]
+        }
+}
