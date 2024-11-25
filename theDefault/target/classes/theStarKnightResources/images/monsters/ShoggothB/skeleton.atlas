@@ -1,0 +1,13 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shoggothB_2
+  rotate: false
+  xy: 1, 1
+  size: 300, 510
+  orig: 300, 510
+  offset: 0, 0
+  index: -1

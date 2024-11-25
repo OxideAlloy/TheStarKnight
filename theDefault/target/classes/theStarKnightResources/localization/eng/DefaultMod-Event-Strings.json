@@ -1,0 +1,62 @@
+{
+  "theStarKnight:IdentityCrisisEvent": {
+    "NAME": "Identity Crisis",
+    "DESCRIPTIONS": [
+      "As you move through ~The~ ~City~ you come across a #pPurple #pMirror. NL You look at it, but you see no reflection.",
+      "You see no one but #g~You~ #g~wish~ #g~to~ #g~become~ #g~someone.~",
+      "#r@YOU@ #r@EXIST@ #r@AND@ #r@ARE@ #r@VALID!@",
+      "#yYou #yare #yat #ypeace #ywith #yyour #ypresence.",
+      "You have no hands."
+    ],
+    "OPTIONS": [
+      "[Inspiration] #gGain #ga #gRandom #gStarting #gRelic.",
+      "[Denial] #rLose #r",
+      " #rMax #rHP. #gRemove #ga #gCard #gfrom #gyour #gdeck.",
+      "[Acceptance] #gGain #gApotheosis.",
+      "[TOUCH THE MIRROR] TOUCH TOUCH TO#C# TOUCH TO UCH TOUCH #rTOUCH TOUCH",
+      "[Leave]",
+      "Select card to remove."
+    ]
+  },
+  "theStarKnight:SicklyFountainEvent": {
+    "NAME": "A Sickly Fountain",
+    "DESCRIPTIONS": [
+      "You pass by a room and glimpse a #gSickly #glooking #gFountain. NL You feel thirsty.",
+      "You drink from the fountain, maybe that wasn't a great idea.",
+      "You decide it's not worth it."
+    ],
+    "OPTIONS": [
+      "[Drink] #gRestore #g20 #gHP. #gGain #ga #gSlimed.",
+      "[Don't Drink]",
+      "[Leave]"
+    ]
+  },
+  "theStarKnight:BronzeMirrorEvent": {
+    "NAME": "A Bronze Mirror",
+    "DESCRIPTIONS": [
+      "Lead by the sounds of merriment and laughter you weave through the stone halls until you find yourself in front of a polished bronze archway. The laughter has faded but a hideous silhouette looms before you.",
+      "You reach out and touch the cold and unyielding surface of polished bronze. You recoil and stumble away in horror.",
+      "You claw at the helm until ichor streams forth. You cannot free yourself, but the experience has left you more determined than ever.",
+      "You turn away from the distracting shade and continue your climb."
+    ],
+    "OPTIONS": [
+      "[Reflect] Duplicate a card.",
+      "[Remove your helm] Lose 16 HP. Gain 8 Max HP.",
+      "[Turn away]",
+      "[Leave]"
+    ]
+  },
+  "theStarKnight:TwistedGalleryEvent": {
+    "NAME": "A Twisted Gallery",
+    "DESCRIPTIONS": [
+      "You find yourself in an art gallery of some sort. The twisted forms are as enthralling as they are grotesque.",
+      "You take a moment to rest.",
+      "You pilfer all that you can carry."
+    ],
+    "OPTIONS": [
+      "[Contemplate] Heal 10 HP.",
+      "[Steal] Gain 200 gold and a Nihilism.",
+      "[Leave]"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "theStarKnight:Shoggoth_A": {
+    "MOVES": [
+      "move"
+    ],
+    "NAME": "Shaggoth Body",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "theStarKnight:Shoggoth_B": {
+    "MOVES": [
+      "move"
+    ],
+    "NAME": "Shaggoth Head",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "theStarKnight:Shoggoth_C": {
+    "MOVES": [
+      "Blob and Weave"
+    ],
+    "NAME": "Shoggoth Blob",
+    "DIALOG": [
+      ""
+    ]
+  }
+}

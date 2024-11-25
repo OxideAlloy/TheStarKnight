@@ -1,0 +1,164 @@
+{
+        "theStarKnight:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+        },
+        "theStarKnight:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy.", " enemies."]
+        },
+
+        "theStarKnight:IchorPower": {
+                "NAME": "Ichor",
+                "DESCRIPTIONS": [
+                        "Increases attack damage received by #b",
+                        "0%. Reduced by 2 when dealt attack damage."
+                ]
+        },
+        "theStarKnight:StackingDrawReductionPower": {
+                "NAME": "Draw Down",
+                "DESCRIPTIONS": ["Reduces the amount of cards drawn next turn by "]
+        },
+        "theStarKnight:RipostePower": {
+                "NAME": "Riposte",
+                "DESCRIPTIONS": ["Until the start of your turn, deal this much damage back when attacked."]
+        },
+        "theStarKnight:ShardEcho": {
+                "NAME": "Shard Echo",
+                "DESCRIPTIONS": ["Causes Echo effects to trigger."]
+        },
+        "theStarKnight:IchorShieldPower": {
+                "NAME": "Ichor Shield",
+                "DESCRIPTIONS": [
+                        "When attacked, apply #b",
+                        " #pIchor."
+                ]
+        },
+        "theStarKnight:TempStrNextTurn": {
+                "NAME": "Temporary Strength Next Turn",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " temporary strength at the start of your turn."
+                ]
+        },
+        "theStarKnight:BleedingEdgePower": {
+                "NAME": "Bleeding Edge",
+                "DESCRIPTIONS": [
+                        "Whenever you attack an enemy, apply #b",
+                        " #pIchor to them. "
+                ]
+        },
+        "theStarKnight:AccretionDiskPower": {
+                "NAME": "Accretion Disk",
+                "DESCRIPTIONS": [
+                        "At the start of your turn add a Pulsar to your hand."
+                ]
+        },
+        "theStarKnight:IchorFloodPower": {
+                "NAME": "Ichor Flood",
+                "DESCRIPTIONS": [
+                        "At the start of your turn apply #b",
+                        " #pIchor to each enemy."
+                ]
+        },
+        "theStarKnight:SingularityPower": {
+                "NAME": "Singularity",
+                "DESCRIPTIONS": [
+                        "At the start of your turn gain #b",
+                        " Constricted and apply #b",
+                        " Constricted to each enemy."
+                ]
+        },
+        "theStarKnight:InstinctPower": {
+                "NAME": "Instinct",
+                "DESCRIPTIONS": [
+                        "At the end of your turn gain block equal to your #yMadness."
+                ]
+        },
+        "theStarKnight:AdaptivePower": {
+                "NAME": "Adaptive",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a card, gain #b",
+                        " #yVigor."
+                ]
+        },
+        "theStarKnight:AlignmentPower": {
+                "NAME": "Conjunction",
+                "DESCRIPTIONS": [
+                        "Cards cost #b",
+                        " less energy to play on the turn they are drawn, to a minimum of one."
+                ]
+        },
+        "theStarKnight:MalignantGrowthPower": {
+                "NAME": "Malignant",
+                "DESCRIPTIONS": [
+                        "At the end of your turn, gain #b",
+                        " temporary HP and reduce Malignant by 1."
+                ]
+        },
+        "theStarKnight:VoidBornPower": {
+                "NAME": "Void Born",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a Status, gain #b",
+                        " Strength and #b",
+                        " Energy next turn. NL At the start of your turn shuffle #b",
+                        " Void into your library.",
+                        " Voids into your library."
+                ]
+        },
+        "theStarKnight:SporePower": {
+                "NAME": "Spore",
+                "DESCRIPTIONS": [
+                        "At the end of turn if there is 10 or more Spore, remove all stacks and take that much damage, otherwise Spore is doubled."
+                ]
+        },
+        "theStarKnight:StarForgePower": {
+                "NAME": "Star Forge",
+                "DESCRIPTIONS": [
+                        "Whenever you exhaust a card, deal #b",
+                        " damage to ALL enemies."
+                ]
+        },
+        "theStarKnight:WeepingWoundPower": {
+                "NAME": "Weeping",
+                "DESCRIPTIONS": [
+                        "Whenever you draw a Status, exhaust it and apply #b",
+                        " #pIchor to All enemies."
+                ]
+        },
+        "theStarKnight:ElderFormPower": {
+                "NAME": "Elder Form",
+                "DESCRIPTIONS": [
+                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to the damage dealt",
+                        ".",
+                        ", #b",
+                        " times."
+                ]
+        },
+        "theStarKnight:RuinPower": {
+                "NAME": "Ruin",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " Constricted at the start of your turn."
+                ]
+        },
+        "theStarKnight:MadnessPower": {
+                "NAME": "Madness",
+                "DESCRIPTIONS": [
+                        "Equal to the difference between your maximum hand size and the number of cards currently in your hand."
+                ]
+        },
+        "theStarKnight:WeakNextTurnPower": {
+                "NAME": "Weak Next Turn",
+                "DESCRIPTIONS": [
+                        "Gain #b",
+                        " Weak at the start of your turn."
+                ]
+        },
+        "theStarKnight:Frozen": {
+                "NAME": "Frozen",
+                "DESCRIPTIONS": [
+                        "Deal and receive 25% less damage."
+                ]
+        }
+}
