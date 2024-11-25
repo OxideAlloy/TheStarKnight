@@ -2,6 +2,7 @@ package theStarKnight.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,19 +31,22 @@ public class Radiate_SK extends AbstractDynamicCard {
 
     private static final int AMOUNT = 2;
     private static final int UPGRADED_AMOUNT = 1;
+    private static final int DEBUFF = 1;
 
     // /STAT DECLARATION/
 
     public Radiate_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.player.increaseMaxHp(-1, false);
+        //AbstractDungeon.player.increaseMaxHp(-1, false);
         this.addToBot(new GainEnergyAction(magicNumber));
+        this.addToBot(new LoseHPAction(p, p, defaultSecondMagicNumber));
     }
 
     //Upgraded stats.

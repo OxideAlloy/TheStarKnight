@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
@@ -24,6 +26,9 @@ public class HeatDeath_SK extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(HeatDeath_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("HeatDeath.png");
 
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -31,13 +36,15 @@ public class HeatDeath_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
-    private static final int AMOUNT = 4;
+    private static final int AMOUNT = 2;
 
     public HeatDeath_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 5;
         baseMagicNumber = magicNumber = AMOUNT;
-        this.cardsToPreview = new Burn();
+        if(!this.upgraded) {
+            this.cardsToPreview = new Burn();
+        }
     }
 
     // Actions the card should do.
@@ -81,6 +88,7 @@ public class HeatDeath_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

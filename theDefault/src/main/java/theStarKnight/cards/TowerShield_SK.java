@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
+import theStarKnight.powers.IcePower;
 import theStarKnight.powers.WeakNextTurnPower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
@@ -30,25 +31,28 @@ public class TowerShield_SK extends AbstractDynamicCard {
     private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK = 5;
 
+    private static final int AMOUNT = 1;
 
     // /STAT DECLARATION/
 
     public TowerShield_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = AMOUNT;
         this.selfRetain = true;
     }
 
     public void onRetained() {
-        this.addToBot(
-                //new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakNextTurnPower(AbstractDungeon.player,AbstractDungeon.player, 1), 1));
+//        this.addToBot(
+//                //new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
+//                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakNextTurnPower(AbstractDungeon.player,AbstractDungeon.player, 1), 1));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new IcePower(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber), this.magicNumber));
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        this.addToBot(new GainBlockAction(p, p, block));
     }
 
 

@@ -2,8 +2,11 @@ package theStarKnight.cards;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
@@ -31,12 +35,12 @@ public class DarkHeart_SK extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int TIMES = 0;
-    private static final int UPGRADED_TIMES = 4;
+    //private static final int TIMES = 0;
+    //private static final int UPGRADED_TIMES = 4;
 
     public DarkHeart_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = TIMES;
+        //baseMagicNumber = magicNumber = TIMES;
         this.baseDamage = 5;
         this.baseBlock = 5;
     }
@@ -44,8 +48,15 @@ public class DarkHeart_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+        if(this.upgraded){
+            this.addToBot(new SFXAction("ATTACK_HEAVY"));
+            this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        }
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, (this.block)));
         //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
@@ -86,7 +97,7 @@ public class DarkHeart_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
-            this.upgradeMagicNumber(UPGRADED_TIMES);
+            //this.upgradeMagicNumber(UPGRADED_TIMES);
             upgradeDamage(9);
             initializeDescription();
         }

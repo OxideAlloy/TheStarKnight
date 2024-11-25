@@ -1,19 +1,15 @@
 package theStarKnight.cards;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class CacconShard_SK extends AbstractDynamicCard {
+public class CocoonShard_SK extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(CacconShard_SK.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(CocoonShard_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("CacconShard.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -32,7 +28,7 @@ public class CacconShard_SK extends AbstractDynamicCard {
     //The power "ShardEcho" causes this cards effect to trigger.//
     //////////////////////////////////////////////////////////////
 
-    public CacconShard_SK() {
+    public CocoonShard_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
     }

@@ -155,10 +155,17 @@
                         " Weak at the start of your turn."
                 ]
         },
-        "theStarKnight:Frozen": {
+        "theStarKnight:IcePower": {
                 "NAME": "Frozen",
                 "DESCRIPTIONS": [
                         "Deal and receive 25% less damage."
+                ]
+        },
+        "theStarKnight:CocoonPower": {
+                "NAME": "Cocoon",
+                "DESCRIPTIONS": [
+                        "Whenever you would lose HP, lose ",
+                        " less."
                 ]
         }
 }

@@ -101,12 +101,12 @@
   },
   "theStarKnight:Samsara_SK": {
     "NAME": "Saṃsāra",
-    "DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP. NL Gain !M! Temporary_HP."
+    "DESCRIPTION": "[#AA0000]Lose [#AA0000]!theStarKnight:SecondMagic! [#AA0000]HP. NL Gain !M! Temporary_HP."
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
     "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Madness + !M! NL Deal !D! damage NL and gain !B! Block."
+    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Deal !D! damage to ALL enemies and gain !B! Block."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
@@ -140,7 +140,7 @@
   },
   "theStarKnight:Helios_SK": {
     "NAME": "Helios",
-    "DESCRIPTION": " Retain. NL Deal !D! damage. NL When retained, NL gain Vulnerable."
+    "DESCRIPTION": " Retain. NL Deal !D! damage. NL When retained, add a *Burn to your hand."
   },
   "theStarKnight:Hemorrhage_SK": {
     "NAME": "Hemorrhage",
@@ -160,8 +160,7 @@
   },
   "theStarKnight:GhostArmor_SK": {
     "NAME": "Ghost Armor",
-    "DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]2 [#AA0000]Max [#AA0000]HP.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP."
+    "DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]2 [#AA0000]HP."
   },
   "theStarKnight:StrangeMatter_SK": {
     "NAME": "Strange Matter",
@@ -203,8 +202,8 @@
   },
   "theStarKnight:PulsatingShard_SK": {
     "NAME": "syha’h gnaiih",
-    "DESCRIPTION": "thestarknight:Memory NL Gain [E] and 1 Frail at the start of your turn.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn."
+    "DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Innate Memory NL Gain [E] at the start of your turn."
   },
   "theStarKnight:CacconShard_SK": {
     "NAME": "nglui R'lyeh",
@@ -229,7 +228,8 @@
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Death",
-    "DESCRIPTION": "thestarknight:Eternal NL thestarknight:Madness NL Deal damage !D!."
+    "DESCRIPTION": "thestarknight:Double_Madness NL Deal damage !D!. NL Add a *Burn to your hand.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Double_Madness NL Deal damage !D!."
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
@@ -242,7 +242,7 @@
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "thestarknight:Multi_Madness !theStarKnight:SecondMagic! NL Deal !D! damage to a random enemy, NL !M! times."
+    "DESCRIPTION": "thestarknight:Ephemeral, thestarknight:Madness NL Deal !D! damage to a random enemy, NL !M! times."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -255,12 +255,12 @@
   },
   "theStarKnight:TowerShield_SK": {
     "NAME": "Tower Shield",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When Retained, gain Weak at the start of your next turn."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, gain !M! thestarknight:Frozen."
   },
   "theStarKnight:TidalLock_SK": {
     "NAME": "Tidal Lock",
-    "DESCRIPTION": "Shuffle 2 *Comets into your library.",
-    "UPGRADE_DESCRIPTION": "Shuffle 2 upgraded *Comets into your library."
+    "DESCRIPTION": "Shuffle 2 *Comets into your library. NL Gain !M! thestarknight:Frozen.",
+    "UPGRADE_DESCRIPTION": "Shuffle 2 upgraded *Comets into your library. NL Gain !M! thestarknight:Frozen."
   },
   "theStarKnight:Comet_SK": {
     "NAME": "Comet",
@@ -271,7 +271,7 @@
     "DESCRIPTION": "Apply Weak and !M! thestarknight:Ichor to each enemy."
   },
   "theStarKnight:MagneticField_SK": {
-    "NAME": "Magnetic Field",
+    "NAME": "Energy Cocoon",
     "DESCRIPTION": "Gain !M! thestarknight:Plated_Armor. NL Exhaust."
   },
   "theStarKnight:Terror_SK": {
@@ -280,8 +280,8 @@
   },
   "theStarKnight:Radiate_SK": {
     "NAME": "Radiate",
-    "DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP. NL Gain [E] [E]",
-    "UPGRADE_DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]Max [#AA0000]HP. NL Gain [E] [E] [E]"
+    "DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]HP. NL Gain [E] [E]",
+    "UPGRADE_DESCRIPTION": "[#AA0000]Lose [#AA0000]1 [#AA0000]HP. NL Gain [E] [E] [E]"
   },
   "theStarKnight:Riposte_SK": {
     "NAME": "Riposte",
@@ -387,7 +387,7 @@
   },
   "theStarKnight:Supernova_SK": {
     "NAME": "Supernova",
-    "DESCRIPTION": "When exhausted, reduce this cards cost by [E]. NL Gain !M! Vigor. NL thestarknight:Eternal Ethereal"
+    "DESCRIPTION": "thestarknight:Eternal. NL When exhausted, reduce this cards cost by [E]. NL Gain !M! Strength. NL Ethereal."
   },
   "theStarKnight:Vivisection_SK": {
     "NAME": "Vivisection",

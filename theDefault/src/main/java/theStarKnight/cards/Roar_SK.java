@@ -38,7 +38,7 @@ public class Roar_SK extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 3;
 
     private static final int BLOCK = 6;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    //private static final int UPGRADE_PLUS_BLOCK = 3;
 
     private static final int AMOUNT = 1;
     private static final int UPGRADED_AMOUNT = 1;
@@ -56,8 +56,10 @@ public class Roar_SK extends AbstractDynamicCard {
 
         //AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, damage));
-        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_GREMLINNOB_1A"));
+
+        //Talk action each time this is played is too much
+        //this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+        //AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_GREMLINNOB_1A"));
         this.addToBot(new TalkAction(true, "@RRrroohrrRGHHhhh!!@", 1.5F, 1.5F));
     }
 
@@ -68,7 +70,7 @@ public class Roar_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             //this.upgradeDamage(UPGRADE_PLUS_DMG);
-            this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            //this.upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
             //upgradeBaseCost(UPGRADED_COST);
             initializeDescription();

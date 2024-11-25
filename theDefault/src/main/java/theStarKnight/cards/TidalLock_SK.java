@@ -1,5 +1,6 @@
 package theStarKnight.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
+import theStarKnight.powers.IcePower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
@@ -28,10 +30,13 @@ public class TidalLock_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
+    private static final int AMOUNT = 1;
+
     // /STAT DECLARATION/
 
     public TidalLock_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = magicNumber = AMOUNT;
         this.cardsToPreview = new Comet_SK();
     }
 
@@ -43,6 +48,8 @@ public class TidalLock_SK extends AbstractDynamicCard {
             card.upgrade();
         }
         this.addToBot(new MakeTempCardInDrawPileAction(card, 2, true, true, false));
+        this.addToBot(new ApplyPowerAction(p, p, new IcePower(p, p, this.magicNumber), this.magicNumber));
+
     }
 
     //Upgraded stats.

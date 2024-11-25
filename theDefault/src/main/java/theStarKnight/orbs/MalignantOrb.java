@@ -85,8 +85,7 @@ public class MalignantOrb extends CustomOrb {
     @Override
     public void onEvoke() { // 1.On Orb Evoke
 
-        AbstractDungeon.actionManager.addToBottom(
-                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, this.evokeAmount));
+        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, this.evokeAmount));
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("SLIME_BLINK_1")); // 3.And play a Jingle Sound.
         // For a list of sound effects you can use, look under com.megacrit.cardcrawl.audio.SoundMaster - you can see the list of keys you can use there. As far as previewing what they sound like, open desktop-1.0.jar with something like 7-Zip and go to audio. Reference the file names provided. (Thanks fiiiiilth)

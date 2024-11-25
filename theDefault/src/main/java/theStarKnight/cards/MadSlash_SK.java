@@ -4,10 +4,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -38,17 +35,17 @@ public class MadSlash_SK extends AbstractDynamicCard {
 
     private static final int TIMES = 5;
 
-    private static final int DAMAGE = 2;
-    //private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DAMAGE = 1;
+    private static final int UPGRADE_PLUS_DMG = 1;
 
-    private static final int DEBUFF = -3;
-    private static final int UPGRADED_DEBUFF = 2;
+    //private static final int DEBUFF = -3;
+    //private static final int UPGRADED_DEBUFF = 2;
 
     public MadSlash_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = TIMES;
         this.baseDamage = DAMAGE;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
+        //defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
     }
 
     // Actions the card should do.
@@ -63,17 +60,22 @@ public class MadSlash_SK extends AbstractDynamicCard {
         }
     }
 
+    //// EPHEMERAL ////
+    public void triggerOnCardPlayed(AbstractCard c) {
+        this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+    }
+
     //// START MADNESS CODE ////
     public void atTurnStart() {
-        baseMagicNumber = this.magicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()+this.defaultSecondMagicNumber);
+        baseMagicNumber = this.magicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         //this.initializeDescription();
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
-        baseMagicNumber = this.magicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()+this.defaultSecondMagicNumber);
+        baseMagicNumber = this.magicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         //this.initializeDescription();
     }
     public void applyPowers() {
-        baseMagicNumber = this.magicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()+this.defaultSecondMagicNumber);
+        baseMagicNumber = this.magicNumber = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         super.applyPowers();
         this.initializeDescription();
     }
@@ -87,8 +89,8 @@ public class MadSlash_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             //rawDescription = UPGRADE_DESCRIPTION;
-            this.upgradeDefaultSecondMagicNumber(UPGRADED_DEBUFF);
-            //upgradeDamage(UPGRADE_PLUS_DMG);
+            //this.upgradeDefaultSecondMagicNumber(UPGRADED_DEBUFF);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

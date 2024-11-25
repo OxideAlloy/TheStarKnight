@@ -2,6 +2,7 @@ package theStarKnight.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,6 +27,8 @@ public class Samsara_SK extends AbstractDynamicCard {
 
     private static final int AMOUNT = 9;
     private static final int UPGRADED_AMOUNT = 5;
+    private static final int DEBUFF = 2;
+    //private static final int UPGRADED_DEBUFF = 1;
 
 
     // /STAT DECLARATION/
@@ -33,18 +36,19 @@ public class Samsara_SK extends AbstractDynamicCard {
     public Samsara_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
         this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
 
+        //AbstractDungeon.player.increaseMaxHp(-1, false);
+        this.addToBot(new LoseHPAction(p, p, defaultSecondMagicNumber));
 
-        AbstractDungeon.player.increaseMaxHp(-1, false);
-        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p, p, this.magicNumber));
+        this.addToBot(new AddTemporaryHPAction(p, p, this.magicNumber));
     }
 
     //Upgraded stats.
@@ -53,6 +57,7 @@ public class Samsara_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            //this.upgradeDefaultSecondMagicNumber(UPGRADED_DEBUFF);
             upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }

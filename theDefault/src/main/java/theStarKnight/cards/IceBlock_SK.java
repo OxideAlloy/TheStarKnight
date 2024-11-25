@@ -40,10 +40,8 @@ public class IceBlock_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new IcePower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IcePower(p, p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.

@@ -57,6 +57,7 @@ public class PulsatingShard_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
+            this.isInnate = true;
             this.loadCardImage(IMG2);
             initializeDescription();
         }

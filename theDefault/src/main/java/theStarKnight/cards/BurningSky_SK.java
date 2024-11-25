@@ -1,8 +1,10 @@
 package theStarKnight.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.cards.tempCards.Insight;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -35,6 +37,7 @@ public class BurningSky_SK extends AbstractDynamicCard {
     public BurningSky_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new FallingStar_SK();
+        //MultiCardPreview.add(this, new FallingStar_SK(), new Burn());
     }
 
     // Actions the card should do.
