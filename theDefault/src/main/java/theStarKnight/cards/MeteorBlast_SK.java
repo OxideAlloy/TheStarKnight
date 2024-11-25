@@ -33,20 +33,30 @@ public class MeteorBlast_SK extends AbstractDynamicCard {
     private static final int COST = 5;
     private static final int UPGRADED_COST = 4;
 
-    private static final int DAMAGE = 35;
+    private static final int DAMAGE = 30;
     private static final int IMPACT = 5;
+
+    private static final int AMOUNT = 5;
 
     public MeteorBlast_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         //baseMagicNumber = magicNumber = IMPACT;
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = AMOUNT;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = IMPACT;
+        this.selfRetain = true;
         this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new DamageAllEnemiesAction(p, this.defaultBaseSecondMagicNumber, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+    }
+
+    public void onRetained() {
+        this.upgradeDamage(this.magicNumber);
+        this.upgradeDefaultSecondMagicNumber(this.magicNumber);
     }
 
 

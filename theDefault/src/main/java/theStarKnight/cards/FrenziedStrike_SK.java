@@ -34,12 +34,12 @@ public class FrenziedStrike_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 0;
+    //private static final int UPGRADED_COST = 0;
 
     private static final int AMOUNT = 1;
-    private static final int DAMAGE = 7;
-    //private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     public FrenziedStrike_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -83,8 +83,8 @@ public class FrenziedStrike_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeDamage(UPGRADE_PLUS_DMG);
+            //upgradeBaseCost(UPGRADED_COST);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -3,10 +3,10 @@
 
     <!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
     <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
-    <groupId>defaultmod</groupId>
+    <groupId>thestarknightmod</groupId>
     <artifactId>TheStarKnight</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
     <name>The Fallen</name>
-    <version>0.0.4</version>
+    <version>0.1.1</version>
     <description>Adds a new character to Slay the Spire, the Fallen!</description>
 
     <properties>
@@ -16,7 +16,7 @@
         <ModTheSpire.version>3.8.0</ModTheSpire.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
-        <Steam.path> D:\Applications\steamapps</Steam.path>
+        <Steam.path>C:\Program Files (x86)\Steam\steamapps</Steam.path>
     </properties>
 
     <dependencies>

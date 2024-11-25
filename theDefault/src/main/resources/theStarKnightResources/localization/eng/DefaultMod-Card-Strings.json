@@ -54,7 +54,7 @@
 
   "theStarKnight:Playtester_SK": {
     "NAME": "Playtest Card",
-    "DESCRIPTION": "Innate. N: Upgrade your cards. NL Gain [E] [E] [E] [E] [E]"
+    "DESCRIPTION": "This is a test NL Innate. N: Upgrade your cards. NL Gain [E] [E] [E] [E] [E]"
   },
 
   "theStarKnight:Strike_SK": {
@@ -92,7 +92,7 @@
   },
   "theStarKnight:SolarFlare_SK": {
     "NAME": "Solar Flare",
-    "DESCRIPTION": "Deal !D! damage X+1 times.",
+    "DESCRIPTION": "Deal 7X (!D!) damage.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage X+1 times. Refund half X rounded down."
   },
   "theStarKnight:KnifeGame_SK": {
@@ -128,7 +128,7 @@
   },
   "theStarKnight:MeteorBlast_SK": {
     "NAME": "Meteorite Strike",
-    "DESCRIPTION": "Deal !D! damage and !theStarKnight:SecondMagic! damage to all enemies."
+    "DESCRIPTION": " Retain. thestarknight:Impending !M! NL Deal !D! damage and !theStarKnight:SecondMagic! damage to all enemies."
   },
   "theStarKnight:HammerTime_SK": {
     "NAME": "Hammer Time",
@@ -136,11 +136,11 @@
   },
   "theStarKnight:HeavyMetal_SK": {
     "NAME": "Heavy Metal",
-    "DESCRIPTION": "Exhaust. NL When drawn, NL gain !M! strength and lose !M! dexterity. NL Retain."
+    "DESCRIPTION": "Retain. NL When drawn, NL gain !M! strength and lose !M! dexterity. NL Exhaust."
   },
   "theStarKnight:Helios_SK": {
     "NAME": "Helios",
-    "DESCRIPTION": "Deal !D! damage. NL Retain. NL When retained, NL gain Vulnerable."
+    "DESCRIPTION": " Retain. NL Deal !D! damage. NL When retained, NL gain Vulnerable."
   },
   "theStarKnight:Hemorrhage_SK": {
     "NAME": "Hemorrhage",
@@ -177,7 +177,7 @@
   },
   "theStarKnight:FallingStar_SK": {
     "NAME": "Falling Star",
-    "DESCRIPTION": "thestarknight:Impending !M! NL Deal !D!. NL Retain. Exhaust."
+    "DESCRIPTION": " Retain. NL thestarknight:Impending !M! NL Deal !D!. NL Exhaust."
   },
   "theStarKnight:BurningSky_SK": {
     "NAME": "Burning Sky",
@@ -255,7 +255,7 @@
   },
   "theStarKnight:TowerShield_SK": {
     "NAME": "Tower Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Retain. NL When Retained, gain Weak at the start of your next turn."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When Retained, gain Weak at the start of your next turn."
   },
   "theStarKnight:TidalLock_SK": {
     "NAME": "Tidal Lock",
@@ -264,7 +264,7 @@
   },
   "theStarKnight:Comet_SK": {
     "NAME": "Comet",
-    "DESCRIPTION": "thestarknight:Impending !M! NL Gain !B! block. NL Retain. Exhaust."
+    "DESCRIPTION": "Retain. thestarknight:Impending !M! NL Gain !B! block. NL Exhaust."
   },
   "theStarKnight:IchorSpray_SK": {
     "NAME": "Ichor Spray",

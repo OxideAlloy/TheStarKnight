@@ -5,8 +5,10 @@ import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,10 +31,13 @@ public class HeatDeath_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
+    private static final int AMOUNT = 4;
 
     public HeatDeath_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 5;
+        baseMagicNumber = magicNumber = AMOUNT;
+        this.cardsToPreview = new Burn();
     }
 
     // Actions the card should do.
@@ -40,23 +45,29 @@ public class HeatDeath_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-   }
-
-   ///Eternal///
-    public void triggerOnExhaust() {
-        this.upgradeDamage(this.magicNumber);
-        this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+        if(!this.upgraded) {
+            this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
+        }
     }
+
+//   ///Eternal///
+//    public void triggerOnExhaust() {
+//        this.upgradeDamage(this.magicNumber);
+//        this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+//    }
 
     //// START MADNESS CODE ////
     public void atTurnStart() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage=this.baseDamage*this.magicNumber;
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage=this.baseDamage*this.magicNumber;
     }
     public void applyPowers() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage=this.baseDamage*this.magicNumber;
         super.applyPowers();
         this.initializeDescription();
     }

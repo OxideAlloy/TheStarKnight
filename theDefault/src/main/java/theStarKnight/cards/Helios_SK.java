@@ -3,7 +3,10 @@ package theStarKnight.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,11 +30,10 @@ public class Helios_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
+    //private static final int UPGRADED_COST = 2;
 
-    private static final int DAMAGE = 30;
-    //private static final int UPGRADE_PLUS_DMG = 1;
-
+    private static final int DAMAGE = 28;
+    private static final int UPGRADE_PLUS_DMG = 8;
     private static final int DEBUFF = 1;
 
     public Helios_SK() {
@@ -39,11 +41,13 @@ public class Helios_SK extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = DEBUFF;
         this.selfRetain = true;
+        this.cardsToPreview = new Burn();
     }
 
     // Actions the card should do.
     @Override
     public void onRetained() {
+        this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VulnerablePower(AbstractDungeon.player, this.magicNumber, false), this.magicNumber));
     }
 
@@ -58,7 +62,7 @@ public class Helios_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             this.loadCardImage(IMG2);
             initializeDescription();
         }
