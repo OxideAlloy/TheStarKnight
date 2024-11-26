@@ -272,7 +272,8 @@
   },
   "theStarKnight:MagneticField_SK": {
     "NAME": "Energy Cocoon",
-    "DESCRIPTION": "Gain !M! thestarknight:Plated_Armor. NL Exhaust."
+    "DESCRIPTION": "Whenever you would lose HP, lose !M! less.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you would lose HP, lose !M! less."
   },
   "theStarKnight:Terror_SK": {
     "NAME": "Terror",
@@ -306,7 +307,7 @@
   },
   "theStarKnight:Atlas_SK": {
     "NAME": "Atlas",
-    "DESCRIPTION": "Gain !M! thestarknight:Plated_Armor. Shuffle a *Heavy *Metal into your deck."
+    "DESCRIPTION": "Gain !M! thestarknight:Frozen. NL Frozen no longer reduces your damage."
   },
   "theStarKnight:AccretionDisk_SK": {
     "NAME": "Accretion Disk",
@@ -319,8 +320,7 @@
   },
   "theStarKnight:IchorFlood_SK": {
     "NAME": "Ichor Flood",
-    "DESCRIPTION": "At the start of your turn apply !M! thestarknight:Ichor to each enemy.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn apply !M! thestarknight:Ichor to each enemy."
+    "DESCRIPTION": "Whenever you play a skill apply !M! thestarknight:Ichor to ALL enemies."
   },
   "theStarKnight:Singularity_SK": {
     "NAME": "Singularity",
@@ -362,7 +362,7 @@
   },
   "theStarKnight:Ruin_SK": {
     "NAME": "Elder Form",
-    "DESCRIPTION": "Gain thestarknight:Elder_Form NL At the start of NL your turn, gain 1 thestarknight:Constricted."
+    "DESCRIPTION": "When you deal unblocked damage to an enemy, they lose !M! Strength for the turn."
   },
   "theStarKnight:ConsumingDarkness_SK": {
     "NAME": "Consuming Darkness",

@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
+import theStarKnight.powers.AtlasPower;
 import theStarKnight.powers.CommonPower;
+import theStarKnight.powers.IcePower;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
@@ -30,22 +32,25 @@ public class Atlas_SK extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int AMOUNT = 4;
+    private static final int AMOUNT = 3;
     private static final int UPGRADED_AMOUNT = 2;
 
     public Atlas_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
-        this.cardsToPreview = new HeavyMetal_SK();
+        //this.cardsToPreview = new HeavyMetal_SK();
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new IcePower(p, p, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new AtlasPower(p), 1));
+
+        //.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
         //AbstractCard card = new HeavyMetal_SK();
-        this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true, false));
+        //this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true, false));
     }
 
     //Upgraded stats.

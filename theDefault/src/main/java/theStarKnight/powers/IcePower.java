@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -49,7 +50,10 @@ public class IcePower extends AbstractPower implements CloneablePowerInterface {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage / 2.0F : damage;
+        //Reduce damage by 25% unless player has "Atlas" power
+        if (!AbstractDungeon.player.hasPower(AtlasPower.POWER_ID)) {
+            return type == DamageInfo.DamageType.NORMAL ? damage * .75F : damage;
+        }
     }
 
     @Override

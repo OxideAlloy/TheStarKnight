@@ -57,7 +57,7 @@
         "theStarKnight:IchorFloodPower": {
                 "NAME": "Ichor Flood",
                 "DESCRIPTIONS": [
-                        "At the start of your turn apply #b",
+                        "Whenever you play a skill apply #b",
                         " #pIchor to each enemy."
                 ]
         },
@@ -166,6 +166,12 @@
                 "DESCRIPTIONS": [
                         "Whenever you would lose HP, lose ",
                         " less."
+                ]
+        },
+        "theStarKnight:AtlasPower": {
+                "NAME": "Atlas",
+                "DESCRIPTIONS": [
+                        "Frozen no longer reduces your damage."
                 ]
         }
 }

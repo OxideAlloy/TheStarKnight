@@ -27,8 +27,8 @@ public class AccretionDisk_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     //private static final int AMOUNT = 2;
     //private static final int UPGRADED_AMOUNT = 2;

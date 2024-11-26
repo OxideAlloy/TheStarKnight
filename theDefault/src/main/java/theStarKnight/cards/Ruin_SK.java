@@ -26,10 +26,11 @@ public class Ruin_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
+    private static final int COST = 2;
+    //private static final int UPGRADED_COST = 2;
 
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 3;
+    private static final int UPGRADED_AMOUNT = 2;
 
 //    private static final int DEBUFF = 4;
 //    private static final int UPGRADED_DEBUFF = -2;
@@ -45,7 +46,7 @@ public class Ruin_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new ElderFormPower(p, p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new RuinPower(p, p,1), 1));
+        //this.addToBot(new ApplyPowerAction(p, p, new RuinPower(p, p,1), 1));
     }
 
     //Upgraded stats.
@@ -53,9 +54,9 @@ public class Ruin_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             //this.upgradeDefaultSecondMagicNumber(UPGRADED_DEBUFF);
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             //rawDescription = UPGRADE_DESCRIPTION;
             this.loadCardImage(IMG2);
             initializeDescription();

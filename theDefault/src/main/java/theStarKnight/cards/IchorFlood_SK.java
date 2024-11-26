@@ -31,6 +31,7 @@ public class IchorFlood_SK extends AbstractDynamicCard {
     //private static final int UPGRADED_COST = 2;
 
     private static final int AMOUNT = 2;
+    private static final int UPGRADED_AMOUNT = 1;
 
     public IchorFlood_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -51,6 +52,7 @@ public class IchorFlood_SK extends AbstractDynamicCard {
             upgradeName();
             this.isInnate = true;
             //upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

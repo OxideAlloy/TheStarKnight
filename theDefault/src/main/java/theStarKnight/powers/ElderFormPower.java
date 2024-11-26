@@ -50,13 +50,13 @@ public class ElderFormPower extends AbstractPower implements CloneablePowerInter
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
 
             this.flash();
-            int unblocked=(damageAmount-target.currentBlock)*this.amount;
+            //int unblocked=(damageAmount-target.currentBlock)*this.amount;
 
             if(unblocked > 0) {
                 this.flash();
-                this.addToBot(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -unblocked), -unblocked));
+                this.addToBot(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -this.amount), -this.amount));
                 if (target != null && !target.hasPower("Artifact")) {
-                    this.addToBot(new ApplyPowerAction(target, this.owner, new GainStrengthPower(target, unblocked), unblocked));
+                    this.addToBot(new ApplyPowerAction(target, this.owner, new GainStrengthPower(target, this.amount), this.amount));
                 }
             }
         }
