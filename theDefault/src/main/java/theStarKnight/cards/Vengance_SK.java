@@ -18,15 +18,15 @@ import theStarKnight.characters.TheDefault;
 
 import static theStarKnight.DefaultMod.makeCardPath;
 
-public class Vengance_SK extends AbstractDynamicCard {
+public class    Vengance_SK extends AbstractDynamicCard {
 
     //See "CardTemplate" for original template
 
     public static final String ID = DefaultMod.makeID(Vengance_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("Vengance.png");
 
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+//    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+//    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -35,8 +35,8 @@ public class Vengance_SK extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 10;
-    //private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     public Vengance_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -54,10 +54,8 @@ public class Vengance_SK extends AbstractDynamicCard {
         this.purgeOnUse = true;
         //this.exhaust = true;
         this.addToBot(new NewQueueCardAction(this, true, false, true));
-        //Eternal Keyword Ability (removed for now)
-//        if (upgraded) {
-//            this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
-//        }
+        //Eternal Keyword Ability
+        this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
     }
 
     // Upgraded stats.
@@ -65,8 +63,8 @@ public class Vengance_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            //upgradeDamage(UPGRADE_PLUS_DMG);
+            //rawDescription = UPGRADE_DESCRIPTION;
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

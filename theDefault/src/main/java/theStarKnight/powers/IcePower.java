@@ -53,6 +53,8 @@ public class IcePower extends AbstractPower implements CloneablePowerInterface {
         //Reduce damage by 25% unless player has "Atlas" power
         if (!AbstractDungeon.player.hasPower(AtlasPower.POWER_ID)) {
             return type == DamageInfo.DamageType.NORMAL ? damage * .75F : damage;
+        } else {
+            return damage;
         }
     }
 

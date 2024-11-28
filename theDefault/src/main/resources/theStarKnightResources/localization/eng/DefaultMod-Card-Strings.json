@@ -101,12 +101,12 @@
   },
   "theStarKnight:Samsara_SK": {
     "NAME": "Saṃsāra",
-    "DESCRIPTION": "[#AA0000]Lose [#AA0000]!theStarKnight:SecondMagic! [#AA0000]HP. NL Gain !M! Temporary_HP."
+    "DESCRIPTION": "[#AA0000]Lose [#AA0000]2 [#AA0000]HP. NL Gain !M! Temporary_HP."
   },
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
     "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Deal !D! damage to ALL enemies and gain !B! Block."
+    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block. NL Gain [E]."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
@@ -160,7 +160,8 @@
   },
   "theStarKnight:GhostArmor_SK": {
     "NAME": "Ghost Armor",
-    "DESCRIPTION": "Gain 1 Intangible. NL [#AA0000]Lose [#AA0000]2 [#AA0000]HP."
+    "DESCRIPTION": "[#AA0000]Lose [#AA0000]6 [#AA0000]HP. NL Gain 1 Intangible.",
+    "UPGRADE_DESCRIPTION": "[#AA0000]Lose [#AA0000]3 [#AA0000]HP. NL Gain 1 Intangible."
   },
   "theStarKnight:StrangeMatter_SK": {
     "NAME": "Strange Matter",
@@ -203,7 +204,7 @@
   "theStarKnight:PulsatingShard_SK": {
     "NAME": "syha’h gnaiih",
     "DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Innate Memory NL Gain [E] at the start of your turn."
+    "UPGRADE_DESCRIPTION": "Innate thestarknight:Memory NL Gain [E] at the start of your turn."
   },
   "theStarKnight:CacconShard_SK": {
     "NAME": "nglui R'lyeh",
@@ -228,8 +229,8 @@
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Death",
-    "DESCRIPTION": "thestarknight:Double_Madness NL Deal damage !D!. NL Add a *Burn to your hand.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Double_Madness NL Deal damage !D!."
+    "DESCRIPTION": "Deal !D! damage. (equal to your exhaust pile). NL Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL Deal !D! damage. (equal to your exhaust pile). NL Exhaust a card."
   },
   "theStarKnight:Ignition_SK": {
     "NAME": "Ignition",
@@ -242,7 +243,7 @@
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "thestarknight:Ephemeral, thestarknight:Madness NL Deal !D! damage to a random enemy, NL !M! times."
+    "DESCRIPTION": "thestarknight:Ephemeral, thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -250,12 +251,11 @@
   },
   "theStarKnight:Vengance_SK": {
     "NAME": "Vengance",
-    "DESCRIPTION": "Deal !D! damage. NL If this would be Exhausted, play it.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL Deal !D! damage. NL If this would be Exhausted, play it."
+    "DESCRIPTION": "thestarknight:Eternal NL Deal !D! damage. NL If this would be Exhausted, play it."
   },
   "theStarKnight:TowerShield_SK": {
     "NAME": "Tower Shield",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, gain !M! thestarknight:Frozen."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, NL gain !M! thestarknight:WeakNextTurnPower."
   },
   "theStarKnight:TidalLock_SK": {
     "NAME": "Tidal Lock",

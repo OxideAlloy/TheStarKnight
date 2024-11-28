@@ -46,7 +46,7 @@ public class Samsara_SK extends AbstractDynamicCard {
         this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
 
         //AbstractDungeon.player.increaseMaxHp(-1, false);
-        this.addToBot(new LoseHPAction(p, p, defaultSecondMagicNumber));
+        this.addToBot(new LoseHPAction(p, p, 2));
 
         this.addToBot(new AddTemporaryHPAction(p, p, this.magicNumber));
     }

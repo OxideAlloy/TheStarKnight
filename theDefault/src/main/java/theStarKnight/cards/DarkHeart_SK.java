@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -48,17 +49,11 @@ public class DarkHeart_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if(this.upgraded){
-            this.addToBot(new SFXAction("ATTACK_HEAVY"));
-            this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        }
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, (this.block)));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new GainBlockAction(p, p, (this.block)));
+        if (this.upgraded)
+            this.addToBot(new GainEnergyAction(1));
+    }
         //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
         //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
         //System.out.println("hand.size = "+AbstractDungeon.player.hand.size());

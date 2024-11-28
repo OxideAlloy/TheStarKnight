@@ -150,5 +150,12 @@
       "frozen"
     ],
     "DESCRIPTION": "Deal and receive 25% less damage."
+  },
+  {
+    "PROPER_NAME": "Ephemeral",
+    "NAMES": [
+      "ephemeral"
+    ],
+    "DESCRIPTION": "This card Exhausts when another card is played."
   }
 ]

@@ -47,14 +47,15 @@ public class Helios_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void onRetained() {
+        //should happen before onRetained
         this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VulnerablePower(AbstractDungeon.player, this.magicNumber, false), this.magicNumber));
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VulnerablePower(AbstractDungeon.player, this.magicNumber, false), this.magicNumber));
     }
+
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
     // Upgraded stats.
@@ -63,6 +64,7 @@ public class Helios_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             //upgradeBaseCost(UPGRADED_COST);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             this.loadCardImage(IMG2);
             initializeDescription();
         }

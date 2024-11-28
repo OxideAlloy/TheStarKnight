@@ -14,6 +14,7 @@ theStarKnight\cards\EventHorizon_SK.class
 theStarKnight\cards\VoidBorn_SK.class
 theStarKnight\relics\DyingSpark_SKRelic.class
 theStarKnight\cards\Impurity_SK.class
+theStarKnight\powers\AtlasPower.class
 theStarKnight\cards\Radiant_SK.class
 theStarKnight\powers\RuinPower.class
 theStarKnight\patches\AddToDeckPatch.class
@@ -65,6 +66,7 @@ theStarKnight\powers\ShardEcho.class
 theStarKnight\powers\IcePower.class
 theStarKnight\cards\FallingStar_SK.class
 theStarKnight\monsters\ShoggothC.class
+theStarKnight\cards\CocoonShard_SK.class
 theStarKnight\actions\ImpurityAction.class
 theStarKnight\powers\SingularityPower.class
 theStarKnight\cards\Strike_SK.class
@@ -73,7 +75,6 @@ theStarKnight\cards\CleavingBlow_SK.class
 theStarKnight\powers\IchorShieldPower.class
 theStarKnight\cards\Instinct_SK.class
 theStarKnight\cards\Vivisection_SK.class
-theStarKnight\cards\CacconShard_SK.class
 theStarKnight\powers\AdaptivePower.class
 theStarKnight\cards\Samsara_SK.class
 theStarKnight\cards\RecklessStrike_SK.class
@@ -120,6 +121,7 @@ theStarKnight\potions\IchorPotion.class
 theStarKnight\cards\BlueShift_SK.class
 theStarKnight\patches\relics\BottledPlaceholderField.class
 theStarKnight\cards\LeadShield_SK.class
+theStarKnight\powers\TungstenPower.class
 theStarKnight\DefaultMod.class
 theStarKnight\cards\ColdShard_SK.class
 theStarKnight\cards\DiffractionSpikes_SK.class

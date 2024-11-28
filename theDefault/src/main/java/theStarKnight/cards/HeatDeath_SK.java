@@ -4,6 +4,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -35,49 +36,60 @@ public class HeatDeath_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
-    private static final int AMOUNT = 2;
+    //private static final int UPGRADED_COST = 0;
+    private static final int AMOUNT = 1;
+    private static final int DAMAGE = 0;
 
     public HeatDeath_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 5;
+        this.baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = AMOUNT;
-        if(!this.upgraded) {
-            this.cardsToPreview = new Burn();
-        }
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        if(!this.upgraded) {
-            this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new ExhaustAction(1, false, false, false));
+    }
+
+   ///Eternal///
+    public void triggerOnExhaust() {
+        if(this.upgraded) {
+            this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
         }
     }
 
-//   ///Eternal///
-//    public void triggerOnExhaust() {
-//        this.upgradeDamage(this.magicNumber);
-//        this.addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
-//    }
 
-    //// START MADNESS CODE ////
+    //// START PUlSAR DAMAGE UPDATE CODE ////
     public void atTurnStart() {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        this.baseDamage=this.baseDamage*this.magicNumber;
+        this.baseDamage = AbstractDungeon.player.exhaustPile.size();
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        this.baseDamage=this.baseDamage*this.magicNumber;
+        this.baseDamage = AbstractDungeon.player.exhaustPile.size();
     }
     public void applyPowers() {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        this.baseDamage=this.baseDamage*this.magicNumber;
+        this.baseDamage = AbstractDungeon.player.exhaustPile.size();
         super.applyPowers();
         this.initializeDescription();
     }
+    //// END PUlSAR DAMAGE UPDATE CODE ////
+
+    //// START MADNESS CODE ////
+//    public void atTurnStart() {
+//        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+//        this.baseDamage=this.baseDamage*this.magicNumber;
+//    }
+//    public void triggerOnOtherCardPlayed(AbstractCard c) {
+//        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+//        this.baseDamage=this.baseDamage*this.magicNumber;
+//    }
+//    public void applyPowers() {
+//        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+//        this.baseDamage=this.baseDamage*this.magicNumber;
+//        super.applyPowers();
+//        this.initializeDescription();
+//    }
     //// END MADNESS CODE ////
 
 
@@ -87,7 +99,7 @@ public class HeatDeath_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            //upgradeBaseCost(UPGRADED_COST);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

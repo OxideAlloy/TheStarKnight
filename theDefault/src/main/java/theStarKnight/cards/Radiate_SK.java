@@ -46,7 +46,7 @@ public class Radiate_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //AbstractDungeon.player.increaseMaxHp(-1, false);
         this.addToBot(new GainEnergyAction(magicNumber));
-        this.addToBot(new LoseHPAction(p, p, defaultSecondMagicNumber));
+        this.addToBot(new LoseHPAction(p, p, 1));
     }
 
     //Upgraded stats.

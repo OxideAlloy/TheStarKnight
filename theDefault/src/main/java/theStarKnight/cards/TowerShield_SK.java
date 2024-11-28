@@ -31,7 +31,7 @@ public class TowerShield_SK extends AbstractDynamicCard {
     private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK = 5;
 
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 2;
 
     // /STAT DECLARATION/
 
@@ -45,8 +45,10 @@ public class TowerShield_SK extends AbstractDynamicCard {
     public void onRetained() {
 //        this.addToBot(
 //                //new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
-//                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakNextTurnPower(AbstractDungeon.player,AbstractDungeon.player, 1), 1));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new IcePower(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakNextTurnPower(AbstractDungeon.player,AbstractDungeon.player, 1), 1));
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber), this.magicNumber));
+
+
     }
 
     // Actions the card should do.

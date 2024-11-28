@@ -129,10 +129,9 @@
         "theStarKnight:ElderFormPower": {
                 "NAME": "Elder Form",
                 "DESCRIPTIONS": [
-                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to the damage dealt",
-                        ".",
-                        ", #b",
-                        " times."
+                        "When you deal unblocked damage to an enemy, they lose ",
+                        "#b",
+                        " Strength for the turn."
                 ]
         },
         "theStarKnight:RuinPower": {

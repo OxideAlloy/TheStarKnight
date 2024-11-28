@@ -32,7 +32,7 @@ public class Pulsar_SK extends AbstractDynamicCard {
     private static final int COST = 0;
     //private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 99;
+    private static final int DAMAGE = 0;
     //private static final int DAMAGE = AbstractDungeon.player.exhaustPile.group.size();
 
     public Pulsar_SK() {

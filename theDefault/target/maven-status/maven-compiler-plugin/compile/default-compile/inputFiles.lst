@@ -14,9 +14,9 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\BleedingEdge_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\BlueShift_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\BurningSky_SK.java
-C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\CacconShard_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\CardTemplate.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\CleavingBlow_SK.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\CocoonShard_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\ColdShard_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Comet_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\ConsumingDarkness_SK.java
@@ -110,6 +110,7 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\AccretionDiskPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\AdaptivePower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\AlignmentPower.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\AtlasPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\BleedingEdgePower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\CommonPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\ElderFormPower.java
@@ -128,6 +129,7 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\StackingDrawReductionPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\StarForgePower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\TempStrNextTurn.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\TungstenPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\VoidBornPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\WeakNextTurnPower.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\powers\WeepingWoundPower.java

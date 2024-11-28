@@ -46,7 +46,7 @@ public class MagneticField_SK extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(m, p, new TungstenPower(m, p, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new TungstenPower(p, p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.

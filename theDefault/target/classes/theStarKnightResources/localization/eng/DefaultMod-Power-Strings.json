@@ -57,7 +57,7 @@
         "theStarKnight:IchorFloodPower": {
                 "NAME": "Ichor Flood",
                 "DESCRIPTIONS": [
-                        "At the start of your turn apply #b",
+                        "Whenever you play a skill apply #b",
                         " #pIchor to each enemy."
                 ]
         },
@@ -129,10 +129,9 @@
         "theStarKnight:ElderFormPower": {
                 "NAME": "Elder Form",
                 "DESCRIPTIONS": [
-                        "When you deal unblocked attack damage, the enemy temporarily loses strength equal to the damage dealt",
-                        ".",
-                        ", #b",
-                        " times."
+                        "When you deal unblocked damage to an enemy, they lose ",
+                        "#b",
+                        " Strength for the turn."
                 ]
         },
         "theStarKnight:RuinPower": {
@@ -155,10 +154,23 @@
                         " Weak at the start of your turn."
                 ]
         },
-        "theStarKnight:Frozen": {
+        "theStarKnight:IcePower": {
                 "NAME": "Frozen",
                 "DESCRIPTIONS": [
                         "Deal and receive 25% less damage."
+                ]
+        },
+        "theStarKnight:CocoonPower": {
+                "NAME": "Cocoon",
+                "DESCRIPTIONS": [
+                        "Whenever you would lose HP, lose ",
+                        " less."
+                ]
+        },
+        "theStarKnight:AtlasPower": {
+                "NAME": "Atlas",
+                "DESCRIPTIONS": [
+                        "Frozen no longer reduces your damage."
                 ]
         }
 }

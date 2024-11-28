@@ -21,8 +21,8 @@ public class GhostArmor_SK extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("GhostArmor.png");
     public static final String IMG2 = makeCardPath("Ghost_full.png");
 
-//    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-//    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -45,8 +45,14 @@ public class GhostArmor_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //hardcoding - number should always be red in description
+        if(!this.upgraded) {
+            this.addToBot(new LoseHPAction(p, p, 6));
+        }else{
+            this.addToBot(new LoseHPAction(p, p, 3));
+        }
         this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
-        this.addToBot(new LoseHPAction(p, p, magicNumber));
+
 
         //AbstractDungeon.player.increaseMaxHp(-magicNumber, true);
         //Purely for visual effect
@@ -58,7 +64,7 @@ public class GhostArmor_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //rawDescription = UPGRADE_DESCRIPTION;
+            rawDescription = UPGRADE_DESCRIPTION;
             this.upgradeMagicNumber(UPGRADED_DEBUFF);
             upgradeBaseCost(UPGRADED_COST);
             this.loadCardImage(IMG2);
