@@ -106,7 +106,7 @@
   "theStarKnight:DarkHeart_SK": {
     "NAME": "Dark Heart",
     "DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Deal !D! damage to ALL enemies and gain !B! Block."
+    "UPGRADE_DESCRIPTION": "thestarknight:Madness NL Deal !D! damage NL and gain !B! Block. NL Gain [E]."
   },
   "theStarKnight:Finish_SK": {
     "NAME": "Finish",
@@ -255,7 +255,7 @@
   },
   "theStarKnight:TowerShield_SK": {
     "NAME": "Tower Shield",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, NL gain !M! thestarknight:Frozen."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, NL gain !M! thestarknight:WeakNextTurnPower."
   },
   "theStarKnight:TidalLock_SK": {
     "NAME": "Tidal Lock",
@@ -271,9 +271,9 @@
     "DESCRIPTION": "Apply Weak and !M! thestarknight:Ichor to each enemy."
   },
   "theStarKnight:MagneticField_SK": {
-    "NAME": "Energy Cocoon",
-    "DESCRIPTION": "Whenever you would lose HP, lose !M! less.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you would lose HP, lose !M! less."
+    "NAME": "Magnetic Field",
+    "DESCRIPTION": "Gain !B! block. NL (Equal to the number of cards in your exhuast pile.)",
+    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL Gain !B! block. NL (Equal to the number of cards in your exhuast pile.)"
   },
   "theStarKnight:Terror_SK": {
     "NAME": "Terror",
@@ -305,9 +305,9 @@
     "NAME": "Bleeding Edge",
     "DESCRIPTION": "Gain !M! Vulnerable. NL Whenever you attack an enemy, apply !M! thestarknight:Ichor to them."
   },
-  "theStarKnight:Atlas_SK": {
-    "NAME": "Atlas",
-    "DESCRIPTION": "Gain !M! thestarknight:Frozen. NL Frozen no longer reduces your damage."
+  "theStarKnight:ShiningOne_SK": {
+    "NAME": "Shining One",
+    "DESCRIPTION": "You cannot lose HP during your turn."
   },
   "theStarKnight:AccretionDisk_SK": {
     "NAME": "Accretion Disk",

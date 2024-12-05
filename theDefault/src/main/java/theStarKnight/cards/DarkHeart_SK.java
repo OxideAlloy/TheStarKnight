@@ -2,12 +2,9 @@ package theStarKnight.cards;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import theStarKnight.DefaultMod;
 import theStarKnight.characters.TheDefault;
 
@@ -25,10 +21,8 @@ public class DarkHeart_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(DarkHeart_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("DarkHeart.png");
-
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -36,12 +30,8 @@ public class DarkHeart_SK extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    //private static final int TIMES = 0;
-    //private static final int UPGRADED_TIMES = 4;
-
     public DarkHeart_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        //baseMagicNumber = magicNumber = TIMES;
         this.baseDamage = 5;
         this.baseBlock = 5;
     }
@@ -54,15 +44,15 @@ public class DarkHeart_SK extends AbstractDynamicCard {
         if (this.upgraded)
             this.addToBot(new GainEnergyAction(1));
     }
-        //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
-        //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
-        //System.out.println("hand.size = "+AbstractDungeon.player.hand.size());
-        //System.out.println("magic number = "+this.magicNumber);
-        //System.out.println("second magic number = "+defaultSecondMagicNumber);
-    }
+    //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
+    //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
+    //System.out.println("hand.size = "+AbstractDungeon.player.hand.size());
+    //System.out.println("magic number = "+this.magicNumber);
+    //System.out.println("second magic number = "+defaultSecondMagicNumber);
 
 
-    //// START MADNESS CODE ////
+
+//// START MADNESS CODE ////
     public void atTurnStart() {
         this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
@@ -83,11 +73,9 @@ public class DarkHeart_SK extends AbstractDynamicCard {
         super.applyPowers();
         this.initializeDescription();
     }
-    //// END MADNESS CODE ////
+//// END MADNESS CODE ////
 
-
-    // Upgraded stats.
-    @Override
+    //Upgraded stats.
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
@@ -97,4 +85,5 @@ public class DarkHeart_SK extends AbstractDynamicCard {
             initializeDescription();
         }
     }
+
 }

@@ -14,7 +14,6 @@ theStarKnight\cards\EventHorizon_SK.class
 theStarKnight\cards\VoidBorn_SK.class
 theStarKnight\relics\DyingSpark_SKRelic.class
 theStarKnight\cards\Impurity_SK.class
-theStarKnight\powers\AtlasPower.class
 theStarKnight\cards\Radiant_SK.class
 theStarKnight\powers\RuinPower.class
 theStarKnight\patches\AddToDeckPatch.class
@@ -34,9 +33,9 @@ theStarKnight\cards\AbstractDefaultCard.class
 theStarKnight\cards\VoidStrike_SK.class
 theStarKnight\cards\Ruin_SK.class
 theStarKnight\cards\ShieldOfFear_SK.class
+theStarKnight\cards\ShiningOne_SK.class
 theStarKnight\monsters\ShoggothB.class
 theStarKnight\cards\Radiate_SK.class
-theStarKnight\cards\Atlas_SK.class
 theStarKnight\cards\Comet_SK.class
 theStarKnight\cards\Singularity_SK.class
 theStarKnight\cards\Corrupt_SK.class
@@ -79,6 +78,7 @@ theStarKnight\powers\AdaptivePower.class
 theStarKnight\cards\Samsara_SK.class
 theStarKnight\cards\RecklessStrike_SK.class
 theStarKnight\util\IDCheckDontTouchPls.class
+theStarKnight\powers\ShiningPower.class
 theStarKnight\relics\DarkHelm_SKRelic.class
 theStarKnight\relics\PlaceholderRelic2.class
 theStarKnight\cards\Defend_SK.class
@@ -121,7 +121,6 @@ theStarKnight\potions\IchorPotion.class
 theStarKnight\cards\BlueShift_SK.class
 theStarKnight\patches\relics\BottledPlaceholderField.class
 theStarKnight\cards\LeadShield_SK.class
-theStarKnight\powers\TungstenPower.class
 theStarKnight\DefaultMod.class
 theStarKnight\cards\ColdShard_SK.class
 theStarKnight\cards\DiffractionSpikes_SK.class

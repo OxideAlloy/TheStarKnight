@@ -60,7 +60,7 @@ public class Roar_SK extends AbstractDynamicCard {
         //Talk action each time this is played is too much
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
         //AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_GREMLINNOB_1A"));
-        this.addToBot(new TalkAction(true, "@RRrroohrrRGHHhhh!!@", 1.5F, 1.5F));
+        //this.addToBot(new TalkAction(true, "@RRrroohrrRGHHhhh!!@", 1.5F, 1.5F));
     }
 
 

@@ -160,17 +160,10 @@
                         "Deal and receive 25% less damage."
                 ]
         },
-        "theStarKnight:CocoonPower": {
-                "NAME": "Cocoon",
+        "theStarKnight:ShiningPower": {
+                "NAME": "Shining",
                 "DESCRIPTIONS": [
-                        "Whenever you would lose HP, lose ",
-                        " less."
-                ]
-        },
-        "theStarKnight:AtlasPower": {
-                "NAME": "Atlas",
-                "DESCRIPTIONS": [
-                        "Frozen no longer reduces your damage."
+                        "You cannot lose HP on your turn."
                 ]
         }
 }
