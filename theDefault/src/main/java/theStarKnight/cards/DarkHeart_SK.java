@@ -41,8 +41,9 @@ public class DarkHeart_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, (this.damage), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new GainBlockAction(p, p, (this.block)));
-        if (this.upgraded)
+        if (this.upgraded) {
             this.addToBot(new GainEnergyAction(1));
+        }
     }
     //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
     //System.out.println("gameHandSize = "+BaseMod.MAX_HAND_SIZE);
@@ -51,33 +52,22 @@ public class DarkHeart_SK extends AbstractDynamicCard {
     //System.out.println("second magic number = "+defaultSecondMagicNumber);
 
 
-
-//// START MADNESS CODE ////
+    //// START MADNESS CODE ////
     public void atTurnStart() {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
-        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
-            this.baseDamage=this.baseDamage+magicNumber;
-            this.baseBlock=this.baseBlock+magicNumber;
-        super.applyPowers();
-        this.initializeDescription();
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
-        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
-            this.baseDamage=this.baseDamage+magicNumber;
-            this.baseBlock=this.baseBlock+magicNumber;
-        super.applyPowers();
-        this.initializeDescription();
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
     }
     public void applyPowers() {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
-        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
-            this.baseDamage=this.baseDamage+magicNumber;
-            this.baseBlock=this.baseBlock+magicNumber;
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
         super.applyPowers();
         this.initializeDescription();
     }
-//// END MADNESS CODE ////
+    //// END MADNESS CODE ////
 
     //Upgraded stats.
     public void upgrade() {

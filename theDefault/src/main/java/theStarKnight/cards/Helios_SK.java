@@ -24,7 +24,7 @@ public class Helios_SK extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Helios.png");
     public static final String IMG2 = makeCardPath("Helios_full.png");
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;

@@ -30,7 +30,7 @@ public class IchorFlood_SK extends AbstractDynamicCard {
     private static final int COST = 2;
     //private static final int UPGRADED_COST = 2;
 
-    private static final int AMOUNT = 2;
+    private static final int AMOUNT = 1;
     private static final int UPGRADED_AMOUNT = 1;
 
     public IchorFlood_SK() {

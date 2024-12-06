@@ -204,7 +204,7 @@
   "theStarKnight:PulsatingShard_SK": {
     "NAME": "syha’h gnaiih",
     "DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn.",
-    "UPGRADE_DESCRIPTION": "Innate thestarknight:Memory NL Gain [E] at the start of your turn."
+    "UPGRADE_DESCRIPTION": "Innate. thestarknight:Memory NL Gain [E] at the start of your turn."
   },
   "theStarKnight:CacconShard_SK": {
     "NAME": "nglui R'lyeh",
@@ -303,11 +303,12 @@
   },
   "theStarKnight:BleedingEdge_SK": {
     "NAME": "Bleeding Edge",
-    "DESCRIPTION": "Gain !M! Vulnerable. NL Whenever you attack an enemy, apply !M! thestarknight:Ichor to them."
+    "DESCRIPTION": "Whenever you attack an enemy, apply !M! thestarknight:Ichor to them."
   },
   "theStarKnight:ShiningOne_SK": {
     "NAME": "Shining One",
-    "DESCRIPTION": "You cannot lose HP during your turn."
+    "DESCRIPTION": "You cannot lose HP during your turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL You cannot lose HP during your turn."
   },
   "theStarKnight:AccretionDisk_SK": {
     "NAME": "Accretion Disk",
