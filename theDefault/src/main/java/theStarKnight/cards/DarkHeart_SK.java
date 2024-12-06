@@ -54,20 +54,24 @@ public class DarkHeart_SK extends AbstractDynamicCard {
 
 //// START MADNESS CODE ////
     public void atTurnStart() {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
+        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
             this.baseDamage=this.baseDamage+magicNumber;
             this.baseBlock=this.baseBlock+magicNumber;
+        super.applyPowers();
+        this.initializeDescription();
     }
     public void triggerOnOtherCardPlayed(AbstractCard c) {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
+        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
             this.baseDamage=this.baseDamage+magicNumber;
             this.baseBlock=this.baseBlock+magicNumber;
+        super.applyPowers();
+        this.initializeDescription();
     }
     public void applyPowers() {
-        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
-        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size());
+        this.baseDamage = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
+        this.baseBlock = (BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()-1);
             this.baseDamage=this.baseDamage+magicNumber;
             this.baseBlock=this.baseBlock+magicNumber;
         super.applyPowers();
@@ -81,7 +85,7 @@ public class DarkHeart_SK extends AbstractDynamicCard {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             //this.upgradeMagicNumber(UPGRADED_TIMES);
-            upgradeDamage(9);
+            //upgradeDamage(9);
             initializeDescription();
         }
     }

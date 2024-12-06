@@ -72,11 +72,7 @@ public class ElderFormPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
-        if(this.amount==1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

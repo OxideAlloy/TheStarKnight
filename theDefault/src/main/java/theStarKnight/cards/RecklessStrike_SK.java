@@ -27,12 +27,13 @@ public class RecklessStrike_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    //private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 18;
+    private static final int UPGRADE_PLUS_DMG = 7;
 
     private static final int AMOUNT = 1;
-    private static final int UPGRADED_AMOUNT = 1;
+    //private static final int UPGRADED_AMOUNT = 1;
 
     public RecklessStrike_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -54,8 +55,9 @@ public class RecklessStrike_SK extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(UPGRADED_AMOUNT);
-            upgradeBaseCost(UPGRADED_COST);
+            //this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            upgradeDamage(UPGRADE_PLUS_DMG);
+            //upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

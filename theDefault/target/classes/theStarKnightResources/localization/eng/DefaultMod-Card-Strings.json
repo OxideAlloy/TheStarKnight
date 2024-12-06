@@ -119,8 +119,8 @@
   },
   "theStarKnight:VoidStrike_SK": {
     "NAME": "Void Strike",
-    "DESCRIPTION": "Deal !D! damage. Exhaust a random card from your hand. Ethereal.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Exhaust a card from your hand. Ethereal."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. Exhaust a random card from your hand.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. Exhaust a card from your hand."
   },
   "theStarKnight:OrbitalStrike_SK": {
     "NAME": "Orbital Strike",
@@ -255,7 +255,7 @@
   },
   "theStarKnight:TowerShield_SK": {
     "NAME": "Tower Shield",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, NL gain !M! thestarknight:WeakNextTurnPower."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When retained, NL gain !M! Weak next turn."
   },
   "theStarKnight:TidalLock_SK": {
     "NAME": "Tidal Lock",
@@ -277,7 +277,7 @@
   },
   "theStarKnight:Terror_SK": {
     "NAME": "Terror",
-    "DESCRIPTION": "Exhaust a card. NL Gain [E] [E] NL Ethereal."
+    "DESCRIPTION": "Ethereal. NL Exhaust a card. NL Gain [E] [E]."
   },
   "theStarKnight:Radiate_SK": {
     "NAME": "Radiate",
@@ -315,8 +315,8 @@
   },
   "theStarKnight:Pulsar_SK": {
     "NAME": "Pulsar",
-    "DESCRIPTION": "Deal !D! damage. (equal to your exhaust pile). NL Exhaust. Ethereal.",
-    "UPGRADE_DESCRIPTION": "Deal !D! (equal to your exhaust pile). NL Exhaust. Ethereal."
+    "DESCRIPTION": "Deal !D! damage. (equal to your exhaust pile). NL Exhaust. ",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! (equal to your exhaust pile). NL Exhaust."
   },
   "theStarKnight:IchorFlood_SK": {
     "NAME": "Ichor Flood",
@@ -337,11 +337,11 @@
   },
   "theStarKnight:Adaptive_SK": {
     "NAME": "Adaptive",
-    "DESCRIPTION": "Whenever you Exhaust a card, NL gain !M! Vigor."
+    "DESCRIPTION": "Whenever you NL exhaust a card, NL gain !M! Vigor."
   },
   "theStarKnight:Alignment_SK": {
     "NAME": "Alignment",
-    "DESCRIPTION": "Cards costs !M! less [E] to a minimum of one, the turn they are drawn. NL Ethereal.",
+    "DESCRIPTION": "Ethereal. NL Cards costs !M! less [E] to a minimum of one, the turn they are drawn.",
     "UPGRADE_DESCRIPTION": "Cards costs !M! less [E] to a minimum of one, the turn they are drawn."
   },
   "theStarKnight:MalignantGrowth_SK": {
@@ -387,7 +387,7 @@
   },
   "theStarKnight:Supernova_SK": {
     "NAME": "Supernova",
-    "DESCRIPTION": "thestarknight:Eternal. NL When exhausted, reduce this cards cost by [E]. NL Gain !M! Strength. NL Ethereal."
+    "DESCRIPTION": "thestarknight:Eternal. Ethereal. NL Gain !M! Vigor. NL Whenever this card is exhausted, lower its cost by 1 this combat."
   },
   "theStarKnight:Vivisection_SK": {
     "NAME": "Vivisection",

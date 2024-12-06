@@ -130,7 +130,6 @@
                 "NAME": "Elder Form",
                 "DESCRIPTIONS": [
                         "When you deal unblocked damage to an enemy, they lose ",
-                        "#b",
                         " Strength for the turn."
                 ]
         },

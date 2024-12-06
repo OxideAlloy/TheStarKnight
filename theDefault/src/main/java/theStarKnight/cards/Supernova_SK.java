@@ -35,7 +35,7 @@ public class Supernova_SK extends AbstractDynamicCard {
     private static final int COST = 5;
     private static final int UPGRADED_COST = 4;
 
-    private static final int AMOUNT = 6;
+    private static final int AMOUNT = 12;
     //private static final int UPGRADED_AMOUNT = 6;
 
 
@@ -50,8 +50,8 @@ public class Supernova_SK extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //this.addToBot(new ApplyPowerAction(p, p, new VigorPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new VigorPower(p, this.magicNumber), this.magicNumber));
+        //this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void triggerOnExhaust() {
