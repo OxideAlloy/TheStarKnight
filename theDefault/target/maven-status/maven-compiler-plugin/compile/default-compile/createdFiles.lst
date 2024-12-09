@@ -10,6 +10,7 @@ theStarKnight\cards\TowerShield_SK.class
 theStarKnight\cards\NeutronBurst_SK.class
 theStarKnight\cards\MeteorBlast_SK.class
 theStarKnight\cards\BleedingEdge_SK.class
+theStarKnight\relics\ThreeEyedStatue_SKRelic.class
 theStarKnight\cards\EventHorizon_SK.class
 theStarKnight\cards\VoidBorn_SK.class
 theStarKnight\relics\DyingSpark_SKRelic.class
@@ -21,6 +22,7 @@ theStarKnight\powers\WeepingWoundPower.class
 theStarKnight\cards\MagneticField_SK.class
 theStarKnight\cards\KnifeGame_SK.class
 theStarKnight\powers\WeakNextTurnPower.class
+theStarKnight\cards\Mania_SK.class
 theStarKnight\characters\TheDefault.class
 theStarKnight\actions\MadnessAction.class
 theStarKnight\cards\UnstableBlock_SK.class
@@ -48,6 +50,7 @@ theStarKnight\relics\MawHelm_SKRelic.class
 theStarKnight\cards\MalignantGrowth_SK.class
 theStarKnight\monsters\ShoggothA.class
 theStarKnight\cards\TidalLock_SK.class
+theStarKnight\cards\Revolve_SK.class
 theStarKnight\cards\IchorFlood_SK.class
 theStarKnight\events\TwistedGalleryEvent.class
 theStarKnight\cards\Riposte_SK.class
@@ -118,6 +121,7 @@ theStarKnight\patches\DefaultInsertPatch.class
 theStarKnight\cards\SolarFlare_SK.class
 theStarKnight\powers\InstinctPower.class
 theStarKnight\potions\IchorPotion.class
+theStarKnight\relics\MeteorShower_SKRelic.class
 theStarKnight\cards\BlueShift_SK.class
 theStarKnight\patches\relics\BottledPlaceholderField.class
 theStarKnight\cards\LeadShield_SK.class
@@ -129,7 +133,6 @@ theStarKnight\relics\BottledPlaceholderRelic.class
 theStarKnight\cards\DarkHeart_SK.class
 theStarKnight\cards\RedShift_SK.class
 theStarKnight\cards\Terror_SK.class
-theStarKnight\cards\Helios_SK.class
 theStarKnight\powers\RipostePower.class
 theStarKnight\relics\PlaceholderRelic.class
 theStarKnight\cards\HeatDeath_SK.class

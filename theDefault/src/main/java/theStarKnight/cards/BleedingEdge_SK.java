@@ -30,9 +30,10 @@ public class BleedingEdge_SK extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int UPGRADED_COST = 2;
 
     private static final int AMOUNT = 1;
+    private static final int UPGRADED_AMOUNT = 1;
 
     public BleedingEdge_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -54,6 +55,7 @@ public class BleedingEdge_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADED_AMOUNT);
             initializeDescription();
         }
     }

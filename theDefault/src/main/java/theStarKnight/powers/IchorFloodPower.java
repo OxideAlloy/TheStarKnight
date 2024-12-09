@@ -77,8 +77,6 @@ public class IchorFloodPower extends AbstractPower implements CloneablePowerInte
                 }
             }
         }
-
-        this.flash();
     }
 
     @Override

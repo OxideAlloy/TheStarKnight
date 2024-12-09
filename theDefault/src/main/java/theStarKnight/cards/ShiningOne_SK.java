@@ -14,7 +14,8 @@ import static theStarKnight.DefaultMod.makeCardPath;
 public class ShiningOne_SK extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ShiningOne_SK.class.getSimpleName());
-    public static final String IMG = makeCardPath("Atlas.png");
+    public static final String IMG = makeCardPath("Helios2.png");
+    public static final String IMG2 = makeCardPath("Helios_full.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -24,7 +25,7 @@ public class ShiningOne_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     //private static final int UPGRADED_COST = 1;
 
     //private static final int AMOUNT = 3;
@@ -56,6 +57,7 @@ public class ShiningOne_SK extends AbstractDynamicCard {
             rawDescription = UPGRADE_DESCRIPTION;
             this.isInnate = true;
             //this.upgradeMagicNumber(UPGRADED_AMOUNT);
+            this.loadCardImage(IMG2);
             initializeDescription();
         }
     }

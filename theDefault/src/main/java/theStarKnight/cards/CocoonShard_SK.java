@@ -17,7 +17,7 @@ public class CocoonShard_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = -2;
+    private static final int COST = 0;
 
     private static final int AMOUNT = 2;
     private static final int UPGRADED_AMOUNT = 1;
@@ -39,10 +39,10 @@ public class CocoonShard_SK extends AbstractDynamicCard {
         //this.addToBot(new HealAction(p, p, 2));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return false;
-    }
+//    @Override
+//    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+//        return false;
+//    }
 
     //Upgraded stats.
     @Override

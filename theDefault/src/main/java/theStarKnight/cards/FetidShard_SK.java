@@ -24,7 +24,7 @@ public class FetidShard_SK extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = -2;
+    private static final int COST = 0;
 
 //    private static final int DAMAGE = 3;
 //    private static final int UPGRADE_PLUS_DMG = 2;
@@ -47,10 +47,10 @@ public class FetidShard_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return false;
-    }
+//    @Override
+//    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+//        return false;
+//    }
 
     @Override
     public void upgrade() {

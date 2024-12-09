@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theStarKnight.DefaultMod;
 import theStarKnight.cards.*;
@@ -112,12 +113,21 @@ public class ShardEcho extends AbstractPower implements CloneablePowerInterface,
                 yshift+=shiftAmt;
             }
 
-            //ColdShard grants 5 block (or 8 block if upgraded).
+            //ColdShard grants 4 block (or 7 block if upgraded).
             if (card.cardID.equals(ColdShard_SK.ID)) {
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(),xpos,ypos-yshift));
                 this.addToTop(new WaitAction(Settings.ACTION_DUR_FAST));
 
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, card.magicNumber));
+                yshift+=shiftAmt;
+            }
+
+            //Supernova grants 5 vigor (or 8 vigor if upgraded).
+            if (card.cardID.equals(Supernova_SK.ID)) {
+                AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(),xpos,ypos-yshift));
+                this.addToTop(new WaitAction(Settings.ACTION_DUR_FAST));
+
+                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, card.magicNumber), card.magicNumber));
                 yshift+=shiftAmt;
             }
 

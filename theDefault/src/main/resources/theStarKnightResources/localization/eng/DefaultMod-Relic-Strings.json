@@ -96,5 +96,19 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theStarKnight:ThreeEyedStatue_SKRelic": {
+    "NAME": "Three Eyed Statue",
+    "FLAVOR": "I've inadvertently broken several fundamental theories regarding this universe.",
+    "DESCRIPTIONS": [
+      "You gain 1 less energy and draw 2 less cards each turn but get two turns."
+    ]
+  },
+  "theStarKnight:MeteorShower_SKRelic": {
+    "NAME": "Meteor Shower",
+    "FLAVOR": "Plumbing the depths.",
+    "DESCRIPTIONS": [
+      "Start combat with a Falling Star in your hand."
+    ]
   }
 }

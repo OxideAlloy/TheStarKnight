@@ -431,6 +431,9 @@ public class DefaultMod implements
         BaseMod.addRelic(new Telescope_SKRelic(), RelicType.SHARED);
         BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
         BaseMod.addRelic(new KleinBottle_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new ThreeEyedStatue_SKRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new MeteorShower_SKRelic(), RelicType.SHARED);
+
         //Currently Broken
         //BaseMod.addRelic(new TinyLighthouse_SKRelic(), RelicType.SHARED);
 

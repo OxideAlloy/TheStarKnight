@@ -88,7 +88,7 @@
   },
   "theStarKnight:Roar_SK": {
     "NAME": "Roar",
-    "DESCRIPTION": "Gain !D! block, calculated as attack damage. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Gain !D! Block, calculated as attack damage. NL Apply !M! Vulnerable."
   },
   "theStarKnight:SolarFlare_SK": {
     "NAME": "Solar Flare",
@@ -138,9 +138,9 @@
     "NAME": "Heavy Metal",
     "DESCRIPTION": "Retain. NL When drawn, NL gain !M! strength and lose !M! dexterity. NL Exhaust."
   },
-  "theStarKnight:Helios_SK": {
-    "NAME": "Helios",
-    "DESCRIPTION": " Retain. NL Deal !D! damage. NL When retained, add a *Burn to your hand."
+  "theStarKnight:Revolve_SK": {
+    "NAME": "Revolve",
+    "DESCRIPTION": "Discard your hand, NL draw !M! cards."
   },
   "theStarKnight:Hemorrhage_SK": {
     "NAME": "Hemorrhage",
@@ -151,7 +151,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity."
   },
   "theStarKnight:OblivionShard_SK": {
-    "NAME": "n’ghft s’uhn",
+    "NAME": "Ka'l'nfhai",
     "DESCRIPTION": "thestarknight:Memory NL  Deal !M! damage to a random enemy at the start of your turn."
   },
   "theStarKnight:Gnaw_SK": {
@@ -181,8 +181,8 @@
   },
   "theStarKnight:BurningSky_SK": {
     "NAME": "Burning Sky",
-    "DESCRIPTION": "Shuffle 2 *Falling *Stars into your library.",
-    "UPGRADE_DESCRIPTION": "Shuffle 2 upgraded *Falling *Stars into your library."
+    "DESCRIPTION": "Shuffle 2 *Falling *Stars into your library. NL Gain !M! Vigor.",
+    "UPGRADE_DESCRIPTION": "Shuffle 2 upgraded *Falling *Stars into your library. NL Gain !M! Vigor."
   },
   "theStarKnight:GatherMass_SK": {
     "NAME": "Gather Mass",
@@ -202,16 +202,16 @@
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
   },
   "theStarKnight:PulsatingShard_SK": {
-    "NAME": "syha’h gnaiih",
+    "NAME": "Tawg'rnyfhai",
     "DESCRIPTION": "thestarknight:Memory NL Gain [E] at the start of your turn.",
     "UPGRADE_DESCRIPTION": "Innate. thestarknight:Memory NL Gain [E] at the start of your turn."
   },
-  "theStarKnight:CacconShard_SK": {
-    "NAME": "nglui R'lyeh",
+  "theStarKnight:CocoonShard_SK": {
+    "NAME": "Ka'l'nfhai",
     "DESCRIPTION": "thestarknight:Memory NL Gain !M! Temporary_HP at the start of your turn."
   },
   "theStarKnight:ColdShard_SK": {
-    "NAME": "ftaghu ‘fhalma",
+    "NAME": "Phfh'rgn'l",
     "DESCRIPTION": "thestarknight:Memory NL Gain !M! Block at the start of your turn."
   },
   "theStarKnight:Impurity_SK": {
@@ -225,7 +225,7 @@
   },
   "theStarKnight:EventHorizon_SK": {
     "NAME": "Event Horizon",
-    "DESCRIPTION": "Gain !B! block, NL exhaust your hand."
+    "DESCRIPTION": "Gain !B! Block, NL exhaust your hand."
   },
   "theStarKnight:HeatDeath_SK": {
     "NAME": "Heat Death",
@@ -238,12 +238,16 @@
   },
   "theStarKnight:ShieldOfFear_SK": {
     "NAME": "Shield of Fear",
-    "DESCRIPTION": "thestarknight:Madness NL Gain !B! block NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL thestarknight:Madness NL Gain !B! block NL Exhaust."
+    "DESCRIPTION": "thestarknight:Madness NL Gain !B! Block NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL thestarknight:Madness NL Gain !B! Block NL Exhaust."
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "thestarknight:Ephemeral, thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times."
+    "DESCRIPTION": "thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times. Add a *Mania to your hand."
+  },
+  "theStarKnight:Mania_SK": {
+    "NAME": "Mania",
+    "DESCRIPTION": "Draw a card. NL Exhaust."
   },
   "theStarKnight:RecklessStrike_SK": {
     "NAME": "Reckless Strike",
@@ -264,7 +268,7 @@
   },
   "theStarKnight:Comet_SK": {
     "NAME": "Comet",
-    "DESCRIPTION": "Retain. thestarknight:Impending !M! NL Gain !B! block. NL Exhaust."
+    "DESCRIPTION": "Retain. thestarknight:Impending !M! NL Gain !B! Block. NL Exhaust."
   },
   "theStarKnight:IchorSpray_SK": {
     "NAME": "Ichor Spray",
@@ -272,8 +276,8 @@
   },
   "theStarKnight:MagneticField_SK": {
     "NAME": "Magnetic Field",
-    "DESCRIPTION": "Gain !B! block. NL (Equal to the number of cards in your exhuast pile.)",
-    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL Gain !B! block. NL (Equal to the number of cards in your exhuast pile.)"
+    "DESCRIPTION": "Gain !B! Block. NL (Equal to the number of cards in your exhuast pile.)",
+    "UPGRADE_DESCRIPTION": "thestarknight:Eternal NL Gain !B! Block. NL (Equal to the number of cards in your exhuast pile.)"
   },
   "theStarKnight:Terror_SK": {
     "NAME": "Terror",
@@ -286,7 +290,7 @@
   },
   "theStarKnight:Riposte_SK": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Gain !B! block NL and !M! thestarknight:Riposte."
+    "DESCRIPTION": "Gain !B! Block NL and !M! thestarknight:Riposte."
   },
   "theStarKnight:Supermassive_SK": {
     "NAME": "Supermassive",
@@ -371,7 +375,7 @@
     "UPGRADE_DESCRIPTION": "thestarknight:Quintuple_Madness NL Deal !D! damage. NL thestarknight:Murder: NL Gain [E] [E]."
   },
   "theStarKnight:FetidShard_SK": {
-    "NAME": "hupadgh n’gha",
+    "NAME": "Wg'rfh",
     "DESCRIPTION": "thestarknight:Memory NL Deal !M! damage to all enemies at the start of your turn."
   },
   "theStarKnight:Nihilism_SK": {
@@ -387,8 +391,8 @@
     "DESCRIPTION": "thestarknight:Eternal NL Deal !D! damage. NL When exhausted, increase this cards damage by !M!."
   },
   "theStarKnight:Supernova_SK": {
-    "NAME": "Supernova",
-    "DESCRIPTION": "thestarknight:Eternal. Ethereal. NL Gain !M! Vigor. NL Whenever this card is exhausted, lower its cost by 1 this combat."
+    "NAME": "Ehna'r'rgh",
+    "DESCRIPTION": "thestarknight:Memory NL Gain !M! Vigor at the start of your turn."
   },
   "theStarKnight:Vivisection_SK": {
     "NAME": "Vivisection",
@@ -404,7 +408,7 @@
   },
   "theStarKnight:IceBlock_SK": {
     "NAME": "Ice Block",
-    "DESCRIPTION": "Gain !B! block NL and !M! thestarknight:Frozen"
+    "DESCRIPTION": "Gain !B! Block NL and !M! thestarknight:Frozen"
   },
   "theStarKnight:HighKick_SK": {
     "NAME": "High Kick",

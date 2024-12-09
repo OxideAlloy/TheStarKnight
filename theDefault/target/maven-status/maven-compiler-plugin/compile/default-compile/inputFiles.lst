@@ -37,7 +37,6 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\HammerTime_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\HeatDeath_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\HeavyMetal_SK.java
-C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Helios_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Hemorrhage_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\HighKick_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\IceBlock_SK.java
@@ -53,6 +52,7 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\MadSlash_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\MagneticField_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\MalignantGrowth_SK.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Mania_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\MeteorBlast_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\NeutronBurst_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Nihilism_SK.java
@@ -66,6 +66,7 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Radiate_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\RecklessStrike_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\RedShift_SK.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Revolve_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Riposte_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Roar_SK.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\cards\Ruin_SK.java
@@ -140,9 +141,11 @@ C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\Hypnos_SKRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\KleinBottle_SKRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\MawHelm_SKRelic.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\MeteorShower_SKRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\PlaceholderRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\PlaceholderRelic2.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\Telescope_SKRelic.java
+C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\ThreeEyedStatue_SKRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\TinyLighthouse_SKRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\relics\TuningFork_SKRelic.java
 C:\Users\olinr\IdeaProjects\TheStarKnight\theDefault\src\main\java\theStarKnight\util\IDCheckDontTouchPls.java

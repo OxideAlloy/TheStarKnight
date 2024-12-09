@@ -98,7 +98,7 @@
     "NAMES": [
       "memory"
     ],
-    "DESCRIPTION": "Unplayable card with an effect that triggers when this is in your discard pile at the start of your turn."
+    "DESCRIPTION": "Card effect triggers when this is in your discard pile at the start of your turn, not when played."
   },
   {
     "PROPER_NAME": "Plated Armor",

@@ -60,16 +60,56 @@ public class ShiningPower extends AbstractPower implements CloneablePowerInterfa
 //        this.addToBot(new TalkAction(true, "atEndOfTurn", 1.5F, 1.5F));
 //    }
 
-    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (!AbstractDungeon.actionManager.turnHasEnded) {
-            this.addToBot(new TalkAction(true, "damaged on my turn", 1.5F, 1.5F));
-            this.flash();
-            return 0;
-        } else {
-            this.addToBot(new TalkAction(true, "damaged NOT on my turn", 1.5F, 1.5F));
-            return damageAmount;
-        }
+//    public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
+//        if (!AbstractDungeon.actionManager.turnHasEnded) {
+//            //this.addToBot(new TalkAction(true, "damaged on my turn", 1.5F, 1.5F));
+//            this.flash();
+//            return 0;
+//        } else {
+//            //this.addToBot(new TalkAction(true, "damaged NOT on my turn", 1.5F, 1.5F));
+//            return damage;
+//        }
+//    }
+
+
+//    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+//        if (!AbstractDungeon.actionManager.turnHasEnded) {
+//            //System.out.println("Magic Number = "+magicNumber );
+//            //this.addToBot(new TalkAction(true, "damaged on my turn", 1.5F, 1.5F));
+//            this.flash();
+//            return 0;
+//        } else {
+//            //this.addToBot(new TalkAction(true, "damaged NOT on my turn", 1.5F, 1.5F));
+//            return damageAmount;
+//        }
+//    }
+
+
+    public int onLoseHp(int damageAmount) {
+        this.addToBot(new TalkAction(true, "onLoseHp called", 1.5F, 1.5F));
+        System.out.println("***ALERT***   onLoseHp called");
+        return damageAmount;
     }
+
+    public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
+        this.addToBot(new TalkAction(true, "atDamageFinalReceive called", 1.5F, 1.5F));
+        System.out.println("***ALERT***   atDamageFinalReceive called");
+        return damage;
+    }
+
+    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
+        this.addToBot(new TalkAction(true, "atDamageReceive called", 1.5F, 1.5F));
+        System.out.println("***ALERT***   atDamageReceive called");
+        return damage;
+    }
+
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        this.addToBot(new TalkAction(true, "onAttackedToChangeDamage called", 1.5F, 1.5F));
+        System.out.println("***ALERT***   onAttackedToChangeDamage called");
+        return damageAmount;
+    }
+
+
 
     @Override
     public void updateDescription() {

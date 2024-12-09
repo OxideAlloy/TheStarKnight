@@ -6,9 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -46,6 +44,7 @@ public class MadSlash_SK extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = TIMES;
         this.baseDamage = DAMAGE;
         //defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
+        this.cardsToPreview = new Mania_SK();
     }
 
     // Actions the card should do.
@@ -58,12 +57,13 @@ public class MadSlash_SK extends AbstractDynamicCard {
         }else {
             this.addToBot(new TalkAction(true, "@I'm not mad enough!@", 1.5F, 1.5F));
         }
+        this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
     }
 
-    //// EPHEMERAL ////
-    public void triggerOnCardPlayed(AbstractCard c) {
-        this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
-    }
+//    //// EPHEMERAL ////
+//    public void triggerOnCardPlayed(AbstractCard c) {
+//        this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+//    }
 
     //// START MADNESS CODE ////
     public void atTurnStart() {
