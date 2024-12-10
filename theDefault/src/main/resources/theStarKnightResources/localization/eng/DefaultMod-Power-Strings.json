@@ -162,7 +162,9 @@
         "theStarKnight:ShiningPower": {
                 "NAME": "Shining",
                 "DESCRIPTIONS": [
-                        "You cannot lose HP on your turn."
+                        "At the start of your turn, put ",
+                        " card from your exhaust pile into your hand.",
+                        " cards from your exhaust pile into your hand."
                 ]
         }
 }

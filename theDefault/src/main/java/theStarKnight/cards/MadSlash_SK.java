@@ -44,7 +44,8 @@ public class MadSlash_SK extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = TIMES;
         this.baseDamage = DAMAGE;
         //defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DEBUFF;
-        this.cardsToPreview = new Mania_SK();
+        //this.cardsToPreview = new Mania_SK();
+        this.exhaust = true;
     }
 
     // Actions the card should do.
@@ -57,7 +58,7 @@ public class MadSlash_SK extends AbstractDynamicCard {
         }else {
             this.addToBot(new TalkAction(true, "@I'm not mad enough!@", 1.5F, 1.5F));
         }
-        this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
+        //this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
     }
 
 //    //// EPHEMERAL ////

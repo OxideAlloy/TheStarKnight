@@ -243,7 +243,7 @@
   },
   "theStarKnight:MadSlash_SK": {
     "NAME": "Mad Slash",
-    "DESCRIPTION": "thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times. Add a *Mania to your hand."
+    "DESCRIPTION": "thestarknight:Multi_Madness NL Deal !D! damage to a random enemy, NL !M! times. NL Exhaust."
   },
   "theStarKnight:Mania_SK": {
     "NAME": "Mania",
@@ -311,8 +311,7 @@
   },
   "theStarKnight:ShiningOne_SK": {
     "NAME": "Shining One",
-    "DESCRIPTION": "You cannot lose HP during your turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL You cannot lose HP during your turn."
+    "DESCRIPTION": "At the start of your turn, put a card from your exhaust pile into your hand."
   },
   "theStarKnight:AccretionDisk_SK": {
     "NAME": "Accretion Disk",
