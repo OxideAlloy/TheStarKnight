@@ -16,10 +16,10 @@ public class ColdShard_SK extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.STATUS;
     public static final CardColor COLOR = TheDefault.Enums.COLOUR_SK;
 
-    private static final int COST = 0;
+    private static final int COST = -2;
 
 //    private static final int BLOCK = 4;
 //    private static final int UPGRADE_PLUS_BLOCK = 3;

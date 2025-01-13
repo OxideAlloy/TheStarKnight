@@ -18,8 +18,8 @@ public class DarkTract_SK extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(DarkTract_SK.class.getSimpleName());
     public static final String IMG = makeCardPath("DarkTract.png");
 
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+//    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+//    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -28,21 +28,24 @@ public class DarkTract_SK extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 2;
     private static final int UPGRADED_AMOUNT = 1;
+    private static final int AMOUNT2 = 2;
+
 
     // /STAT DECLARATION/
 
     public DarkTract_SK() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = AMOUNT;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = AMOUNT2;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DrawCardAction(p, this.magicNumber));
-        this.addToBot(new DiscardAction(p, p, this.magicNumber, false));
+        this.addToBot(new DiscardAction(p, p, defaultSecondMagicNumber, false));
     }
 
 //// NOTE: Must add the card to AddToDeckPatch for this to work ////
@@ -58,7 +61,7 @@ public class DarkTract_SK extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeMagicNumber(UPGRADED_AMOUNT);
-            rawDescription = UPGRADE_DESCRIPTION;
+            //rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

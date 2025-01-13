@@ -110,6 +110,7 @@ theStarKnight\powers\StarForgePower.class
 theStarKnight\cards\AbstractDynamicCard.class
 theStarKnight\powers\MalignantGrowthPower.class
 theStarKnight\cards\OblivionShard_SK.class
+theStarKnight\cards\TestCard_SK.class
 theStarKnight\powers\CommonPower.class
 theStarKnight\patches\DefaultInsertPatch$Locator.class
 theStarKnight\cards\Hemorrhage_SK.class

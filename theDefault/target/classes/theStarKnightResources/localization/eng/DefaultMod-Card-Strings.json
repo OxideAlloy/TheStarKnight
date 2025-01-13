@@ -56,6 +56,11 @@
     "NAME": "Playtest Card",
     "DESCRIPTION": "This is a test NL Innate. N: Upgrade your cards. NL Gain [E] [E] [E] [E] [E]"
   },
+  "theStarKnight:TestCard_SK": {
+    "NAME": "Test Card",
+    "DESCRIPTION": "This is a test."
+  },
+
 
   "theStarKnight:Strike_SK": {
     "NAME": "Strike",
@@ -194,8 +199,7 @@
   },
   "theStarKnight:DarkTract_SK": {
     "NAME": "Dark Tract",
-    "DESCRIPTION": "Draw !M! card, NL discard !M! card. NL When gained, NL gain 2 max HP.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards, NL discard !M! cards. NL When gained, NL gain 2 max HP."
+    "DESCRIPTION": "Draw !M! cards, NL discard !theStarKnight:SecondMagic! cards. NL When gained, NL gain 2 max HP."
   },
   "theStarKnight:LeadShield_SK": {
     "NAME": "Lead Shield",
