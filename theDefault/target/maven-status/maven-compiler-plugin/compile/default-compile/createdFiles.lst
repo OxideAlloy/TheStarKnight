@@ -12,6 +12,7 @@ theStarKnight\cards\MeteorBlast_SK.class
 theStarKnight\cards\BleedingEdge_SK.class
 theStarKnight\relics\ThreeEyedStatue_SKRelic.class
 theStarKnight\cards\EventHorizon_SK.class
+theStarKnight\patches\monsters\DonuPatch$DonusBigNaturals.class
 theStarKnight\cards\VoidBorn_SK.class
 theStarKnight\relics\DyingSpark_SKRelic.class
 theStarKnight\cards\Impurity_SK.class
@@ -64,6 +65,7 @@ theStarKnight\powers\VoidBornPower.class
 theStarKnight\cards\ConsumingDarkness_SK.class
 theStarKnight\cards\Glare_SK.class
 theStarKnight\cards\Supermassive_SK.class
+theStarKnight\cards\TestCard2_SK.class
 theStarKnight\powers\ShardEcho.class
 theStarKnight\powers\IcePower.class
 theStarKnight\cards\FallingStar_SK.class
@@ -121,6 +123,7 @@ theStarKnight\powers\StackingDrawReductionPower.class
 theStarKnight\patches\DefaultInsertPatch.class
 theStarKnight\cards\SolarFlare_SK.class
 theStarKnight\powers\InstinctPower.class
+theStarKnight\patches\monsters\DonuPatch.class
 theStarKnight\potions\IchorPotion.class
 theStarKnight\relics\MeteorShower_SKRelic.class
 theStarKnight\cards\BlueShift_SK.class
@@ -148,6 +151,7 @@ theStarKnight\cards\Stomp_SK.class
 theStarKnight\cards\ShadeBlade_SK.class
 theStarKnight\relics\DefaultClickableRelic.class
 theStarKnight\patches\relics\BottledPlaceholderField$MakeStatEquivalentCopy.class
+theStarKnight\patches\monsters\DonuPatch$DonusBigNaturals$1.class
 theStarKnight\cards\PulsatingShard_SK.class
 theStarKnight\relics\TinyLighthouse_SKRelic.class
 theStarKnight\cards\BurningSky_SK.class

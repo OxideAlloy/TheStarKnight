@@ -39,7 +39,6 @@ public class RecklessStrike_SK extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = AMOUNT;
-        this.tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.
