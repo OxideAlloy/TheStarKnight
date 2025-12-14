@@ -47,6 +47,7 @@ public class TestCard2_SK extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ConstrictedPower(m, p, this.magicNumber), this.magicNumber));
         //this.addToBot(new TalkAction(true, "@RRrroohrrRGHHhhh!!@", 1.5F, 1.5F));
+        //Testing things
 
         int cIndex = AbstractDungeon.player.hand.group.indexOf(this);
         if (cIndex>0) {
